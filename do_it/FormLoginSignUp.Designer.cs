@@ -165,7 +165,6 @@
             this.label3.Size = new System.Drawing.Size(209, 60);
             this.label3.TabIndex = 3;
             this.label3.Text = "Organize your tasks \r\n         and ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // bunifuButton2
             // 
@@ -304,10 +303,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(316, 27);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage2;
-            this.bunifuPages1.PageIndex = 1;
-            this.bunifuPages1.PageName = "tabPage2";
-            this.bunifuPages1.PageTitle = "signup";
+            this.bunifuPages1.Page = this.tabPage1;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "tabPage1";
+            this.bunifuPages1.PageTitle = "signin";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(307, 311);
             this.bunifuPages1.TabIndex = 1;
@@ -343,7 +342,6 @@
             this.tabPage1.Size = new System.Drawing.Size(299, 285);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "signin";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // lblerror
             // 
@@ -354,7 +352,6 @@
             this.lblerror.Name = "lblerror";
             this.lblerror.Size = new System.Drawing.Size(0, 13);
             this.lblerror.TabIndex = 10;
-            this.lblerror.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // txtpwd
             // 
@@ -429,6 +426,7 @@
             this.txtpwd.TextPlaceholder = "passworrd";
             this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.WordWrap = true;
+            this.txtpwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpwd_KeyUp);
             // 
             // txtmail
             // 
@@ -574,11 +572,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label2.Location = new System.Drawing.Point(104, 28);
+            this.label2.Location = new System.Drawing.Point(107, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 32);
+            this.label2.Size = new System.Drawing.Size(82, 32);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Sign in";
+            this.label2.Text = "Log in";
             // 
             // tabPage2
             // 
