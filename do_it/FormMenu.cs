@@ -22,6 +22,7 @@ namespace do_it
         private void FormMenu_Load(object sender, EventArgs e)
         {
             timer1.Start();
+           
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -83,6 +84,8 @@ namespace do_it
                 btntools.Text = "tools";
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
+                
+                
             }
             else
             {

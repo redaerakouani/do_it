@@ -93,8 +93,11 @@ namespace do_it
             
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            string req = "select * from users where LOGIN like  '" + txtmail.Text + "' or Full_name like '" + txtmail.Text + "' and password_user like '" + txtpwd.Text + "'  ";
+            string req = "select * from users where LOGIN like @l or Full_name like @u and password_user like @p ";
             SqlCommand com2 = new SqlCommand(req, cn);
+            com2.Parameters.Add(new SqlParameter("@l", txtmail.Text));
+            com2.Parameters.Add(new SqlParameter("@u", txtmail.Text));
+            com2.Parameters.Add(new SqlParameter("@p", txtpwd.Text));
             SqlDataReader dr;
             dr = com2.ExecuteReader();
             if (dr.Read())
@@ -125,6 +128,21 @@ namespace do_it
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtpwd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txtpwdsignup_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
