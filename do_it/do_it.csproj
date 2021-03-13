@@ -90,6 +90,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTools2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTools2.Designer.cs">
+      <DependentUpon>FormTools2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
