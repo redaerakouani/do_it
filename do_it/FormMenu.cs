@@ -110,5 +110,10 @@ namespace do_it
         {
           //  formtask(new FormMenu());
         }
+
+        private void btntask_Click(object sender, EventArgs e)
+        {
+            formtask(new formTask());
+        }
     }
 }

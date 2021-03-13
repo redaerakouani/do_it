@@ -481,6 +481,7 @@
             this.btntask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btntask.TextMarginLeft = 0;
             this.btntask.UseDefaultRadiusAndThickness = true;
+            this.btntask.Click += new System.EventHandler(this.btntask_Click);
             // 
             // btnlogout
             // 
