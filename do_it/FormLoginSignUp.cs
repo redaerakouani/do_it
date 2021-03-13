@@ -111,10 +111,10 @@ namespace do_it
             Application.Exit();
         }
 
-        private void txtpwd_KeyUp(object sender, KeyEventArgs e)
+
+        private void txtpwd_KeyUp_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == 13) btnLogin_Click(sender,e);
-            
+            if (e.KeyValue == 13) { btnLogin.PerformClick(); }
         }
     }
 }

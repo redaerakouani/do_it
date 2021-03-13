@@ -165,7 +165,6 @@
             this.label3.Size = new System.Drawing.Size(209, 60);
             this.label3.TabIndex = 3;
             this.label3.Text = "Organize your tasks \r\n         and ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // bunifuButton2
             // 
@@ -343,7 +342,6 @@
             this.tabPage1.Size = new System.Drawing.Size(299, 309);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "signin";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // lblerror
             // 
@@ -354,7 +352,6 @@
             this.lblerror.Name = "lblerror";
             this.lblerror.Size = new System.Drawing.Size(0, 13);
             this.lblerror.TabIndex = 10;
-            this.lblerror.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // txtpwd
             // 
@@ -429,7 +426,7 @@
             this.txtpwd.TextPlaceholder = "passworrd";
             this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.WordWrap = true;
-            this.txtpwd.TextChanged += new System.EventHandler(this.txtpwd_TextChanged);
+            this.txtpwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpwd_KeyUp_1);
             // 
             // txtmail
             // 
@@ -767,7 +764,6 @@
             this.Txtpwdsignup.TextPlaceholder = "passworrd";
             this.Txtpwdsignup.UseSystemPasswordChar = true;
             this.Txtpwdsignup.WordWrap = true;
-            this.Txtpwdsignup.TextChanged += new System.EventHandler(this.Txtpwdsignup_TextChanged);
             // 
             // txtEmail
             // 
@@ -918,7 +914,6 @@
             this.label1.Size = new System.Drawing.Size(180, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Create account";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtfullname
             // 
