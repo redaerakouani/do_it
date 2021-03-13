@@ -37,15 +37,7 @@ namespace do_it
             bunifuPages1.SetPage(tabPage2);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
@@ -78,10 +70,7 @@ namespace do_it
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void FormLoginSignUp_Load(object sender, EventArgs e)
         {
@@ -93,11 +82,11 @@ namespace do_it
             
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            string req = "select * from users where LOGIN like @l or Full_name like @u and password_user like @p ";
+            string req = "select * from users where LOGIN like  @login or Full_name like @login and password_user like @paswd  ";
             SqlCommand com2 = new SqlCommand(req, cn);
-            com2.Parameters.Add(new SqlParameter("@l", txtmail.Text));
-            com2.Parameters.Add(new SqlParameter("@u", txtmail.Text));
-            com2.Parameters.Add(new SqlParameter("@p", txtpwd.Text));
+            com2.Parameters.Add(new SqlParameter("@login", txtmail.Text));
+
+            com2.Parameters.Add(new SqlParameter( "@paswd", txtpwd.Text));
             SqlDataReader dr;
             dr = com2.ExecuteReader();
             if (dr.Read())
@@ -115,34 +104,17 @@ namespace do_it
             }
         }
 
-        private void label6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void txtpwd_TextChanged(object sender, EventArgs e)
+        private void txtpwd_KeyUp(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txtpwdsignup_TextChanged(object sender, EventArgs e)
-        {
-
+            if (e.KeyValue == 13) btnLogin_Click(sender,e);
+            
         }
     }
 }
