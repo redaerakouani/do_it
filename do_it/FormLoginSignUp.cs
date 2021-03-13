@@ -114,6 +114,7 @@ namespace do_it
 
         private void txtpwd_KeyUp_1(object sender, KeyEventArgs e)
         {
+
             if (e.KeyValue == 13) { btnLogin.PerformClick(); }
         }
     }
