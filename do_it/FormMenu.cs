@@ -34,6 +34,9 @@ namespace do_it
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+
+
         }
 
         private void btnminize_Click(object sender, EventArgs e)
