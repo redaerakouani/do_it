@@ -32,5 +32,7 @@ namespace do_it
             this.cATEGORIETableAdapter.Fill(this.dO_ITDataSet.CATEGORIE);
 
         }
+
+        
     }
 }
