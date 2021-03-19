@@ -348,7 +348,7 @@
             this.lblerror.AutoSize = true;
             this.lblerror.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblerror.ForeColor = System.Drawing.Color.Brown;
-            this.lblerror.Location = new System.Drawing.Point(12, 193);
+            this.lblerror.Location = new System.Drawing.Point(26, 218);
             this.lblerror.Name = "lblerror";
             this.lblerror.Size = new System.Drawing.Size(0, 13);
             this.lblerror.TabIndex = 10;
@@ -426,7 +426,6 @@
             this.txtpwd.TextPlaceholder = "passworrd";
             this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.WordWrap = true;
-            this.txtpwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpwd_KeyUp_1);
             // 
             // txtmail
             // 
@@ -565,6 +564,7 @@
             this.btnLogin.TextMarginLeft = 0;
             this.btnLogin.UseDefaultRadiusAndThickness = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyUp);
             // 
             // label2
             // 
@@ -601,7 +601,7 @@
             this.lblerrorsignup.AutoSize = true;
             this.lblerrorsignup.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblerrorsignup.ForeColor = System.Drawing.Color.Brown;
-            this.lblerrorsignup.Location = new System.Drawing.Point(10, 242);
+            this.lblerrorsignup.Location = new System.Drawing.Point(24, 263);
             this.lblerrorsignup.Name = "lblerrorsignup";
             this.lblerrorsignup.Size = new System.Drawing.Size(0, 13);
             this.lblerrorsignup.TabIndex = 17;
@@ -876,7 +876,7 @@
             this.bunifuButton5.IdleIconLeftImage = null;
             this.bunifuButton5.IdleIconRightImage = null;
             this.bunifuButton5.IndicateFocus = false;
-            this.bunifuButton5.Location = new System.Drawing.Point(177, 255);
+            this.bunifuButton5.Location = new System.Drawing.Point(177, 260);
             this.bunifuButton5.Name = "bunifuButton5";
             stateProperties27.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties27.BorderRadius = 35;

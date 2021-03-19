@@ -72,6 +72,37 @@ namespace do_it
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnemail_Click(object sender, EventArgs e)
+        {
+            formtask(new Formmail());
+        }
+
+        private void btnhome_Click(object sender, EventArgs e)
+        {
+           // panelForms.Controls.RemoveAt(0);
+            
+        }
+
+        private void btntask_Click(object sender, EventArgs e)
+        {
+            formtask(new formTask());
+        }
+
+        private void btntools_Click(object sender, EventArgs e)
+        {
+            formtask(new FormTools2());
+        }
+
+        private void btndocs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+
             if (bunifuGradientPanel1.Width == 60)
             {
                 bunifuGradientPanel1.Width = 180;
@@ -84,8 +115,11 @@ namespace do_it
                 btntools.Text = "tools";
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
+                Size = new Size(847, 551);
+      
                 
-                
+
+
             }
             else
             {
@@ -94,26 +128,18 @@ namespace do_it
                 btnpublic.Text = "";
                 btnnote.Text = "";
                 btnemail.Text = "";
-                btnlogout.Text =  "";
+                btnlogout.Text = "";
                 btnhome.Text = "";
                 btntools.Text = "";
                 btndocs.Text = "";
+                Size = new Size(687, 551);
+               
             }
         }
 
-        private void btnemail_Click(object sender, EventArgs e)
+        private void btnClients_Click(object sender, EventArgs e)
         {
-            formtask(new Formmail());
-        }
-
-        private void btnhome_Click(object sender, EventArgs e)
-        {
-          //  formtask(new FormMenu());
-        }
-
-        private void btntask_Click(object sender, EventArgs e)
-        {
-            formtask(new formTask());
+            formtask(new FormClients());
         }
     }
 }

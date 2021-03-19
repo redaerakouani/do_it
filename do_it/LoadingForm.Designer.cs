@@ -84,6 +84,7 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(342, 315);
             this.bunifuGradientPanel1.TabIndex = 2;
+       
             // 
             // pictureBox2
             // 

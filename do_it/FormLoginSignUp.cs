@@ -91,31 +91,47 @@ namespace do_it
             dr = com2.ExecuteReader();
             if (dr.Read())
             {
-                FormMenu f = new FormMenu();
-                f.ShowDialog();
-                this.Hide();
+                if (dr["TYPE_USER"].ToString() == "admin")
+                {
+                    FormClients f = new FormClients();
+                    f.ShowDialog();
+                    this.Hide();
+                }
+                else if (dr["TYPE_USER"].ToString() == "user")
+                {
+                 
+                    FormMenu f = new FormMenu();
+                    f.ShowDialog();
+                    this.Hide();
+                }
             }
-            else if(txtmail.Text == "" || txtpwd.Text == "")
+
+            else if (txtmail.Text == "" || txtpwd.Text == "")
             {
                 lblerror.Text = "please fill mandatory fields";
-            }else
+            }
+            else
             {
                 lblerror.Text = "wrong password or email";
             }
-        }
 
-      
+                
+            }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
-        private void txtpwd_KeyUp_1(object sender, KeyEventArgs e)
+        private void btnLogin_KeyUp(object sender, KeyEventArgs e)
         {
-
             if (e.KeyValue == 13) { btnLogin.PerformClick(); }
         }
     }
+
+      
+    
+
+      
+    
 }

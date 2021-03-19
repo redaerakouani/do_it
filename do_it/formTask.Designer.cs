@@ -33,9 +33,9 @@
             this.cATEGORIEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORIETableAdapter = new do_it.DO_ITDataSetTableAdapters.CATEGORIETableAdapter();
             this.tableAdapterManager = new do_it.DO_ITDataSetTableAdapters.TableAdapterManager();
+            this.tASKTableAdapter = new do_it.DO_ITDataSetTableAdapters.TASKTableAdapter();
             this.cATEGORIEComboBox = new System.Windows.Forms.ComboBox();
             this.tASKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tASKTableAdapter = new do_it.DO_ITDataSetTableAdapters.TASKTableAdapter();
             this.tASKListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dO_ITDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIEBindingSource)).BeginInit();
@@ -65,6 +65,10 @@
             this.tableAdapterManager.UpdateOrder = do_it.DO_ITDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
             // 
+            // tASKTableAdapter
+            // 
+            this.tASKTableAdapter.ClearBeforeFill = true;
+            // 
             // cATEGORIEComboBox
             // 
             this.cATEGORIEComboBox.DataSource = this.cATEGORIEBindingSource;
@@ -80,10 +84,6 @@
             // 
             this.tASKBindingSource.DataMember = "FK_TASK_APPARTIEN_CATEGORI";
             this.tASKBindingSource.DataSource = this.cATEGORIEBindingSource;
-            // 
-            // tASKTableAdapter
-            // 
-            this.tASKTableAdapter.ClearBeforeFill = true;
             // 
             // tASKListBox
             // 
