@@ -426,6 +426,7 @@
             this.txtpwd.TextPlaceholder = "passworrd";
             this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.WordWrap = true;
+            this.txtpwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpwd_KeyUp);
             // 
             // txtmail
             // 
@@ -564,7 +565,6 @@
             this.btnLogin.TextMarginLeft = 0;
             this.btnLogin.UseDefaultRadiusAndThickness = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            this.btnLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyUp);
             // 
             // label2
             // 
