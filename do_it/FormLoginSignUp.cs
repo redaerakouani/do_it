@@ -74,12 +74,12 @@ namespace do_it
 
         private void FormLoginSignUp_Load(object sender, EventArgs e)
         {
-
+            txtEmail.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+             
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             string req = "select * from users where LOGIN like  @login or Full_name like @login and password_user like @paswd  ";
@@ -91,31 +91,28 @@ namespace do_it
             dr = com2.ExecuteReader();
             if (dr.Read())
             {
-                if (dr["TYPE_USER"].ToString() == "admin")
+                if (dr["TYPE_USER"].ToString().Equals("Admin")) 
                 {
                     FormClients f = new FormClients();
                     f.ShowDialog();
                     this.Hide();
                 }
-                else if (dr["TYPE_USER"].ToString() == "user")
+                else 
                 {
-                 
+                    Program.activeUser = com2.Parameters["@login"].Value.ToString();
                     FormMenu f = new FormMenu();
                     f.ShowDialog();
                     this.Hide();
                 }
             }
-
-            else if (txtmail.Text == "" || txtpwd.Text == "")
-            {
-                lblerror.Text = "please fill mandatory fields";
-            }
-            else
-            {
-                lblerror.Text = "wrong password or email";
-            }
-
-                
+                else if (txtmail.Text == "" || txtpwd.Text == "")
+                {
+                    lblerror.Text = "please fill mandatory fields";
+                }
+                else
+                {
+                    lblerror.Text = "wrong password or email";
+                }   
             }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -123,9 +120,10 @@ namespace do_it
             Application.Exit();
         }
 
-        private void btnLogin_KeyUp(object sender, KeyEventArgs e)
+
+        private void txtpwd_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == 13) { btnLogin.PerformClick(); }
+            if (e.KeyValue == 13) btnLogin.PerformClick();
         }
     }
 
