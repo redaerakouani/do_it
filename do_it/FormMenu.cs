@@ -12,6 +12,8 @@ namespace do_it
 {
     public partial class FormMenu : Form
     {
+        public object Applicatication { get; private set; }
+
         public FormMenu()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace do_it
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
+            panelForms.Visible = false;
             timer1.Start();
            
         }
@@ -66,7 +69,8 @@ namespace do_it
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-           
+            panelForms.Visible = true;
+            label1.Visible = false;
         }
 
         private void panelForms_Paint(object sender, PaintEventArgs e)
@@ -79,28 +83,41 @@ namespace do_it
 
         private void btnemail_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
+            label1.Visible = false;
             formtask(new Formmail());
         }
 
         private void btnhome_Click(object sender, EventArgs e)
         {
-           // panelForms.Controls.RemoveAt(0);
-            
+            //   panelForms.Controls.RemoveAt(0);
+            panelForms.Visible = false;
+            label1.Visible = true;
+            //panelForms.Visible = true;
+
+
+            // this.FormMenu_Load(sender, e);   
         }
 
         private void btntask_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
+            label1.Visible = false;
             formtask(new formTask());
+
         }
 
         private void btntools_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
+            label1.Visible = false;
             formtask(new FormTools2());
         }
 
         private void btndocs_Click(object sender, EventArgs e)
         {
-
+            panelForms.Visible = true;
+            label1.Visible = false;
         }
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
@@ -143,6 +160,17 @@ namespace do_it
         private void btnClients_Click(object sender, EventArgs e)
         {
             formtask(new FormClients());
+        }
+
+        private void panelForms_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnpublic_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            label1.Visible = false;
         }
     }
 }

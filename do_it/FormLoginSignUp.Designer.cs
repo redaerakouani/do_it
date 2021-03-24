@@ -224,7 +224,7 @@
             stateProperties2.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties2;
             this.bunifuButton2.Size = new System.Drawing.Size(132, 45);
-            this.bunifuButton2.TabIndex = 2;
+            this.bunifuButton2.TabIndex = 4;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
@@ -418,7 +418,7 @@
             this.txtpwd.ShortcutsEnabled = true;
             this.txtpwd.Size = new System.Drawing.Size(275, 40);
             this.txtpwd.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtpwd.TabIndex = 8;
+            this.txtpwd.TabIndex = 2;
             this.txtpwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtpwd.TextMarginBottom = 0;
             this.txtpwd.TextMarginLeft = 12;
@@ -493,7 +493,7 @@
             this.txtmail.ShortcutsEnabled = true;
             this.txtmail.Size = new System.Drawing.Size(275, 40);
             this.txtmail.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtmail.TabIndex = 7;
+            this.txtmail.TabIndex = 1;
             this.txtmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmail.TextMarginBottom = 0;
             this.txtmail.TextMarginLeft = 12;
@@ -560,7 +560,7 @@
             stateProperties14.IconRightImage = null;
             this.btnLogin.OnPressedState = stateProperties14;
             this.btnLogin.Size = new System.Drawing.Size(110, 41);
-            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.TextMarginLeft = 0;
             this.btnLogin.UseDefaultRadiusAndThickness = true;
