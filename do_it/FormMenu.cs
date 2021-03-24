@@ -95,7 +95,7 @@ namespace do_it
             label1.Visible = true;
             //panelForms.Visible = true;
 
-
+               
             // this.FormMenu_Load(sender, e);   
         }
 
