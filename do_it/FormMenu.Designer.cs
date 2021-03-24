@@ -74,11 +74,9 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.btnminize = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.paneltop.SuspendLayout();
-            this.panelForms.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,9 +91,9 @@
             this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Controls.Add(this.btnhome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 82);
+            this.panel2.Location = new System.Drawing.Point(0, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 462);
+            this.panel2.Size = new System.Drawing.Size(60, 476);
             this.panel2.TabIndex = 3;
             // 
             // btntools
@@ -161,7 +159,6 @@
             this.btntools.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btntools.TextMarginLeft = 0;
             this.btntools.UseDefaultRadiusAndThickness = true;
-            this.btntools.Click += new System.EventHandler(this.btntools_Click);
             // 
             // btnnote
             // 
@@ -356,7 +353,6 @@
             this.btndocs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btndocs.TextMarginLeft = 0;
             this.btndocs.UseDefaultRadiusAndThickness = true;
-            this.btndocs.Click += new System.EventHandler(this.btndocs_Click);
             // 
             // btnpublic
             // 
@@ -485,7 +481,6 @@
             this.btntask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btntask.TextMarginLeft = 0;
             this.btntask.UseDefaultRadiusAndThickness = true;
-            this.btntask.Click += new System.EventHandler(this.btntask_Click);
             // 
             // btnlogout
             // 
@@ -516,7 +511,7 @@
             this.btnlogout.ForeColor = System.Drawing.Color.Transparent;
             this.btnlogout.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogout.IconMarginLeft = 11;
-            this.btnlogout.IconPadding = 13;
+            this.btnlogout.IconPadding = 14;
             this.btnlogout.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogout.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnlogout.IdleBorderRadius = 3;
@@ -525,7 +520,7 @@
             this.btnlogout.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnlogout.IdleIconLeftImage")));
             this.btnlogout.IdleIconRightImage = null;
             this.btnlogout.IndicateFocus = false;
-            this.btnlogout.Location = new System.Drawing.Point(0, 404);
+            this.btnlogout.Location = new System.Drawing.Point(0, 418);
             this.btnlogout.Name = "btnlogout";
             stateProperties13.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties13.BorderRadius = 3;
@@ -675,7 +670,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(60, 542);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(60, 551);
             this.bunifuGradientPanel1.TabIndex = 4;
             // 
             // paneltop
@@ -685,7 +680,7 @@
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(60, 82);
+            this.paneltop.Size = new System.Drawing.Size(60, 75);
             this.paneltop.TabIndex = 2;
             // 
             // btnmenu
@@ -713,11 +708,11 @@
             this.btnmenu.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnmenu.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnmenu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenu.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenu.ForeColor = System.Drawing.Color.Transparent;
             this.btnmenu.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnmenu.IconMarginLeft = 11;
-            this.btnmenu.IconPadding = 16;
+            this.btnmenu.IconPadding = 13;
             this.btnmenu.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.btnmenu.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnmenu.IdleBorderRadius = 3;
@@ -747,11 +742,11 @@
             stateProperties18.IconRightImage = null;
             this.btnmenu.OnPressedState = stateProperties18;
             this.btnmenu.Size = new System.Drawing.Size(60, 58);
-            this.btnmenu.TabIndex = 13;
+            this.btnmenu.TabIndex = 12;
             this.btnmenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnmenu.TextMarginLeft = 0;
             this.btnmenu.UseDefaultRadiusAndThickness = true;
-            this.btnmenu.Click += new System.EventHandler(this.bunifuButton1_Click_1);
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // btnclose
             // 
@@ -782,30 +777,18 @@
             // panelForms
             // 
             this.panelForms.BackColor = System.Drawing.Color.Transparent;
-            this.panelForms.Controls.Add(this.label1);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelForms.Location = new System.Drawing.Point(60, 23);
+            this.panelForms.Location = new System.Drawing.Point(60, 32);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(674, 519);
+            this.panelForms.Size = new System.Drawing.Size(787, 519);
             this.panelForms.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(232, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 86);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(734, 542);
+            this.ClientSize = new System.Drawing.Size(847, 551);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.btnminize);
             this.Controls.Add(this.btnclose);
@@ -818,8 +801,6 @@
             this.panel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.paneltop.ResumeLayout(false);
-            this.panelForms.ResumeLayout(false);
-            this.panelForms.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -839,9 +820,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnemail;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnnote;
         private System.Windows.Forms.Panel paneltop;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnmenu;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btntools;
         private System.Windows.Forms.Panel panelForms;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnmenu;
-        private System.Windows.Forms.Label label1;
     }
 }

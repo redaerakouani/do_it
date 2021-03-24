@@ -165,6 +165,7 @@
             this.label3.Size = new System.Drawing.Size(209, 60);
             this.label3.TabIndex = 3;
             this.label3.Text = "Organize your tasks \r\n         and ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // bunifuButton2
             // 
@@ -300,15 +301,15 @@
             this.bunifuPages1.AllowTransitions = true;
             this.bunifuPages1.Controls.Add(this.tabPage1);
             this.bunifuPages1.Controls.Add(this.tabPage2);
-            this.bunifuPages1.Location = new System.Drawing.Point(316, 12);
+            this.bunifuPages1.Location = new System.Drawing.Point(316, 27);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage1;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage1";
-            this.bunifuPages1.PageTitle = "signin";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "signup";
             this.bunifuPages1.SelectedIndex = 0;
-            this.bunifuPages1.Size = new System.Drawing.Size(307, 335);
+            this.bunifuPages1.Size = new System.Drawing.Size(307, 311);
             this.bunifuPages1.TabIndex = 1;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -339,19 +340,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(299, 309);
+            this.tabPage1.Size = new System.Drawing.Size(299, 285);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "signin";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // lblerror
             // 
             this.lblerror.AutoSize = true;
             this.lblerror.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblerror.ForeColor = System.Drawing.Color.Brown;
-            this.lblerror.Location = new System.Drawing.Point(26, 218);
+            this.lblerror.Location = new System.Drawing.Point(12, 193);
             this.lblerror.Name = "lblerror";
             this.lblerror.Size = new System.Drawing.Size(0, 13);
             this.lblerror.TabIndex = 10;
+            this.lblerror.Click += new System.EventHandler(this.label6_Click_1);
             // 
             // txtpwd
             // 
@@ -365,9 +368,9 @@
             this.txtpwd.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtpwd.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtpwd.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtpwd.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtpwd.BorderRadius = 25;
-            this.txtpwd.BorderThickness = 2;
+            this.txtpwd.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtpwd.BorderRadius = 1;
+            this.txtpwd.BorderThickness = 1;
             this.txtpwd.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpwd.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -377,11 +380,11 @@
             this.txtpwd.HideSelection = true;
             this.txtpwd.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtpwd.IconLeft")));
             this.txtpwd.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpwd.IconPadding = 8;
+            this.txtpwd.IconPadding = 5;
             this.txtpwd.IconRight = null;
             this.txtpwd.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpwd.Lines = new string[0];
-            this.txtpwd.Location = new System.Drawing.Point(12, 166);
+            this.txtpwd.Location = new System.Drawing.Point(12, 159);
             this.txtpwd.MaxLength = 32767;
             this.txtpwd.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtpwd.Modified = false;
@@ -402,7 +405,7 @@
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtpwd.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             stateProperties8.ForeColor = System.Drawing.Color.DimGray;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -416,7 +419,7 @@
             this.txtpwd.SelectionLength = 0;
             this.txtpwd.SelectionStart = 0;
             this.txtpwd.ShortcutsEnabled = true;
-            this.txtpwd.Size = new System.Drawing.Size(275, 40);
+            this.txtpwd.Size = new System.Drawing.Size(275, 35);
             this.txtpwd.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtpwd.TabIndex = 8;
             this.txtpwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -426,7 +429,6 @@
             this.txtpwd.TextPlaceholder = "passworrd";
             this.txtpwd.UseSystemPasswordChar = true;
             this.txtpwd.WordWrap = true;
-            this.txtpwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpwd_KeyUp);
             // 
             // txtmail
             // 
@@ -441,8 +443,8 @@
             this.txtmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtmail.BorderRadius = 25;
-            this.txtmail.BorderThickness = 2;
+            this.txtmail.BorderRadius = 1;
+            this.txtmail.BorderThickness = 1;
             this.txtmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -452,11 +454,11 @@
             this.txtmail.HideSelection = true;
             this.txtmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtmail.IconLeft")));
             this.txtmail.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmail.IconPadding = 8;
+            this.txtmail.IconPadding = 5;
             this.txtmail.IconRight = null;
             this.txtmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmail.Lines = new string[0];
-            this.txtmail.Location = new System.Drawing.Point(15, 98);
+            this.txtmail.Location = new System.Drawing.Point(12, 90);
             this.txtmail.MaxLength = 32767;
             this.txtmail.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtmail.Modified = false;
@@ -491,7 +493,7 @@
             this.txtmail.SelectionLength = 0;
             this.txtmail.SelectionStart = 0;
             this.txtmail.ShortcutsEnabled = true;
-            this.txtmail.Size = new System.Drawing.Size(275, 40);
+            this.txtmail.Size = new System.Drawing.Size(275, 35);
             this.txtmail.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmail.TabIndex = 7;
             this.txtmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -539,7 +541,7 @@
             this.btnLogin.IdleIconLeftImage = null;
             this.btnLogin.IdleIconRightImage = null;
             this.btnLogin.IndicateFocus = false;
-            this.btnLogin.Location = new System.Drawing.Point(178, 235);
+            this.btnLogin.Location = new System.Drawing.Point(178, 220);
             this.btnLogin.Name = "btnLogin";
             stateProperties13.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties13.BorderRadius = 35;
@@ -592,7 +594,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(299, 309);
+            this.tabPage2.Size = new System.Drawing.Size(299, 285);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "signup";
             // 
@@ -601,7 +603,7 @@
             this.lblerrorsignup.AutoSize = true;
             this.lblerrorsignup.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblerrorsignup.ForeColor = System.Drawing.Color.Brown;
-            this.lblerrorsignup.Location = new System.Drawing.Point(24, 263);
+            this.lblerrorsignup.Location = new System.Drawing.Point(10, 242);
             this.lblerrorsignup.Name = "lblerrorsignup";
             this.lblerrorsignup.Size = new System.Drawing.Size(0, 13);
             this.lblerrorsignup.TabIndex = 17;
@@ -611,7 +613,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(18, 194);
+            this.label6.Location = new System.Drawing.Point(11, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 16;
@@ -629,9 +631,9 @@
             this.txtconfirmpwd.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtconfirmpwd.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtconfirmpwd.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtconfirmpwd.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtconfirmpwd.BorderRadius = 25;
-            this.txtconfirmpwd.BorderThickness = 2;
+            this.txtconfirmpwd.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtconfirmpwd.BorderRadius = 1;
+            this.txtconfirmpwd.BorderThickness = 1;
             this.txtconfirmpwd.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtconfirmpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtconfirmpwd.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -641,11 +643,11 @@
             this.txtconfirmpwd.HideSelection = true;
             this.txtconfirmpwd.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtconfirmpwd.IconLeft")));
             this.txtconfirmpwd.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtconfirmpwd.IconPadding = 8;
+            this.txtconfirmpwd.IconPadding = 5;
             this.txtconfirmpwd.IconRight = null;
             this.txtconfirmpwd.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtconfirmpwd.Lines = new string[0];
-            this.txtconfirmpwd.Location = new System.Drawing.Point(13, 215);
+            this.txtconfirmpwd.Location = new System.Drawing.Point(12, 188);
             this.txtconfirmpwd.MaxLength = 32767;
             this.txtconfirmpwd.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtconfirmpwd.Modified = false;
@@ -666,7 +668,7 @@
             stateProperties17.ForeColor = System.Drawing.Color.Empty;
             stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtconfirmpwd.OnHoverState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties18.BorderColor = System.Drawing.Color.Silver;
             stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             stateProperties18.ForeColor = System.Drawing.Color.DimGray;
             stateProperties18.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -680,7 +682,7 @@
             this.txtconfirmpwd.SelectionLength = 0;
             this.txtconfirmpwd.SelectionStart = 0;
             this.txtconfirmpwd.ShortcutsEnabled = true;
-            this.txtconfirmpwd.Size = new System.Drawing.Size(275, 40);
+            this.txtconfirmpwd.Size = new System.Drawing.Size(275, 35);
             this.txtconfirmpwd.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtconfirmpwd.TabIndex = 13;
             this.txtconfirmpwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -703,9 +705,9 @@
             this.Txtpwdsignup.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.Txtpwdsignup.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.Txtpwdsignup.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.Txtpwdsignup.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.Txtpwdsignup.BorderRadius = 25;
-            this.Txtpwdsignup.BorderThickness = 2;
+            this.Txtpwdsignup.BorderColorIdle = System.Drawing.Color.Silver;
+            this.Txtpwdsignup.BorderRadius = 1;
+            this.Txtpwdsignup.BorderThickness = 1;
             this.Txtpwdsignup.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Txtpwdsignup.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Txtpwdsignup.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -715,11 +717,11 @@
             this.Txtpwdsignup.HideSelection = true;
             this.Txtpwdsignup.IconLeft = ((System.Drawing.Image)(resources.GetObject("Txtpwdsignup.IconLeft")));
             this.Txtpwdsignup.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txtpwdsignup.IconPadding = 8;
+            this.Txtpwdsignup.IconPadding = 5;
             this.Txtpwdsignup.IconRight = null;
             this.Txtpwdsignup.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.Txtpwdsignup.Lines = new string[0];
-            this.Txtpwdsignup.Location = new System.Drawing.Point(13, 149);
+            this.Txtpwdsignup.Location = new System.Drawing.Point(12, 129);
             this.Txtpwdsignup.MaxLength = 32767;
             this.Txtpwdsignup.MinimumSize = new System.Drawing.Size(100, 35);
             this.Txtpwdsignup.Modified = false;
@@ -740,7 +742,7 @@
             stateProperties21.ForeColor = System.Drawing.Color.Empty;
             stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.Txtpwdsignup.OnHoverState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties22.BorderColor = System.Drawing.Color.Silver;
             stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             stateProperties22.ForeColor = System.Drawing.Color.DimGray;
             stateProperties22.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -754,7 +756,7 @@
             this.Txtpwdsignup.SelectionLength = 0;
             this.Txtpwdsignup.SelectionStart = 0;
             this.Txtpwdsignup.ShortcutsEnabled = true;
-            this.Txtpwdsignup.Size = new System.Drawing.Size(275, 40);
+            this.Txtpwdsignup.Size = new System.Drawing.Size(275, 35);
             this.Txtpwdsignup.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.Txtpwdsignup.TabIndex = 12;
             this.Txtpwdsignup.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -777,9 +779,9 @@
             this.txtEmail.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtEmail.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtEmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtEmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtEmail.BorderRadius = 25;
-            this.txtEmail.BorderThickness = 2;
+            this.txtEmail.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtEmail.BorderRadius = 1;
+            this.txtEmail.BorderThickness = 1;
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -789,11 +791,11 @@
             this.txtEmail.HideSelection = true;
             this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
             this.txtEmail.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.IconPadding = 8;
+            this.txtEmail.IconPadding = 5;
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(13, 97);
+            this.txtEmail.Location = new System.Drawing.Point(12, 82);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtEmail.Modified = false;
@@ -814,7 +816,7 @@
             stateProperties25.ForeColor = System.Drawing.Color.Empty;
             stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtEmail.OnHoverState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties26.BorderColor = System.Drawing.Color.Silver;
             stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             stateProperties26.ForeColor = System.Drawing.Color.DimGray;
             stateProperties26.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -828,7 +830,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(275, 40);
+            this.txtEmail.Size = new System.Drawing.Size(275, 35);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 11;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -876,7 +878,7 @@
             this.bunifuButton5.IdleIconLeftImage = null;
             this.bunifuButton5.IdleIconRightImage = null;
             this.bunifuButton5.IndicateFocus = false;
-            this.bunifuButton5.Location = new System.Drawing.Point(177, 260);
+            this.bunifuButton5.Location = new System.Drawing.Point(177, 233);
             this.bunifuButton5.Name = "bunifuButton5";
             stateProperties27.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties27.BorderRadius = 35;
@@ -909,7 +911,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label1.Location = new System.Drawing.Point(53, -3);
+            this.label1.Location = new System.Drawing.Point(52, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 32);
             this.label1.TabIndex = 2;
@@ -928,8 +930,8 @@
             this.txtfullname.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtfullname.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtfullname.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtfullname.BorderRadius = 25;
-            this.txtfullname.BorderThickness = 2;
+            this.txtfullname.BorderRadius = 1;
+            this.txtfullname.BorderThickness = 1;
             this.txtfullname.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtfullname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtfullname.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -939,11 +941,11 @@
             this.txtfullname.HideSelection = true;
             this.txtfullname.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtfullname.IconLeft")));
             this.txtfullname.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtfullname.IconPadding = 8;
+            this.txtfullname.IconPadding = 5;
             this.txtfullname.IconRight = null;
             this.txtfullname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtfullname.Lines = new string[0];
-            this.txtfullname.Location = new System.Drawing.Point(13, 44);
+            this.txtfullname.Location = new System.Drawing.Point(12, 36);
             this.txtfullname.MaxLength = 32767;
             this.txtfullname.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtfullname.Modified = false;
@@ -978,7 +980,7 @@
             this.txtfullname.SelectionLength = 0;
             this.txtfullname.SelectionStart = 0;
             this.txtfullname.ShortcutsEnabled = true;
-            this.txtfullname.Size = new System.Drawing.Size(275, 40);
+            this.txtfullname.Size = new System.Drawing.Size(275, 35);
             this.txtfullname.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtfullname.TabIndex = 10;
             this.txtfullname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
