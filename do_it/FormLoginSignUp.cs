@@ -24,15 +24,20 @@ namespace do_it
             bunifuFormDock1.SubscribeControlToDragEvents(tabPage1);
             bunifuFormDock1.SubscribeControlToDragEvents(tabPage2);
         }
+
+      
         //switch sign up//sign in
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(tabPage1);
         }
+
         private void bunifuButton2_Click_2(object sender, EventArgs e)
         {
             bunifuPages1.SetPage(tabPage2);
         }
+
+      
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
@@ -69,7 +74,7 @@ namespace do_it
 
         private void FormLoginSignUp_Load(object sender, EventArgs e)
         {
-           
+            txtEmail.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -80,6 +85,7 @@ namespace do_it
             string req = "select * from users where LOGIN like  @login or Full_name like @login and password_user like @paswd  ";
             SqlCommand com2 = new SqlCommand(req, cn);
             com2.Parameters.Add(new SqlParameter("@login", txtmail.Text));
+
             com2.Parameters.Add(new SqlParameter( "@paswd", txtpwd.Text));
             SqlDataReader dr;
             dr = com2.ExecuteReader();
@@ -113,9 +119,17 @@ namespace do_it
         {
             Application.Exit();
         }
+
+
         private void txtpwd_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13) btnLogin.PerformClick();
         }
     }
+
+      
+    
+
+      
+    
 }
