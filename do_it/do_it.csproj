@@ -34,19 +34,28 @@
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
-      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
-      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Tech4Each-20210221T142205Z-001\Tech4Each\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -62,12 +71,21 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsFormsCalendar">
+      <HintPath>..\..\..\WinFormsCalendar_1.1\WindowsFormsCalendar.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DO_ITDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DO_ITDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClients.Designer.cs">
+      <DependentUpon>FormClients.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLoginSignUp.cs">
       <SubType>Form</SubType>
@@ -87,6 +105,18 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="formTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTask.Designer.cs">
+      <DependentUpon>formTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTools2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTools2.Designer.cs">
+      <DependentUpon>FormTools2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLoginSignUp.resx">
       <DependentUpon>FormLoginSignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTask.resx">
+      <DependentUpon>formTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTools2.resx">
+      <DependentUpon>FormTools2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

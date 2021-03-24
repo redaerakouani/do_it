@@ -65,5 +65,10 @@ namespace do_it
                 MessageBox.Show("Something wrong \n" + ex.Message, "error");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
