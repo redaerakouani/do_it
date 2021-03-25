@@ -18,19 +18,19 @@ namespace do_it
         {
             InitializeComponent();
             bunifuFormDock1.SubscribeControlToDragEvents(bunifuGradientPanel1);
-          
+
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             panelForms.Visible = false;
             timer1.Start();
-           
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           // label1.Text = DateTime.Now.ToLongTimeString();
+            // label1.Text = DateTime.Now.ToLongTimeString();
             //label2.Text = DateTime.Now.ToLongDateString();
         }
 
@@ -65,7 +65,7 @@ namespace do_it
             f.Show();
         }
 
-        
+
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
@@ -75,7 +75,7 @@ namespace do_it
 
         private void panelForms_Paint(object sender, PaintEventArgs e)
         {
-                    }
+        }
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
@@ -95,7 +95,7 @@ namespace do_it
             label1.Visible = true;
             //panelForms.Visible = true;
 
-               
+
             // this.FormMenu_Load(sender, e);   
         }
 
@@ -136,8 +136,8 @@ namespace do_it
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
                 Size = new Size(847, 551);
-      
-                
+
+
 
 
             }
@@ -153,7 +153,7 @@ namespace do_it
                 btntools.Text = "";
                 btndocs.Text = "";
                 Size = new Size(687, 551);
-               
+
             }
         }
 
@@ -172,5 +172,7 @@ namespace do_it
             panelForms.Visible = true;
             label1.Visible = false;
         }
+
+        
     }
 }

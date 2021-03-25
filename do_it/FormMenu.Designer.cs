@@ -616,7 +616,6 @@
             this.btnhome.TextMarginLeft = 0;
             this.btnhome.UseDefaultRadiusAndThickness = true;
             this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
-           
             // 
             // bunifuFormDock1
             // 
@@ -796,6 +795,7 @@
             this.label1.Size = new System.Drawing.Size(226, 86);
             this.label1.TabIndex = 0;
             this.label1.Text = "Home";
+            
             // 
             // FormMenu
             // 
