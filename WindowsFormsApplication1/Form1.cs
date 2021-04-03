@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace do_it
+namespace WindowsFormsApplication1
 {
-    public partial class FormNotes : Form
+    public partial class Form1 : Form
     {
-        public FormNotes()
+        public Form1()
         {
             InitializeComponent();
         }

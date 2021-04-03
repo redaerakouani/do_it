@@ -24,7 +24,6 @@ namespace do_it
 
         public string get_userID()
         {
-            
             string id="";
             cn = new SqlConnection(cs);
             cn.Open();
@@ -65,7 +64,7 @@ namespace do_it
             dr = null;
             return id;
         }
-        public void datepicker_value(string cs, SqlConnection cn, string req,BunifuDatePicker datepiker)
+        public void datepicker_value(string cs, SqlConnection cn, string req, BunifuDatepicker datepiker)
         {
 
             cn = new SqlConnection(cs);
@@ -156,10 +155,7 @@ namespace do_it
 
         private void formTask_Load(object sender, EventArgs e)
         {
-            //bunifuDatepicker1.Enabled = false;
-            //bunifuDatepicker2.Enabled = false;
-
-
+            
             string req2 = "select CAT_NAME from CATEGORIE";
             remplircombo(cs, cn, req2, combbx_cat);
             combbx_cat.SelectedIndex=0; 
@@ -167,17 +163,13 @@ namespace do_it
 
         private void combbx_cat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                string req = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
-                remplirlist(cs, cn, req, DataGridtasks);
-                string req1 = "select STATUS from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
-                checkboxvalue(cs, cn, req1, bunifuCheckBox1);
-                string req2 = "select public_task from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
-                checkboxvalue(cs, cn, req, bunifuCheckBox4);
-            }
-            catch{}
-            
+
+            string req = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText( combbx_cat.SelectedItem) + "' ";
+            remplirlist(cs, cn, req, DataGridtasks);
+            string req1 = "select STATUS from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
+            checkboxvalue(cs, cn, req1, bunifuCheckBox1);
+            string req2 = "select public_task from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
+            checkboxvalue(cs, cn, req, bunifuCheckBox4);
         }
 
         private void DataGridtasks_SelectionChanged(object sender, EventArgs e)
@@ -193,7 +185,10 @@ namespace do_it
                 string req4 = "select END_TIME from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION= '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
                 datepicker_value(cs, cn, req4, bunifuDatepicker2);
             }
-            catch {}
+            catch(Exception ex)
+            {
+                //
+            }
             
         }
 
@@ -240,47 +235,25 @@ namespace do_it
                 //recharge list data 
                 string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
                 remplirlist(cs, cn, req2, DataGridtasks);
-                txt_new_tsk.Clear();
-                panelDatePicker.Enabled = false;
-                //bunifuDatepicker1.Enabled = false;
-                //bunifuDatepicker2.Enabled = false;
-
             }
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("are you sure you want to delete this task ","delete",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)==DialogResult.OK)
-            {
-                string req = "delete from TASK where ID_USER in (select ID_USER from users where FULL_NAME = '" + Program.activeUser + "') and DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
-                cn = new SqlConnection(cs);
-                cn.Open();
+            string req = "delete from TASK where ID_USER in (select ID_USER from users where FULL_NAME = '" + Program.activeUser + "') and DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
+            cn = new SqlConnection(cs);
+            cn.Open();
 
-                comd = new SqlCommand(req, cn);
-                comd.ExecuteNonQuery();
+            comd = new SqlCommand(req, cn);
+            comd.ExecuteNonQuery();
 
 
 
-                string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
-                remplirlist(cs, cn, req2, DataGridtasks);
-
-            }
-            
+            string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
+            remplirlist(cs, cn, req2, DataGridtasks);
 
 
         }
 
-        private void txt_new_tsk_KeyDown(object sender, KeyEventArgs e)
-        {
-            panelDatePicker.Enabled = true;
-
-            //bunifuDatepicker1.Enabled=true;
-            //bunifuDatepicker2.Enabled=true;
-        }
-
-        private void txt_new_tsk_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

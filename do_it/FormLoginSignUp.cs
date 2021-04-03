@@ -27,15 +27,7 @@ namespace do_it
 
       
         //switch sign up//sign in
-        private void bunifuButton1_Click_1(object sender, EventArgs e)
-        {
-            bunifuPages1.SetPage(tabPage1);
-        }
-
-        private void bunifuButton2_Click_2(object sender, EventArgs e)
-        {
-            bunifuPages1.SetPage(tabPage2);
-        }
+    
 
       
 
@@ -70,10 +62,9 @@ namespace do_it
 
         }
 
-        private void FormLoginSignUp_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = txtmail;
-        }
+    
+
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -91,16 +82,20 @@ namespace do_it
             {
                 if (dr["TYPE_USER"].ToString().Equals("Admin")) 
                 {
-                    FormClients f = new FormClients();
-                    f.ShowDialog();
+                    FormAdmin f = new FormAdmin();
                     this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                   
                 }
                 else 
                 {
                     Program.activeUser = com2.Parameters["@login"].Value.ToString();
                     FormMenu f = new FormMenu();
-                    f.ShowDialog();
                     this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                    
                 }
             }
                 else if (txtmail.Text == "" || txtpwd.Text == "")
@@ -124,7 +119,21 @@ namespace do_it
             if (e.KeyValue == 13) btnLogin.PerformClick();
         }
 
-        
+        private void FormLoginSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            loginSignupPage.SetPage(tabPage1);
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            loginSignupPage.SetPage(tabPage2);
+        }
+       
     }
 
       

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace do_it
 {
-    public partial class FormNotes : Form
+    public partial class Form1 : Form
     {
-        public FormNotes()
+        public Form1()
         {
             InitializeComponent();
         }

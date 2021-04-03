@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace do_it
+namespace WindowsFormsApplication1
 {
     static class Program
     {
-        public static string activeUser;
-
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -17,7 +15,7 @@ namespace do_it
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadingForm());
+            Application.Run(new Form1());
         }
     }
 }

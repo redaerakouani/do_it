@@ -82,7 +82,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(6, 67);
+            this.label7.Location = new System.Drawing.Point(6, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 21);
             this.label7.TabIndex = 37;
@@ -93,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(9, 136);
+            this.label4.Location = new System.Drawing.Point(9, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 21);
             this.label4.TabIndex = 35;
@@ -104,7 +104,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(9, 197);
+            this.label3.Location = new System.Drawing.Point(9, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 21);
             this.label3.TabIndex = 34;
@@ -115,7 +115,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(9, 266);
+            this.label2.Location = new System.Drawing.Point(9, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 33;
@@ -127,7 +127,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(9, 26);
+            this.label6.Location = new System.Drawing.Point(9, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 21);
             this.label6.TabIndex = 32;
@@ -147,7 +147,7 @@
             this.txtmailpwd.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmailpwd.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmailpwd.BorderRadius = 25;
-            this.txtmailpwd.BorderThickness = 2;
+            this.txtmailpwd.BorderThickness = 1;
             this.txtmailpwd.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmailpwd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmailpwd.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -161,7 +161,7 @@
             this.txtmailpwd.IconRight = null;
             this.txtmailpwd.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmailpwd.Lines = new string[0];
-            this.txtmailpwd.Location = new System.Drawing.Point(91, 59);
+            this.txtmailpwd.Location = new System.Drawing.Point(91, 64);
             this.txtmailpwd.MaxLength = 32767;
             this.txtmailpwd.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtmailpwd.Modified = false;
@@ -349,7 +349,7 @@
             this.txtsubject.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtsubject.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtsubject.BorderRadius = 25;
-            this.txtsubject.BorderThickness = 2;
+            this.txtsubject.BorderThickness = 1;
             this.txtsubject.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtsubject.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsubject.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -423,7 +423,7 @@
             this.txtTo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtTo.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtTo.BorderRadius = 25;
-            this.txtTo.BorderThickness = 2;
+            this.txtTo.BorderThickness = 1;
             this.txtTo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTo.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -497,7 +497,7 @@
             this.txtname.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtname.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtname.BorderRadius = 25;
-            this.txtname.BorderThickness = 2;
+            this.txtname.BorderThickness = 1;
             this.txtname.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtname.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -571,7 +571,7 @@
             this.txtmail.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmail.BorderRadius = 25;
-            this.txtmail.BorderThickness = 2;
+            this.txtmail.BorderThickness = 1;
             this.txtmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -663,7 +663,7 @@
             this.txtmessage.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmessage.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.txtmessage.BorderRadius = 50;
-            this.txtmessage.BorderThickness = 2;
+            this.txtmessage.BorderThickness = 1;
             this.txtmessage.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmessage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmessage.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
@@ -681,7 +681,7 @@
             this.txtmessage.MaxLength = 32767;
             this.txtmessage.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtmessage.Modified = false;
-            this.txtmessage.Multiline = false;
+            this.txtmessage.Multiline = true;
             this.txtmessage.Name = "txtmessage";
             stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             stateProperties25.FillColor = System.Drawing.Color.Empty;
