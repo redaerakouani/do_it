@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Tulpep.NotificationWindow;
 
 namespace do_it
 {
@@ -26,11 +25,6 @@ namespace do_it
         {
             panelForms.Visible = false;
             timer1.Start();
-            PopupNotifier popup = new PopupNotifier();
-            popup.Image = Properties.Resources.info_30px;
-            popup.TitleText = "Reminder";
-            popup.ContentText = "welcome back";
-            popup.Popup();
 
         }
 
@@ -77,6 +71,8 @@ namespace do_it
         {
             panelForms.Visible = true;
             label1.Visible = false;
+            formtask(new FormNotes());
+
         }
 
         private void panelForms_Paint(object sender, PaintEventArgs e)
@@ -97,11 +93,12 @@ namespace do_it
         private void btnhome_Click(object sender, EventArgs e)
         {
             //   panelForms.Controls.RemoveAt(0);
-            panelForms.Visible = false;
-            label1.Visible = true;
+            //panelForms.Visible = false;
+            //label1.Visible = true;
             //panelForms.Visible = true;
-
-
+            panelForms.Visible = true;
+            label1.Visible = false;
+            formtask(new FormHome());
             // this.FormMenu_Load(sender, e);   
         }
 
@@ -141,7 +138,7 @@ namespace do_it
                 btntools.Text = "tools";
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
-                Size = new Size(847, 542);
+                Size = new Size(847, 551);
 
 
 
@@ -158,14 +155,14 @@ namespace do_it
                 btnhome.Text = "";
                 btntools.Text = "";
                 btndocs.Text = "";
-                Size = new Size(734, 542);
+                Size = new Size(687, 551);
 
             }
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            formtask(new FormAdmin());
+            formtask(new FormClients());
         }
 
         private void panelForms_Paint_1(object sender, PaintEventArgs e)
