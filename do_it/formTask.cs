@@ -158,18 +158,25 @@ namespace do_it
             
             string req2 = "select CAT_NAME from CATEGORIE";
             remplircombo(cs, cn, req2, combbx_cat);
-            combbx_cat.SelectedIndex=0; 
+            combbx_cat.SelectedIndex=0;
+           
         }
 
         private void combbx_cat_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            try
+            {
             string req = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText( combbx_cat.SelectedItem) + "' ";
             remplirlist(cs, cn, req, DataGridtasks);
             string req1 = "select STATUS from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
             checkboxvalue(cs, cn, req1, bunifuCheckBox1);
             string req2 = "select public_task from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
             checkboxvalue(cs, cn, req, bunifuCheckBox4);
+            }catch(Exception ex)
+            {
+
+            }
+           
         }
 
         private void DataGridtasks_SelectionChanged(object sender, EventArgs e)
@@ -251,6 +258,5 @@ namespace do_it
 
 
         }
-
     }
 }

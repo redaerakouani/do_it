@@ -71,6 +71,8 @@ namespace do_it
         {
             panelForms.Visible = true;
             label1.Visible = false;
+            formtask(new FormNotes());
+
         }
 
         private void panelForms_Paint(object sender, PaintEventArgs e)
@@ -91,11 +93,12 @@ namespace do_it
         private void btnhome_Click(object sender, EventArgs e)
         {
             //   panelForms.Controls.RemoveAt(0);
-            panelForms.Visible = false;
-            label1.Visible = true;
+            //panelForms.Visible = false;
+            //label1.Visible = true;
             //panelForms.Visible = true;
-
-
+            panelForms.Visible = true;
+            label1.Visible = false;
+            formtask(new FormHome());
             // this.FormMenu_Load(sender, e);   
         }
 

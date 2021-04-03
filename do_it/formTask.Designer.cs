@@ -407,6 +407,7 @@
             this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker2.FormatCustom = null;
             this.bunifuDatepicker2.Location = new System.Drawing.Point(359, 310);
+            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuDatepicker2.Name = "bunifuDatepicker2";
             this.bunifuDatepicker2.Size = new System.Drawing.Size(303, 47);
             this.bunifuDatepicker2.TabIndex = 18;
@@ -421,6 +422,7 @@
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
             this.bunifuDatepicker1.Location = new System.Drawing.Point(359, 194);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 48);
             this.bunifuDatepicker1.TabIndex = 19;

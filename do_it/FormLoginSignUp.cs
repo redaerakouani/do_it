@@ -70,11 +70,9 @@ namespace do_it
 
         }
 
-    
-
         private void FormLoginSignUp_Load(object sender, EventArgs e)
         {
-            txtEmail.Focus();
+            this.ActiveControl = txtmail;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

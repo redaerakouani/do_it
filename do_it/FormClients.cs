@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,8 @@ namespace do_it
 {
     public partial class FormClients : Form
     {
+        string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
+
         public FormClients()
         {
             InitializeComponent();
@@ -63,9 +67,17 @@ namespace do_it
 
         private void btnremove_Click(object sender, EventArgs e)
         {
-            usersBindingSource.RemoveCurrent();
-            tableAdapterManager.UpdateAll(dO_ITDataSet);
-            activate(true);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            string req = "delete from users where ID_USER = " + iD_USERTextBox.Text;
+            SqlCommand com = new SqlCommand(req, cn);
+            com.ExecuteNonQuery();
+            usersListBox.Refresh();
+            this.usersTableAdapter.Fill(this.dO_ITDataSet.users);
+
+            //usersBindingSource.RemoveCurrent();
+            //tableAdapterManager.UpdateAll(dO_ITDataSet);
+            //activate(true);
         }
 
         private void btnvalidate_Click(object sender, EventArgs e)
