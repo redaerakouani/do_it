@@ -337,6 +337,32 @@
         lqYAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bunifuDatepicker2.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGCSURBVFhH7ZZNTsMwEIWNuAGNkLgAS5asOQBXQeIGoK5Y
+        IdrcggMhkapnCXnWvHQytlMnTpCQ+KSRMs9vPNPa/XGWp7dti5B0MqX1/wP8/gAf18c7XRR7zo1UPXog
+        j0ITYn/1fR97zo2xemkXok0IFM5pzkjVS7sQa1wrpF1IzLxGSLuQmHmNkHYhZw2F/L0BmJfqJKX3WAPz
+        Up2k9B5rYF6qZ2ML9WYlejazCxPU1fF2tzm86qEQ0LAmthM0SDqb1rUXu6p51k1jAQ+8UhYOoM05OsCG
+        dr2umsf36usGgWe73g9BwScd2pSjA/3K683hQeQArNGHGi9S8EkH81wd50pNN7c+oofwd8Iamefq+sKJ
+        5IlphGv7qnkZNebAepyzSJ6xffWd6I2frr2U9UmwHpdNJA91SQfA26/zYWrIXmcHsIG1wQD6T+mU8F06
+        mKeOwAbWBkdQSuoSjkG/v4SlpD6GKYKP4RIUfREtQdFX8VJgQ/1OpAKexZtrcK75P8fO/QACk1Ua6BaW
+        cQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuDatepicker1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGCSURBVFhH7ZZNTsMwEIWNuAGNkLgAS5asOQBXQeIGoK5Y
+        IdrcggMhkapnCXnWvHQytlMnTpCQ+KSRMs9vPNPa/XGWp7dti5B0MqX1/wP8/gAf18c7XRR7zo1UPXog
+        j0ITYn/1fR97zo2xemkXok0IFM5pzkjVS7sQa1wrpF1IzLxGSLuQmHmNkHYhZw2F/L0BmJfqJKX3WAPz
+        Up2k9B5rYF6qZ2ML9WYlejazCxPU1fF2tzm86qEQ0LAmthM0SDqb1rUXu6p51k1jAQ+8UhYOoM05OsCG
+        dr2umsf36usGgWe73g9BwScd2pSjA/3K683hQeQArNGHGi9S8EkH81wd50pNN7c+oofwd8Iamefq+sKJ
+        5IlphGv7qnkZNebAepyzSJ6xffWd6I2frr2U9UmwHpdNJA91SQfA26/zYWrIXmcHsIG1wQD6T+mU8F06
+        mKeOwAbWBkdQSuoSjkG/v4SlpD6GKYKP4RIUfREtQdFX8VJgQ/1OpAKexZtrcK75P8fO/QACk1Ua6BaW
+        cQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>147</value>
   </metadata>

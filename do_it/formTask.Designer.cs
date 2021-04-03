@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTask));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dO_ITDataSet = new do_it.DO_ITDataSet();
             this.cATEGORIEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORIETableAdapter = new do_it.DO_ITDataSetTableAdapters.CATEGORIETableAdapter();
@@ -52,18 +52,20 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCheckBox4 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btn_add = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panelDatePicker = new System.Windows.Forms.Panel();
+            this.bunifuDatepicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuDatepicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dO_ITDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tASKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dO_ITDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridtasks)).BeginInit();
+            this.panelDatePicker.SuspendLayout();
             this.SuspendLayout();
             // 
             // dO_ITDataSet
@@ -145,26 +147,26 @@
             this.txt_new_tsk.Modified = false;
             this.txt_new_tsk.Multiline = false;
             this.txt_new_tsk.Name = "txt_new_tsk";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_new_tsk.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_new_tsk.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_new_tsk.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_new_tsk.OnIdleState = stateProperties4;
+            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_new_tsk.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.Empty;
+            stateProperties22.FillColor = System.Drawing.Color.White;
+            stateProperties22.ForeColor = System.Drawing.Color.Empty;
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_new_tsk.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_new_tsk.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            stateProperties24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_new_tsk.OnIdleState = stateProperties24;
             this.txt_new_tsk.PasswordChar = '\0';
             this.txt_new_tsk.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txt_new_tsk.PlaceholderText = "New task";
@@ -184,6 +186,8 @@
             this.txt_new_tsk.TextPlaceholder = "New task";
             this.txt_new_tsk.UseSystemPasswordChar = false;
             this.txt_new_tsk.WordWrap = true;
+            this.txt_new_tsk.TextChanged += new System.EventHandler(this.txt_new_tsk_TextChanged);
+            this.txt_new_tsk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_new_tsk_KeyDown);
             // 
             // dO_ITDataSet1
             // 
@@ -204,14 +208,14 @@
             this.DataGridtasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
             this.DataGridtasks.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridtasks.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridtasks.DefaultCellStyle = dataGridViewCellStyle11;
             this.DataGridtasks.EnableHeadersVisualStyles = false;
             this.DataGridtasks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.DataGridtasks.Location = new System.Drawing.Point(32, 141);
@@ -221,12 +225,12 @@
             this.DataGridtasks.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridtasks.RowHeadersVisible = false;
             this.DataGridtasks.RowHeadersWidth = 175;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataGridtasks.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataGridtasks.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DataGridtasks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DataGridtasks.Size = new System.Drawing.Size(268, 288);
             this.DataGridtasks.TabIndex = 10;
@@ -398,36 +402,6 @@
             this.btn_add.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // bunifuDatepicker2
-            // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.bunifuDatepicker2.BorderRadius = 30;
-            this.bunifuDatepicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(359, 310);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(303, 47);
-            this.bunifuDatepicker2.TabIndex = 18;
-            this.bunifuDatepicker2.Value = new System.DateTime(2021, 3, 28, 21, 56, 10, 996);
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.bunifuDatepicker1.BorderRadius = 30;
-            this.bunifuDatepicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(359, 194);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 48);
-            this.bunifuDatepicker1.TabIndex = 19;
-            this.bunifuDatepicker1.Value = new System.DateTime(2021, 3, 28, 9, 56, 0, 0);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -527,11 +501,67 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label5.Location = new System.Drawing.Point(368, 284);
+            this.label5.Location = new System.Drawing.Point(10, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 21);
             this.label5.TabIndex = 30;
             this.label5.Text = "End Time";
+            // 
+            // panelDatePicker
+            // 
+            this.panelDatePicker.Controls.Add(this.bunifuDatepicker2);
+            this.panelDatePicker.Controls.Add(this.bunifuDatepicker1);
+            this.panelDatePicker.Controls.Add(this.label5);
+            this.panelDatePicker.Enabled = false;
+            this.panelDatePicker.Location = new System.Drawing.Point(358, 154);
+            this.panelDatePicker.Name = "panelDatePicker";
+            this.panelDatePicker.Size = new System.Drawing.Size(319, 327);
+            this.panelDatePicker.TabIndex = 32;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BorderRadius = 1;
+            this.bunifuDatepicker1.CalendarForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.bunifuDatepicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatepicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatepicker1.DisplayWeekNumbers = false;
+            this.bunifuDatepicker1.DPHeight = 0;
+            this.bunifuDatepicker1.FillDatePicker = false;
+            this.bunifuDatepicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatepicker1.Icon")));
+            this.bunifuDatepicker1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(14, 47);
+            this.bunifuDatepicker1.MinimumSize = new System.Drawing.Size(290, 32);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(290, 32);
+            this.bunifuDatepicker1.TabIndex = 31;
+            // 
+            // bunifuDatepicker2
+            // 
+            this.bunifuDatepicker2.BorderRadius = 1;
+            this.bunifuDatepicker2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.bunifuDatepicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatepicker2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatepicker2.DisplayWeekNumbers = false;
+            this.bunifuDatepicker2.DPHeight = 0;
+            this.bunifuDatepicker2.FillDatePicker = false;
+            this.bunifuDatepicker2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatepicker2.Icon")));
+            this.bunifuDatepicker2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.bunifuDatepicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatepicker2.Location = new System.Drawing.Point(14, 165);
+            this.bunifuDatepicker2.MinimumSize = new System.Drawing.Size(290, 32);
+            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
+            this.bunifuDatepicker2.Size = new System.Drawing.Size(290, 32);
+            this.bunifuDatepicker2.TabIndex = 32;
             // 
             // formTask
             // 
@@ -539,20 +569,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(674, 519);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuCheckBox4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bunifuDatepicker1);
-            this.Controls.Add(this.bunifuDatepicker2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuCheckBox1);
             this.Controls.Add(this.DataGridtasks);
             this.Controls.Add(this.txt_new_tsk);
             this.Controls.Add(this.combbx_cat);
             this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.panelDatePicker);
             this.ForeColor = System.Drawing.Color.SteelBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTask";
@@ -562,6 +590,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tASKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dO_ITDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridtasks)).EndInit();
+            this.panelDatePicker.ResumeLayout(false);
+            this.panelDatePicker.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,13 +614,14 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_add;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelDatePicker;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatepicker1;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatepicker2;
     }
 }
