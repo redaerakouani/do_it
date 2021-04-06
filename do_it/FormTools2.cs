@@ -25,22 +25,51 @@ namespace do_it
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Process.Start("CMD.exe","/c start www.google.com");
+            Process.Start(" start www.google.com");
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            Process.Start("CMD.exe","/c start www.facebook.com");
+            Process.Start(" www.facebook.com");
         }
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            Process.Start("CMD.exe","/c start www.drive.google.com");
+            Process.Start(" www.drive.google.com");
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-            Process.Start("CMD.exe", "/c start www.youtube.com");
+            Process.Start(" www.youtube.com");
+        }
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
+        }
+
+        private void bunifuImageButton2_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
+        }
+
+        private void bunifuImageButton3_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
+        }
+
+        private void bunifuImageButton1_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
+        }
+
+        private void bunifuImageButton5_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
+        }
+
+        private void btnmap_Click(object sender, EventArgs e)
+        {
+            Process.Start("www..com");
         }
 
         private void FormTools2_Load(object sender, EventArgs e)
@@ -54,7 +83,7 @@ namespace do_it
 
         private void StopWatch_Tick(object sender, EventArgs e)
         {
-          
+
 
             milisec++;
             if (milisec > 99)
@@ -69,8 +98,8 @@ namespace do_it
             }
             lblstpwatch.Text = min.ToString("00") + ":" + sec.ToString("00") + ":" + milisec.ToString("00");
 
-        
-    }
+
+        }
 
         private void btnstop_Click(object sender, EventArgs e)
         {
@@ -102,8 +131,8 @@ namespace do_it
         private void timer3_Tick(object sender, EventArgs e)
         {
 
-            messagetime = txtH.Text + ":"+txtmin.Text+":"+txtss.Text+":" + comboBox1.Text;
-        
+            messagetime = txtH.Text + ":" + txtmin.Text + ":" + txtss.Text + ":" + comboBox1.Text;
+
 
 
             if (curenttime == messagetime)
@@ -115,7 +144,7 @@ namespace do_it
                 popup.ContentText = textBox1.Text;
                 popup.Popup();
                 curenttime = null;
-    
+
             }
         }
 
@@ -135,6 +164,13 @@ namespace do_it
         {
 
         }
+
+        private void bunifuImageButton4_Click_1(object sender, EventArgs e)
+        {
+            Process.Start("www.linkedin.com");
+        }
+
+      
     }
 }
 

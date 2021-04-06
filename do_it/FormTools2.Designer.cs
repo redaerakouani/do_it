@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTools2));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnytb = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnmap = new Bunifu.Framework.UI.BunifuImageButton();
@@ -64,6 +64,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnexel = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btntelegram = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnword = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnlinkedin = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnzoom = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnteams = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnytb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmap)).BeginInit();
@@ -76,10 +82,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnpause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnteams);
+            this.groupBox1.Controls.Add(this.btnzoom);
+            this.groupBox1.Controls.Add(this.btnexel);
+            this.groupBox1.Controls.Add(this.btntelegram);
+            this.groupBox1.Controls.Add(this.btnword);
+            this.groupBox1.Controls.Add(this.btnlinkedin);
             this.groupBox1.Controls.Add(this.btnytb);
             this.groupBox1.Controls.Add(this.btnmap);
             this.groupBox1.Controls.Add(this.btngmail);
@@ -99,7 +117,7 @@
             // 
             this.btnytb.Image = ((System.Drawing.Image)(resources.GetObject("btnytb.Image")));
             this.btnytb.ImageActive = null;
-            this.btnytb.Location = new System.Drawing.Point(100, 378);
+            this.btnytb.Location = new System.Drawing.Point(100, 312);
             this.btnytb.Name = "btnytb";
             this.btnytb.Size = new System.Drawing.Size(48, 55);
             this.btnytb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,19 +130,20 @@
             // 
             this.btnmap.Image = ((System.Drawing.Image)(resources.GetObject("btnmap.Image")));
             this.btnmap.ImageActive = null;
-            this.btnmap.Location = new System.Drawing.Point(26, 37);
+            this.btnmap.Location = new System.Drawing.Point(100, 380);
             this.btnmap.Name = "btnmap";
             this.btnmap.Size = new System.Drawing.Size(48, 55);
             this.btnmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnmap.TabIndex = 6;
             this.btnmap.TabStop = false;
             this.btnmap.Zoom = 10;
+            this.btnmap.Click += new System.EventHandler(this.btnmap_Click);
             // 
             // btngmail
             // 
             this.btngmail.Image = ((System.Drawing.Image)(resources.GetObject("btngmail.Image")));
             this.btngmail.ImageActive = null;
-            this.btngmail.Location = new System.Drawing.Point(100, 38);
+            this.btngmail.Location = new System.Drawing.Point(100, 26);
             this.btngmail.Name = "btngmail";
             this.btngmail.Size = new System.Drawing.Size(48, 55);
             this.btngmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +156,7 @@
             // 
             this.btngoogle.Image = ((System.Drawing.Image)(resources.GetObject("btngoogle.Image")));
             this.btngoogle.ImageActive = null;
-            this.btngoogle.Location = new System.Drawing.Point(100, 114);
+            this.btngoogle.Location = new System.Drawing.Point(100, 99);
             this.btngoogle.Name = "btngoogle";
             this.btngoogle.Size = new System.Drawing.Size(48, 55);
             this.btngoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +169,7 @@
             // 
             this.btndrive.Image = ((System.Drawing.Image)(resources.GetObject("btndrive.Image")));
             this.btndrive.ImageActive = null;
-            this.btndrive.Location = new System.Drawing.Point(100, 294);
+            this.btndrive.Location = new System.Drawing.Point(100, 239);
             this.btndrive.Name = "btndrive";
             this.btndrive.Size = new System.Drawing.Size(48, 55);
             this.btndrive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +182,7 @@
             // 
             this.btnfacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnfacebook.Image")));
             this.btnfacebook.ImageActive = null;
-            this.btnfacebook.Location = new System.Drawing.Point(100, 200);
+            this.btnfacebook.Location = new System.Drawing.Point(100, 169);
             this.btnfacebook.Name = "btnfacebook";
             this.btnfacebook.Size = new System.Drawing.Size(48, 55);
             this.btnfacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,11 +314,11 @@
             this.btnnstop.ColorContrastOnClick = 45;
             this.btnnstop.ColorContrastOnHover = 45;
             this.btnnstop.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnnstop.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnnstop.CustomizableEdges = borderEdges1;
             this.btnnstop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnnstop.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnnstop.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -320,24 +339,24 @@
             this.btnnstop.IndicateFocus = false;
             this.btnnstop.Location = new System.Drawing.Point(20, 209);
             this.btnnstop.Name = "btnnstop";
-            stateProperties9.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties9.BorderRadius = 35;
-            stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties9.BorderThickness = 2;
-            stateProperties9.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.btnnstop.onHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.White;
-            stateProperties10.BorderRadius = 35;
-            stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties10.BorderThickness = 2;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.btnnstop.OnPressedState = stateProperties10;
+            stateProperties1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnnstop.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.White;
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties2.BorderThickness = 2;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnnstop.OnPressedState = stateProperties2;
             this.btnnstop.Size = new System.Drawing.Size(66, 42);
             this.btnnstop.TabIndex = 32;
             this.btnnstop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,11 +378,11 @@
             this.btnStart.ColorContrastOnClick = 45;
             this.btnStart.ColorContrastOnHover = 45;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnStart.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnStart.CustomizableEdges = borderEdges2;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStart.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnStart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -384,24 +403,24 @@
             this.btnStart.IndicateFocus = false;
             this.btnStart.Location = new System.Drawing.Point(136, 209);
             this.btnStart.Name = "btnStart";
-            stateProperties11.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.BorderRadius = 35;
-            stateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties11.BorderThickness = 2;
-            stateProperties11.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties11.IconLeftImage = null;
-            stateProperties11.IconRightImage = null;
-            this.btnStart.onHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.White;
-            stateProperties12.BorderRadius = 35;
-            stateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties12.BorderThickness = 2;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties12.IconLeftImage = null;
-            stateProperties12.IconRightImage = null;
-            this.btnStart.OnPressedState = stateProperties12;
+            stateProperties3.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties3.BorderRadius = 35;
+            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties3.BorderThickness = 2;
+            stateProperties3.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnStart.onHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.BorderRadius = 35;
+            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties4.BorderThickness = 2;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btnStart.OnPressedState = stateProperties4;
             this.btnStart.Size = new System.Drawing.Size(66, 42);
             this.btnStart.TabIndex = 31;
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -490,6 +509,84 @@
             this.label4.TabIndex = 41;
             this.label4.Text = ":";
             // 
+            // btnexel
+            // 
+            this.btnexel.Image = ((System.Drawing.Image)(resources.GetObject("btnexel.Image")));
+            this.btnexel.ImageActive = null;
+            this.btnexel.Location = new System.Drawing.Point(26, 312);
+            this.btnexel.Name = "btnexel";
+            this.btnexel.Size = new System.Drawing.Size(48, 55);
+            this.btnexel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnexel.TabIndex = 10;
+            this.btnexel.TabStop = false;
+            this.btnexel.Zoom = 10;
+            this.btnexel.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
+            // 
+            // btntelegram
+            // 
+            this.btntelegram.Image = ((System.Drawing.Image)(resources.GetObject("btntelegram.Image")));
+            this.btntelegram.ImageActive = null;
+            this.btntelegram.Location = new System.Drawing.Point(26, 170);
+            this.btntelegram.Name = "btntelegram";
+            this.btntelegram.Size = new System.Drawing.Size(48, 55);
+            this.btntelegram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btntelegram.TabIndex = 11;
+            this.btntelegram.TabStop = false;
+            this.btntelegram.Zoom = 10;
+            this.btntelegram.Click += new System.EventHandler(this.bunifuImageButton2_Click_1);
+            // 
+            // btnword
+            // 
+            this.btnword.Image = ((System.Drawing.Image)(resources.GetObject("btnword.Image")));
+            this.btnword.ImageActive = null;
+            this.btnword.Location = new System.Drawing.Point(26, 239);
+            this.btnword.Name = "btnword";
+            this.btnword.Size = new System.Drawing.Size(48, 55);
+            this.btnword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnword.TabIndex = 12;
+            this.btnword.TabStop = false;
+            this.btnword.Zoom = 10;
+            this.btnword.Click += new System.EventHandler(this.bunifuImageButton3_Click_1);
+            // 
+            // btnlinkedin
+            // 
+            this.btnlinkedin.Image = ((System.Drawing.Image)(resources.GetObject("btnlinkedin.Image")));
+            this.btnlinkedin.ImageActive = null;
+            this.btnlinkedin.Location = new System.Drawing.Point(26, 99);
+            this.btnlinkedin.Name = "btnlinkedin";
+            this.btnlinkedin.Size = new System.Drawing.Size(48, 55);
+            this.btnlinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnlinkedin.TabIndex = 13;
+            this.btnlinkedin.TabStop = false;
+            this.btnlinkedin.Zoom = 10;
+            this.btnlinkedin.Click += new System.EventHandler(this.bunifuImageButton4_Click_1);
+            // 
+            // btnzoom
+            // 
+            this.btnzoom.Image = ((System.Drawing.Image)(resources.GetObject("btnzoom.Image")));
+            this.btnzoom.ImageActive = null;
+            this.btnzoom.Location = new System.Drawing.Point(26, 380);
+            this.btnzoom.Name = "btnzoom";
+            this.btnzoom.Size = new System.Drawing.Size(48, 55);
+            this.btnzoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnzoom.TabIndex = 14;
+            this.btnzoom.TabStop = false;
+            this.btnzoom.Zoom = 10;
+            this.btnzoom.Click += new System.EventHandler(this.bunifuImageButton5_Click_1);
+            // 
+            // btnteams
+            // 
+            this.btnteams.Image = ((System.Drawing.Image)(resources.GetObject("btnteams.Image")));
+            this.btnteams.ImageActive = null;
+            this.btnteams.Location = new System.Drawing.Point(26, 26);
+            this.btnteams.Name = "btnteams";
+            this.btnteams.Size = new System.Drawing.Size(48, 55);
+            this.btnteams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnteams.TabIndex = 15;
+            this.btnteams.TabStop = false;
+            this.btnteams.Zoom = 10;
+            this.btnteams.Click += new System.EventHandler(this.bunifuImageButton6_Click);
+            // 
             // FormTools2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,6 +614,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,5 +654,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton btnexel;
+        private Bunifu.Framework.UI.BunifuImageButton btntelegram;
+        private Bunifu.Framework.UI.BunifuImageButton btnword;
+        private Bunifu.Framework.UI.BunifuImageButton btnlinkedin;
+        private Bunifu.Framework.UI.BunifuImageButton btnteams;
+        private Bunifu.Framework.UI.BunifuImageButton btnzoom;
     }
 }
