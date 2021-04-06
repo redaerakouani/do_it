@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Tulpep.NotificationWindow;
+
 namespace do_it
 {
     public partial class FormTools2 : Form
@@ -88,5 +90,51 @@ namespace do_it
         {
             Stopwatch.Stop();
         }
+        string curenttime;
+        string messagetime;
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            curenttime = DateTime.Now.ToString("hh:mm:ss:tt");
+            //label1.Text = curenttime;
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+
+            messagetime = txtH.Text + ":"+txtmin.Text+":"+txtss.Text+":" + comboBox1.Text;
+        
+
+
+            if (curenttime == messagetime)
+            {
+                timer2.Stop();
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Properties.Resources.info_30px;
+                popup.TitleText = "Reminder";
+                popup.ContentText = textBox1.Text;
+                popup.Popup();
+                curenttime = null;
+    
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+            label2.Text = "reminder set for " + messagetime;
+        }
+
+        private void btnnstop_Click(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            label2.Text = "";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
