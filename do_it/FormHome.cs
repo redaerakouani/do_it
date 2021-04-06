@@ -27,7 +27,7 @@ namespace do_it
             cn.Open();
 
             string req1 = "select FULL_NAME from users where ID_USER = "+get_userID();
-            string req2 = "select DESCRIPTION from TASK where ID_USER = "+ get_userID()+" AND STATUS = '0'";
+            string req2 = "select DESCRIPTION from TASK where ID_USER = " + get_userID() + " AND STATUS = '0' AND datediff(dd,START_TIME,getdate())=0";
             SqlCommand com = new SqlCommand(req1, cn);
 
             SqlDataReader dr = com.ExecuteReader();
@@ -60,7 +60,7 @@ namespace do_it
             else
                 lblGreeting.Text = "Good evening,";
 
-            
+            txtBoxNote.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
         public string get_userID()
         {
@@ -82,6 +82,7 @@ namespace do_it
             com = null;
             dr = null;
             return id;
+            
         }
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
@@ -105,7 +106,19 @@ namespace do_it
 
         private void btnGoTasks_Click(object sender, EventArgs e)
         {
-            
+            //Program.open()
+            //Program.goToTask = true;
+            //this.Close();
+            //FormMenu f = new FormMenu();
+            //f.Show();
+
+            //FormMenu obj = (FormMenu)Application.OpenForms["FormMenu"];
+            //obj.Close();
+
+            //   formtask(new formTask());
+            //FormMenu.formtask(new formTask());
         }
+
+       
     }
 }

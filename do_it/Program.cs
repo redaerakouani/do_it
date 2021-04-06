@@ -8,6 +8,7 @@ namespace do_it
     static class Program
     {
         public static string activeUser;
+        public static bool goToTask = false;
 
         /// <summary>
         /// Point d'entrée principal de l'application.

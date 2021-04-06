@@ -25,6 +25,8 @@ namespace do_it
         {
             panelForms.Visible = false;
             timer1.Start();
+            btnhome_Click(sender, e);
+           
 
         }
 
@@ -53,7 +55,7 @@ namespace do_it
             f.Show();
             this.Hide();
         }
-        private void formtask(object panelT)
+        public void formtask(object panelT)
         {
             if (this.panelForms.Controls.Count > 0)
                 this.panelForms.Controls.RemoveAt(0);
@@ -102,7 +104,7 @@ namespace do_it
             // this.FormMenu_Load(sender, e);   
         }
 
-        private void btntask_Click(object sender, EventArgs e)
+      public void btntask_Click(object sender, EventArgs e)
         {
             panelForms.Visible = true;
             label1.Visible = false;
@@ -138,7 +140,7 @@ namespace do_it
                 btntools.Text = "tools";
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
-                Size = new Size(847, 542);
+                Size = new Size(847, 551);
 
 
 
@@ -155,7 +157,7 @@ namespace do_it
                 btnhome.Text = "";
                 btntools.Text = "";
                 btndocs.Text = "";
-                Size = new Size(734, 542);
+                Size = new Size(687, 551);
 
             }
         }
@@ -176,6 +178,14 @@ namespace do_it
             label1.Visible = false;
         }
 
-        
+        //private void panelForms_ControlRemoved(object sender, ControlEventArgs e)
+        //{
+        //    if (panelForms.Controls.Count == 0) {
+        //        btntask.PerformClick();
+        //    }
+
+        //    //else {Program.goToTask = false;}
+
+        //}
     }
 }

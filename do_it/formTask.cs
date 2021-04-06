@@ -187,7 +187,7 @@ namespace do_it
                 string req = "select STATUS from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '"+DataGridtasks.CurrentCell.Value.ToString()+"'";
                 checkboxvalue(cs, cn, req, bunifuCheckBox1);
                 string req2 = "select public_task from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_ = c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
-                checkboxvalue(cs, cn, req, bunifuCheckBox4);
+                checkboxvalue(cs, cn, req2, bunifuCheckBox4);
                 string req3 = "select START_TIME from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION= '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
                 datepicker_value(cs,cn,req3,bunifuDatepicker1);
                 string req4 = "select END_TIME from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and t.DESCRIPTION= '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
@@ -279,6 +279,11 @@ namespace do_it
         }
 
         private void txt_new_tsk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridtasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
