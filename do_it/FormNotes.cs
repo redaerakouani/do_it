@@ -34,12 +34,12 @@ namespace do_it
         }
         private void FormNotes_Load(object sender, EventArgs e)
         {
-            Pgnote.SetPage(note1);
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
+            Pgnote.SetPage(note2);
+            //SqlConnection cn = new SqlConnection(cs);
+            //cn.Open();
 
-             string req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID();
-                    com = new SqlCommand(req, cn);
+            // string req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID();
+            //        com = new SqlCommand(req, cn);
             //string req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID() + " AND TYPE_NOTE = '@Type'";
             //SqlCommand com = new SqlCommand(req, cn);
             //comboxType.SelectedIndex = 0;
@@ -59,12 +59,12 @@ namespace do_it
             //        com = new SqlCommand(req, cn);
 
             //}
-            SqlDataReader dr = com.ExecuteReader();
-            while (dr.Read())
-            {
-                lstnotes.Items.Add(dr[0]);
+            //SqlDataReader dr = com.ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    lstnotes.Items.Add(dr[0]);
 
-            }
+            //}
 
         }
         //retrieve User ID
@@ -187,5 +187,7 @@ namespace do_it
         {
 
         }
+
+        
     }
 }
