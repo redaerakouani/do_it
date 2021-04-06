@@ -92,15 +92,18 @@ namespace do_it
                 if (dr["TYPE_USER"].ToString().Equals("Admin")) 
                 {
                     FormClients f = new FormClients();
-                    f.ShowDialog();
                     this.Hide();
+                    f.ShowDialog();
+                    this.Close();
                 }
                 else 
                 {
                     Program.activeUser = com2.Parameters["@login"].Value.ToString();
                     FormMenu f = new FormMenu();
-                    f.ShowDialog();
                     this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                    
                 }
             }
                 else if (txtmail.Text == "" || txtpwd.Text == "")
