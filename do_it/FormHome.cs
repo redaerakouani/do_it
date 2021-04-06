@@ -119,6 +119,49 @@ namespace do_it
             //FormMenu.formtask(new formTask());
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBoxPulicNote_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxNote_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGreeting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelNoTasks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTasks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

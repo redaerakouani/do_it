@@ -65,6 +65,7 @@
             this.lblGreeting.Size = new System.Drawing.Size(240, 45);
             this.lblGreeting.TabIndex = 22;
             this.lblGreeting.Text = "Good morning,";
+            this.lblGreeting.Click += new System.EventHandler(this.lblGreeting_Click);
             // 
             // lblName
             // 
@@ -77,6 +78,7 @@
             this.lblName.Size = new System.Drawing.Size(107, 45);
             this.lblName.TabIndex = 23;
             this.lblName.Text = "Name";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // pictureBox1
             // 
@@ -85,6 +87,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -97,6 +100,7 @@
             this.label1.Size = new System.Drawing.Size(345, 25);
             this.label1.TabIndex = 25;
             this.label1.Text = "Anything on your mind? Write it down.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtBoxNote
             // 
@@ -121,6 +125,7 @@
             this.txtBoxNote.Size = new System.Drawing.Size(415, 33);
             this.txtBoxNote.TabIndex = 26;
             this.txtBoxNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBoxNote.OnValueChanged += new System.EventHandler(this.txtBoxNote_OnValueChanged);
             // 
             // label2
             // 
@@ -262,6 +267,7 @@
             this.chkBoxPulicNote.TabIndex = 31;
             this.chkBoxPulicNote.ThreeState = false;
             this.chkBoxPulicNote.ToolTipText = null;
+            this.chkBoxPulicNote.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.chkBoxPulicNote_CheckedChanged);
             // 
             // label3
             // 
@@ -274,6 +280,7 @@
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 32;
             this.label3.Text = "Public";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panelTasks
             // 
@@ -283,6 +290,7 @@
             this.panelTasks.Name = "panelTasks";
             this.panelTasks.Size = new System.Drawing.Size(569, 149);
             this.panelTasks.TabIndex = 33;
+            this.panelTasks.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTasks_Paint);
             // 
             // panelNoTasks
             // 
@@ -292,6 +300,7 @@
             this.panelNoTasks.Name = "panelNoTasks";
             this.panelNoTasks.Size = new System.Drawing.Size(569, 149);
             this.panelNoTasks.TabIndex = 34;
+            this.panelNoTasks.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNoTasks_Paint);
             // 
             // btnGoTasks
             // 
