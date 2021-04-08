@@ -25,22 +25,22 @@ namespace do_it
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Process.Start(" start www.google.com");
+            Process.Start("www.google.com");
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            Process.Start(" www.facebook.com");
+            Process.Start("www.facebook.com");
         }
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            Process.Start(" www.drive.google.com");
+            Process.Start("www.drive.google.com");
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-            Process.Start(" www.youtube.com");
+            Process.Start("www.youtube.com");
         }
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace do_it
 
         private void bunifuImageButton3_Click_1(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            Process.Start("WINWORD.exe");
         }
 
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)

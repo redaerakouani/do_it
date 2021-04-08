@@ -171,6 +171,7 @@ namespace do_it
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
+            formtask(new FormDocs());
         }
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
@@ -189,7 +190,7 @@ namespace do_it
                 btndocs.Text = "Docs";
                 panelForms.Width = 647;
                 panelHome.Width = 647;
-                Size = new Size(847, 551);
+                Size = new Size(847, 542);
 
 
 
@@ -206,7 +207,7 @@ namespace do_it
                 btnhome.Text = "";
                 btntools.Text = "";
                 btndocs.Text = "";
-                Size = new Size(687, 551);
+                Size = new Size(734, 542);
 
             }
         }
@@ -282,9 +283,15 @@ namespace do_it
         private void btnnote_Click(object sender, EventArgs e)
         {
             panelHome.Visible = false;
+            formtask(new FormNotes());
         }
 
         private void paneltop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelHome_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -75,12 +75,20 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +106,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DO_ITDataSet.cs">
+      <DependentUpon>DO_ITDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DO_ITDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +125,12 @@
     </Compile>
     <Compile Include="FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocs.Designer.cs">
+      <DependentUpon>FormDocs.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
@@ -139,6 +162,12 @@
     <Compile Include="FormNotes.Designer.cs">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrinting.Designer.cs">
+      <DependentUpon>FormPrinting.cs</DependentUpon>
+    </Compile>
     <Compile Include="formTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,8 +188,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocs.resx">
+      <DependentUpon>FormDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
@@ -177,6 +213,9 @@
     <EmbeddedResource Include="FormNotes.resx">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPrinting.resx">
+      <DependentUpon>FormPrinting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formTask.resx">
       <DependentUpon>formTask.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,14 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -215,11 +249,19 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info_30px.png" />
