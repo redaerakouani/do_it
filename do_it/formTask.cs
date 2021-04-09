@@ -283,9 +283,5 @@ namespace do_it
 
         }
 
-        private void DataGridtasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

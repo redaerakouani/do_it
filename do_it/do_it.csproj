@@ -63,6 +63,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -139,6 +142,12 @@
     <Compile Include="FormNotes.Designer.cs">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPublic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPublic.Designer.cs">
+      <DependentUpon>FormPublic.cs</DependentUpon>
+    </Compile>
     <Compile Include="formTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNotes.resx">
       <DependentUpon>FormNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPublic.resx">
+      <DependentUpon>FormPublic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTask.resx">
       <DependentUpon>formTask.cs</DependentUpon>

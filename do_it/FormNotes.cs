@@ -13,6 +13,7 @@ namespace do_it
 {
     public partial class FormNotes : Form
     {
+        //Note
         string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
         SqlConnection cn = new SqlConnection();
         SqlCommand com = new SqlCommand();
@@ -24,49 +25,130 @@ namespace do_it
         public Point old = new Point();
         public Graphics g;
         public Pen p;
-        public FormNotes()
-        {
-            InitializeComponent();
-            g = DrawingPanel.CreateGraphics();
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            p = new Pen(Color.Black);
-            p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-        }
+       
         private void FormNotes_Load(object sender, EventArgs e)
         {
-            Pgnote.SetPage(note2);
-            //SqlConnection cn = new SqlConnection(cs);
-            //cn.Open();
+            Pgnote.SetPage(note1);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
 
-            // string req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID();
-            //        com = new SqlCommand(req, cn);
-            //string req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID() + " AND TYPE_NOTE = '@Type'";
-            //SqlCommand com = new SqlCommand(req, cn);
-            //comboxType.SelectedIndex = 0;
-            //if (comboxType.SelectedItem.ToString() == "Text")
-            //{
-            //        com.Parameters.Add(new SqlParameter("@Type", "Text"));
+            string req1 = "select TITLE_NOTE from NOTE where ID_USER = '" + get_userID()+"'";
+            SqlCommand com1 = new SqlCommand(req1, cn);
+            SqlDataReader dr = com1.ExecuteReader();
+            while (dr.Read())
+            {
+                lstnotes.Items.Add(dr[0]);
 
-            //}
-            //else
-            //{
-            //    if (comboxType.SelectedItem.ToString() == "Sketch")
-            //    {
-            //        com.Parameters.Add(new SqlParameter("@Type", "Text"));
-            //    }
-            //    else
-            //        req = "select TEXT_NOTE from NOTE where ID_USER = " + get_userID();
-            //        com = new SqlCommand(req, cn);
-
-            //}
-            //SqlDataReader dr = com.ExecuteReader();
-            //while (dr.Read())
-            //{
-            //    lstnotes.Items.Add(dr[0]);
-
-            //}
+            }
 
         }
+
+        //Delete_Note_Button
+        private void deleteNote_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("are you sure you want to delete this note ", "delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" + get_userID() + "'";
+                cn = new SqlConnection(cs);
+                cn.Open();
+                com = new SqlCommand(req, cn);
+                com.ExecuteNonQuery();
+                remplirlist();
+                com = null;
+                cn.Close();
+            }
+        }
+        //Methode_RemplireList
+        public void remplirlist()
+        {
+
+            lstnotes.Items.Clear();
+            string req = "select TITLE_NOTE from NOTE where ID_USER = " + get_userID();
+            cn = new SqlConnection(cs);
+            cn.Open();
+            com = new SqlCommand(req, cn);
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                lstnotes.Items.Add(dr[0]);
+
+            }
+        }
+
+        //Button_Add_newNote
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Pgnote.SetPage(note2);
+            cbAdd.Checked = true;
+        }
+        //Button_Back_To_DisplayNotesPage
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Pgnote.SetPage(note1);
+        }
+        //Button_Go_To_Sketching
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            Pgnote.SetPage(sketch);
+
+        }
+        //Modify_Note_Selected
+        private void Btn_modifie_note_Click(object sender, EventArgs e)
+        {
+            Pgnote.SetPage(note2);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            string req = "select TITLE_NOTE ,TEXT_NOTE,PUBLIC_NOTE,DATE_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+            SqlCommand com = new SqlCommand(req, cn);
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                TitleNote.Text = dr[0].ToString();
+                NoteText.Text = dr[1].ToString();
+                chkBoxPulicNote.Checked = Convert.ToBoolean(dr[2].ToString());
+
+            }
+            cbAdd.Checked = false;
+            dr.Close();
+            dr = null;
+        }
+        //Display_Notes_Selection
+        private void lstnotes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cn = new SqlConnection(cs);
+            cn.Open();
+            string r1 = "select TEXT_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+            string r2 = "select DATE_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+            string r3 = "select PUBLIC_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+            SqlCommand com = new SqlCommand(r1, cn);
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                txtnotedisplay.Text = dr[0].ToString();
+            }
+            dr.Close();
+            dr = null;
+            com = new SqlCommand(r2, cn);
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                lbldate.Text = "Last modified on: " + Convert.ToDateTime(dr[0].ToString()).ToString("MMM dd,yyyy HH:mm");
+            }
+            dr.Close();
+            dr = null;
+            com = new SqlCommand(r3, cn);
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                if (dr[0].ToString() == "TRUE")
+                    cb_public.Checked = true;
+                else
+                    cb_public.Checked = false;
+            }
+            dr = null;
+        }
+
         //retrieve User ID
         public string get_userID()
         {
@@ -86,6 +168,15 @@ namespace do_it
             com = null;
             dr = null;
             return id;
+        }
+        //sketching_Modifs
+        public FormNotes()
+        {
+            InitializeComponent();
+            g = DrawingPanel.CreateGraphics();
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            p = new Pen(Color.Black);
+            p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
         private void DrawingPanel_MouseDown(object sender, MouseEventArgs e)
@@ -152,41 +243,48 @@ namespace do_it
         {
             p.Color = Color.White;
         }
-
+        //Button_Exit_Sketch
         private void btnexit_Click(object sender, EventArgs e)
         {
             base.Close();
         }
 
-        private void comboxType_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void deleteNote_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("are you sure you want to delete this note ", "delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            if (cbAdd.Checked == true)
             {
-                string req = "delete from NOTE where TEXT_NOTE ='" + lstnotes.SelectedItem.ToString()+"' and ID_USER = '" + get_userID()+ "'";
-                cn = new SqlConnection(cs);
-                cn.Open();
-
-                com = new SqlCommand(req, cn);
+                string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
+                SqlCommand com = new SqlCommand(req1, cn);
+                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
+                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
                 com.ExecuteNonQuery();
-                lstnotes.Refresh();
-                com = null;
-                cn.Close();
-
-                //string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
-                //remplirlist(cs, cn, req2, DataGridtasks);
-
             }
+            else
+            {
+                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public WHERE ID_USER='"+get_userID()+ "' and TITLE_NOTE='"+ lstnotes.SelectedItem.ToString()+ "'";
+                SqlCommand com = new SqlCommand(req2, cn);
+                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                com.ExecuteNonQuery();
+            }
+
+            
+            TitleNote.Text = "";
+            NoteText.Text = "";
+
+            cn.Close();
+            cn = null;
+            com = null;
         }
 
-        private void txtnotedisplay_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
     }

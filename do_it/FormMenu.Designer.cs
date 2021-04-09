@@ -147,7 +147,7 @@
             this.btntools.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btntools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btntools.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btntools.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntools.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btntools.ForeColor = System.Drawing.Color.Transparent;
             this.btntools.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btntools.IconMarginLeft = 11;
@@ -212,7 +212,7 @@
             this.btnnote.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnnote.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnnote.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnnote.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnote.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnnote.ForeColor = System.Drawing.Color.Transparent;
             this.btnnote.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnnote.IconMarginLeft = 11;
@@ -445,7 +445,6 @@
             this.btnpublic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnpublic.TextMarginLeft = 0;
             this.btnpublic.UseDefaultRadiusAndThickness = true;
-            this.btnpublic.Click += new System.EventHandler(this.btnpublic_Click_1);
             // 
             // btntask
             // 
@@ -708,7 +707,6 @@
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(60, 82);
             this.paneltop.TabIndex = 2;
-            this.paneltop.Paint += new System.Windows.Forms.PaintEventHandler(this.paneltop_Paint);
             // 
             // btnmenu
             // 
@@ -826,7 +824,7 @@
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(674, 512);
-            this.panelHome.TabIndex = 47;
+            this.panelHome.TabIndex = 50;
             // 
             // label3
             // 
@@ -942,7 +940,7 @@
             this.btnAddNote.IdleIconLeftImage = null;
             this.btnAddNote.IdleIconRightImage = null;
             this.btnAddNote.IndicateFocus = false;
-            this.btnAddNote.Location = new System.Drawing.Point(496, 232);
+            this.btnAddNote.Location = new System.Drawing.Point(521, 232);
             this.btnAddNote.Name = "btnAddNote";
             stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties17.BorderRadius = 40;
@@ -967,6 +965,7 @@
             this.btnAddNote.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddNote.TextMarginLeft = 0;
             this.btnAddNote.UseDefaultRadiusAndThickness = true;
+            this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
             // 
             // txtBoxNote
             // 
@@ -988,13 +987,13 @@
             this.txtBoxNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxNote.MaxLength = 32767;
             this.txtBoxNote.Name = "txtBoxNote";
-            this.txtBoxNote.Size = new System.Drawing.Size(415, 33);
+            this.txtBoxNote.Size = new System.Drawing.Size(446, 33);
             this.txtBoxNote.TabIndex = 39;
             this.txtBoxNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(442, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(473, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 37;

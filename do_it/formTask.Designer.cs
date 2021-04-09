@@ -236,7 +236,6 @@
             this.DataGridtasks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DataGridtasks.Size = new System.Drawing.Size(268, 288);
             this.DataGridtasks.TabIndex = 10;
-            this.DataGridtasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridtasks_CellContentClick);
             this.DataGridtasks.SelectionChanged += new System.EventHandler(this.DataGridtasks_SelectionChanged);
             // 
             // Column1
