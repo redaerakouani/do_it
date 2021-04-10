@@ -2899,11 +2899,24 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM dbo.NOTE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE\r\nFROM          " +
+                "  NOTE\r\nWHERE        (ID_USER = @iduser)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE\r\nFROM          " +
+                "  NOTE\r\nWHERE        (ID_USER = @iduser) AND (PUBLIC_NOTE = @pub)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pub", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2925,6 +2938,70 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DO_ITDataSet.NOTEDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DO_ITDataSet.NOTEDataTable dataTable = new DO_ITDataSet.NOTEDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DO_ITDataSet.NOTEDataTable dataTable, int iduser) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(iduser));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DO_ITDataSet.NOTEDataTable GetDataBy(int iduser) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(iduser));
+            DO_ITDataSet.NOTEDataTable dataTable = new DO_ITDataSet.NOTEDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(DO_ITDataSet.NOTEDataTable dataTable, int iduser, global::System.Nullable<bool> pub) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(iduser));
+            if ((pub.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(pub.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DO_ITDataSet.NOTEDataTable GetDataBy1(int iduser, global::System.Nullable<bool> pub) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(iduser));
+            if ((pub.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(pub.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             DO_ITDataSet.NOTEDataTable dataTable = new DO_ITDataSet.NOTEDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3254,7 +3331,7 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TASK] WHERE (([ID_TASK] = @Original_ID_TASK) AND ([ID_USER] = @Original_ID_USER) AND ([ID_CATEGORIE_] = @Original_ID_CATEGORIE_) AND ((@IsNull_START_TIME = 1 AND [START_TIME] IS NULL) OR ([START_TIME] = @Original_START_TIME)) AND ((@IsNull_END_TIME = 1 AND [END_TIME] IS NULL) OR ([END_TIME] = @Original_END_TIME)) AND ((@IsNull_DESCRIPTION = 1 AND [DESCRIPTION] IS NULL) OR ([DESCRIPTION] = @Original_DESCRIPTION)) AND ((@IsNull_STATUS = 1 AND [STATUS] IS NULL) OR ([STATUS] = @Original_STATUS)) AND ((@IsNull_PUBLIC_TASK = 1 AND [PUBLIC_TASK] IS NULL) OR ([PUBLIC_TASK] = @Original_PUBLIC_TASK)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [TASK] WHERE (([ID_TASK] = @Original_ID_TASK) AND ([ID_USER] = @Original_ID_USER) AND ([ID_CATEGORIE_] = @Original_ID_CATEGORIE_) AND ((@IsNull_START_TIME = 1 AND [START_TIME] IS NULL) OR ([START_TIME] = @Original_START_TIME)) AND ((@IsNull_END_TIME = 1 AND [END_TIME] IS NULL) OR ([END_TIME] = @Original_END_TIME)) AND ((@IsNull_DESCRIPTION = 1 AND [DESCRIPTION] IS NULL) OR ([DESCRIPTION] = @Original_DESCRIPTION)) AND ((@IsNull_STATUS = 1 AND [STATUS] IS NULL) OR ([STATUS] = @Original_STATUS)) AND ((@IsNull_PUBLIC_TASK = 1 AND [PUBLIC_TASK] IS NULL) OR ([PUBLIC_TASK] = @Original_PUBLIC_TASK)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TASK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TASK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3271,7 +3348,7 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PUBLIC_TASK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_TASK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TASK] ([ID_USER], [ID_CATEGORIE_], [START_TIME], [END_TIME], [DESCRIPTION], [STATUS], [PUBLIC_TASK]) VALUES (@ID_USER, @ID_CATEGORIE_, @START_TIME, @END_TIME, @DESCRIPTION, @STATUS, @PUBLIC_TASK);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [TASK] ([ID_USER], [ID_CATEGORIE_], [START_TIME], [END_TIME], [DESCRIPTION], [STATUS], [PUBLIC_TASK]) VALUES (@ID_USER, @ID_CATEGORIE_, @START_TIME, @END_TIME, @DESCRIPTION, @STATUS, @PUBLIC_TASK);
 SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATUS, PUBLIC_TASK FROM TASK WHERE (ID_TASK = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3283,7 +3360,7 @@ SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATU
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PUBLIC_TASK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_TASK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TASK] SET [ID_USER] = @ID_USER, [ID_CATEGORIE_] = @ID_CATEGORIE_, [START_TIME] = @START_TIME, [END_TIME] = @END_TIME, [DESCRIPTION] = @DESCRIPTION, [STATUS] = @STATUS, [PUBLIC_TASK] = @PUBLIC_TASK WHERE (([ID_TASK] = @Original_ID_TASK) AND ([ID_USER] = @Original_ID_USER) AND ([ID_CATEGORIE_] = @Original_ID_CATEGORIE_) AND ((@IsNull_START_TIME = 1 AND [START_TIME] IS NULL) OR ([START_TIME] = @Original_START_TIME)) AND ((@IsNull_END_TIME = 1 AND [END_TIME] IS NULL) OR ([END_TIME] = @Original_END_TIME)) AND ((@IsNull_DESCRIPTION = 1 AND [DESCRIPTION] IS NULL) OR ([DESCRIPTION] = @Original_DESCRIPTION)) AND ((@IsNull_STATUS = 1 AND [STATUS] IS NULL) OR ([STATUS] = @Original_STATUS)) AND ((@IsNull_PUBLIC_TASK = 1 AND [PUBLIC_TASK] IS NULL) OR ([PUBLIC_TASK] = @Original_PUBLIC_TASK)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [TASK] SET [ID_USER] = @ID_USER, [ID_CATEGORIE_] = @ID_CATEGORIE_, [START_TIME] = @START_TIME, [END_TIME] = @END_TIME, [DESCRIPTION] = @DESCRIPTION, [STATUS] = @STATUS, [PUBLIC_TASK] = @PUBLIC_TASK WHERE (([ID_TASK] = @Original_ID_TASK) AND ([ID_USER] = @Original_ID_USER) AND ([ID_CATEGORIE_] = @Original_ID_CATEGORIE_) AND ((@IsNull_START_TIME = 1 AND [START_TIME] IS NULL) OR ([START_TIME] = @Original_START_TIME)) AND ((@IsNull_END_TIME = 1 AND [END_TIME] IS NULL) OR ([END_TIME] = @Original_END_TIME)) AND ((@IsNull_DESCRIPTION = 1 AND [DESCRIPTION] IS NULL) OR ([DESCRIPTION] = @Original_DESCRIPTION)) AND ((@IsNull_STATUS = 1 AND [STATUS] IS NULL) OR ([STATUS] = @Original_STATUS)) AND ((@IsNull_PUBLIC_TASK = 1 AND [PUBLIC_TASK] IS NULL) OR ([PUBLIC_TASK] = @Original_PUBLIC_TASK)));
 SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATUS, PUBLIC_TASK FROM TASK WHERE (ID_TASK = @ID_TASK)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3319,20 +3396,45 @@ SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATU
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATUS" +
-                ", PUBLIC_TASK FROM dbo.TASK";
+            this._commandCollection[0].CommandText = "SELECT        ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION," +
+                " STATUS, PUBLIC_TASK\r\nFROM            TASK\r\nWHERE        (PUBLIC_TASK = @pub) AN" +
+                "D (STATUS = @status) AND (ID_USER = @iduser) AND (ID_CATEGORIE_ = @idcateg)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pub", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_TASK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcateg", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_CATEGORIE_", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT DESCRIPTION, END_TIME, ID_CATEGORIE_, ID_TASK, ID_USER, PUBLIC_TASK, START" +
+                "_TIME, STATUS FROM TASK WHERE (ID_USER = @iduser)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DO_ITDataSet.TASKDataTable dataTable) {
+        public virtual int Fillfilter(DO_ITDataSet.TASKDataTable dataTable, global::System.Nullable<bool> pub, global::System.Nullable<bool> status, int iduser, int idcateg) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((pub.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(pub.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((status.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(status.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(iduser));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idcateg));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -3344,11 +3446,39 @@ SELECT ID_TASK, ID_USER, ID_CATEGORIE_, START_TIME, END_TIME, DESCRIPTION, STATU
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DO_ITDataSet.TASKDataTable GetData() {
+        public virtual DO_ITDataSet.TASKDataTable GetData(global::System.Nullable<bool> pub, global::System.Nullable<bool> status, int iduser, int idcateg) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((pub.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((bool)(pub.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((status.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((bool)(status.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(iduser));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idcateg));
             DO_ITDataSet.TASKDataTable dataTable = new DO_ITDataSet.TASKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DO_ITDataSet.TASKDataTable dataTable, int iduser) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(iduser));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
