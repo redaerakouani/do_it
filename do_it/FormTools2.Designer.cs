@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTools2));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnteams = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnzoom = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnexel = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btntelegram = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnword = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnlinkedin = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnytb = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnmap = new Bunifu.Framework.UI.BunifuImageButton();
             this.btngmail = new Bunifu.Framework.UI.BunifuImageButton();
@@ -49,7 +55,13 @@
             this.btnpause = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnstrat = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtss = new System.Windows.Forms.MaskedTextBox();
+            this.txtmin = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtH = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnnstop = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -58,19 +70,14 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtH = new System.Windows.Forms.MaskedTextBox();
-            this.txtmin = new System.Windows.Forms.MaskedTextBox();
-            this.txtss = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnexel = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btntelegram = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnword = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnlinkedin = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnzoom = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnteams = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnytb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btngmail)).BeginInit();
@@ -82,12 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnpause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -112,6 +113,84 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Apps";
+            // 
+            // btnteams
+            // 
+            this.btnteams.Image = ((System.Drawing.Image)(resources.GetObject("btnteams.Image")));
+            this.btnteams.ImageActive = null;
+            this.btnteams.Location = new System.Drawing.Point(26, 26);
+            this.btnteams.Name = "btnteams";
+            this.btnteams.Size = new System.Drawing.Size(48, 55);
+            this.btnteams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnteams.TabIndex = 15;
+            this.btnteams.TabStop = false;
+            this.btnteams.Zoom = 10;
+            this.btnteams.Click += new System.EventHandler(this.bunifuImageButton6_Click);
+            // 
+            // btnzoom
+            // 
+            this.btnzoom.Image = ((System.Drawing.Image)(resources.GetObject("btnzoom.Image")));
+            this.btnzoom.ImageActive = null;
+            this.btnzoom.Location = new System.Drawing.Point(26, 380);
+            this.btnzoom.Name = "btnzoom";
+            this.btnzoom.Size = new System.Drawing.Size(48, 55);
+            this.btnzoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnzoom.TabIndex = 14;
+            this.btnzoom.TabStop = false;
+            this.btnzoom.Zoom = 10;
+            this.btnzoom.Click += new System.EventHandler(this.bunifuImageButton5_Click_1);
+            // 
+            // btnexel
+            // 
+            this.btnexel.Image = ((System.Drawing.Image)(resources.GetObject("btnexel.Image")));
+            this.btnexel.ImageActive = null;
+            this.btnexel.Location = new System.Drawing.Point(26, 312);
+            this.btnexel.Name = "btnexel";
+            this.btnexel.Size = new System.Drawing.Size(48, 55);
+            this.btnexel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnexel.TabIndex = 10;
+            this.btnexel.TabStop = false;
+            this.btnexel.Zoom = 10;
+            this.btnexel.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
+            // 
+            // btntelegram
+            // 
+            this.btntelegram.Image = ((System.Drawing.Image)(resources.GetObject("btntelegram.Image")));
+            this.btntelegram.ImageActive = null;
+            this.btntelegram.Location = new System.Drawing.Point(26, 170);
+            this.btntelegram.Name = "btntelegram";
+            this.btntelegram.Size = new System.Drawing.Size(48, 55);
+            this.btntelegram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btntelegram.TabIndex = 11;
+            this.btntelegram.TabStop = false;
+            this.btntelegram.Zoom = 10;
+            this.btntelegram.Click += new System.EventHandler(this.bunifuImageButton2_Click_1);
+            // 
+            // btnword
+            // 
+            this.btnword.Image = ((System.Drawing.Image)(resources.GetObject("btnword.Image")));
+            this.btnword.ImageActive = null;
+            this.btnword.Location = new System.Drawing.Point(26, 239);
+            this.btnword.Name = "btnword";
+            this.btnword.Size = new System.Drawing.Size(48, 55);
+            this.btnword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnword.TabIndex = 12;
+            this.btnword.TabStop = false;
+            this.btnword.Zoom = 10;
+            this.btnword.Click += new System.EventHandler(this.bunifuImageButton3_Click_1);
+            // 
+            // btnlinkedin
+            // 
+            this.btnlinkedin.Image = ((System.Drawing.Image)(resources.GetObject("btnlinkedin.Image")));
+            this.btnlinkedin.ImageActive = null;
+            this.btnlinkedin.Location = new System.Drawing.Point(26, 99);
+            this.btnlinkedin.Name = "btnlinkedin";
+            this.btnlinkedin.Size = new System.Drawing.Size(48, 55);
+            this.btnlinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnlinkedin.TabIndex = 13;
+            this.btnlinkedin.TabStop = false;
+            this.btnlinkedin.Zoom = 10;
+            this.btnlinkedin.Click += new System.EventHandler(this.bunifuImageButton4_Click_1);
             // 
             // btnytb
             // 
@@ -277,6 +356,54 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reminder";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(138, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 20);
+            this.label4.TabIndex = 41;
+            this.label4.Text = ":";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(94, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 20);
+            this.label3.TabIndex = 40;
+            this.label3.Text = ":";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(51, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 39;
+            this.label1.Text = ":";
+            // 
+            // txtss
+            // 
+            this.txtss.ForeColor = System.Drawing.Color.DimGray;
+            this.txtss.Location = new System.Drawing.Point(105, 26);
+            this.txtss.Name = "txtss";
+            this.txtss.Size = new System.Drawing.Size(35, 27);
+            this.txtss.TabIndex = 38;
+            this.txtss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtmin
+            // 
+            this.txtmin.ForeColor = System.Drawing.Color.DimGray;
+            this.txtmin.Location = new System.Drawing.Point(61, 26);
+            this.txtmin.Name = "txtmin";
+            this.txtmin.Size = new System.Drawing.Size(37, 27);
+            this.txtmin.TabIndex = 37;
+            this.txtmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,6 +418,15 @@
             this.comboBox1.TabIndex = 36;
             this.comboBox1.Text = "AM";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // txtH
+            // 
+            this.txtH.ForeColor = System.Drawing.Color.DimGray;
+            this.txtH.Location = new System.Drawing.Point(20, 26);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(35, 27);
+            this.txtH.TabIndex = 35;
+            this.txtH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -314,11 +450,11 @@
             this.btnnstop.ColorContrastOnClick = 45;
             this.btnnstop.ColorContrastOnHover = 45;
             this.btnnstop.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnnstop.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnnstop.CustomizableEdges = borderEdges5;
             this.btnnstop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnnstop.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnnstop.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -339,24 +475,24 @@
             this.btnnstop.IndicateFocus = false;
             this.btnnstop.Location = new System.Drawing.Point(20, 209);
             this.btnnstop.Name = "btnnstop";
-            stateProperties1.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties1.BorderRadius = 35;
-            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnnstop.onHoverState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.White;
-            stateProperties2.BorderRadius = 35;
-            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties2.BorderThickness = 2;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnnstop.OnPressedState = stateProperties2;
+            stateProperties9.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties9.BorderRadius = 35;
+            stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties9.BorderThickness = 2;
+            stateProperties9.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties9.IconLeftImage = null;
+            stateProperties9.IconRightImage = null;
+            this.btnnstop.onHoverState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.White;
+            stateProperties10.BorderRadius = 35;
+            stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties10.BorderThickness = 2;
+            stateProperties10.FillColor = System.Drawing.Color.White;
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties10.IconLeftImage = null;
+            stateProperties10.IconRightImage = null;
+            this.btnnstop.OnPressedState = stateProperties10;
             this.btnnstop.Size = new System.Drawing.Size(66, 42);
             this.btnnstop.TabIndex = 32;
             this.btnnstop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,11 +514,11 @@
             this.btnStart.ColorContrastOnClick = 45;
             this.btnStart.ColorContrastOnHover = 45;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnStart.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnStart.CustomizableEdges = borderEdges6;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStart.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnStart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -403,24 +539,24 @@
             this.btnStart.IndicateFocus = false;
             this.btnStart.Location = new System.Drawing.Point(136, 209);
             this.btnStart.Name = "btnStart";
-            stateProperties3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties3.BorderRadius = 35;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 2;
-            stateProperties3.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btnStart.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.BorderRadius = 35;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 2;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btnStart.OnPressedState = stateProperties4;
+            stateProperties11.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties11.BorderRadius = 35;
+            stateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties11.BorderThickness = 2;
+            stateProperties11.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties11.IconLeftImage = null;
+            stateProperties11.IconRightImage = null;
+            this.btnStart.onHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.White;
+            stateProperties12.BorderRadius = 35;
+            stateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties12.BorderThickness = 2;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties12.IconLeftImage = null;
+            stateProperties12.IconRightImage = null;
+            this.btnStart.OnPressedState = stateProperties12;
             this.btnStart.Size = new System.Drawing.Size(66, 42);
             this.btnStart.TabIndex = 31;
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -452,140 +588,19 @@
             this.timer3.Enabled = true;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // txtH
+            // timer1
             // 
-            this.txtH.ForeColor = System.Drawing.Color.DimGray;
-            this.txtH.Location = new System.Drawing.Point(20, 26);
-            this.txtH.Name = "txtH";
-            this.txtH.Size = new System.Drawing.Size(35, 27);
-            this.txtH.TabIndex = 35;
-            this.txtH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtmin
+            // label5
             // 
-            this.txtmin.ForeColor = System.Drawing.Color.DimGray;
-            this.txtmin.Location = new System.Drawing.Point(61, 26);
-            this.txtmin.Name = "txtmin";
-            this.txtmin.Size = new System.Drawing.Size(37, 27);
-            this.txtmin.TabIndex = 37;
-            this.txtmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtss
-            // 
-            this.txtss.ForeColor = System.Drawing.Color.DimGray;
-            this.txtss.Location = new System.Drawing.Point(105, 26);
-            this.txtss.Name = "txtss";
-            this.txtss.Size = new System.Drawing.Size(35, 27);
-            this.txtss.TabIndex = 38;
-            this.txtss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(51, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 20);
-            this.label1.TabIndex = 39;
-            this.label1.Text = ":";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(94, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 40;
-            this.label3.Text = ":";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(138, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 20);
-            this.label4.TabIndex = 41;
-            this.label4.Text = ":";
-            // 
-            // btnexel
-            // 
-            this.btnexel.Image = ((System.Drawing.Image)(resources.GetObject("btnexel.Image")));
-            this.btnexel.ImageActive = null;
-            this.btnexel.Location = new System.Drawing.Point(26, 312);
-            this.btnexel.Name = "btnexel";
-            this.btnexel.Size = new System.Drawing.Size(48, 55);
-            this.btnexel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnexel.TabIndex = 10;
-            this.btnexel.TabStop = false;
-            this.btnexel.Zoom = 10;
-            this.btnexel.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
-            // 
-            // btntelegram
-            // 
-            this.btntelegram.Image = ((System.Drawing.Image)(resources.GetObject("btntelegram.Image")));
-            this.btntelegram.ImageActive = null;
-            this.btntelegram.Location = new System.Drawing.Point(26, 170);
-            this.btntelegram.Name = "btntelegram";
-            this.btntelegram.Size = new System.Drawing.Size(48, 55);
-            this.btntelegram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btntelegram.TabIndex = 11;
-            this.btntelegram.TabStop = false;
-            this.btntelegram.Zoom = 10;
-            this.btntelegram.Click += new System.EventHandler(this.bunifuImageButton2_Click_1);
-            // 
-            // btnword
-            // 
-            this.btnword.Image = ((System.Drawing.Image)(resources.GetObject("btnword.Image")));
-            this.btnword.ImageActive = null;
-            this.btnword.Location = new System.Drawing.Point(26, 239);
-            this.btnword.Name = "btnword";
-            this.btnword.Size = new System.Drawing.Size(48, 55);
-            this.btnword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnword.TabIndex = 12;
-            this.btnword.TabStop = false;
-            this.btnword.Zoom = 10;
-            this.btnword.Click += new System.EventHandler(this.bunifuImageButton3_Click_1);
-            // 
-            // btnlinkedin
-            // 
-            this.btnlinkedin.Image = ((System.Drawing.Image)(resources.GetObject("btnlinkedin.Image")));
-            this.btnlinkedin.ImageActive = null;
-            this.btnlinkedin.Location = new System.Drawing.Point(26, 99);
-            this.btnlinkedin.Name = "btnlinkedin";
-            this.btnlinkedin.Size = new System.Drawing.Size(48, 55);
-            this.btnlinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnlinkedin.TabIndex = 13;
-            this.btnlinkedin.TabStop = false;
-            this.btnlinkedin.Zoom = 10;
-            this.btnlinkedin.Click += new System.EventHandler(this.bunifuImageButton4_Click_1);
-            // 
-            // btnzoom
-            // 
-            this.btnzoom.Image = ((System.Drawing.Image)(resources.GetObject("btnzoom.Image")));
-            this.btnzoom.ImageActive = null;
-            this.btnzoom.Location = new System.Drawing.Point(26, 380);
-            this.btnzoom.Name = "btnzoom";
-            this.btnzoom.Size = new System.Drawing.Size(48, 55);
-            this.btnzoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnzoom.TabIndex = 14;
-            this.btnzoom.TabStop = false;
-            this.btnzoom.Zoom = 10;
-            this.btnzoom.Click += new System.EventHandler(this.bunifuImageButton5_Click_1);
-            // 
-            // btnteams
-            // 
-            this.btnteams.Image = ((System.Drawing.Image)(resources.GetObject("btnteams.Image")));
-            this.btnteams.ImageActive = null;
-            this.btnteams.Location = new System.Drawing.Point(26, 26);
-            this.btnteams.Name = "btnteams";
-            this.btnteams.Size = new System.Drawing.Size(48, 55);
-            this.btnteams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnteams.TabIndex = 15;
-            this.btnteams.TabStop = false;
-            this.btnteams.Zoom = 10;
-            this.btnteams.Click += new System.EventHandler(this.bunifuImageButton6_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(138, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "label5";
             // 
             // FormTools2
             // 
@@ -593,6 +608,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(658, 480);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -601,6 +617,12 @@
             this.Text = "FormTools2";
             this.Load += new System.EventHandler(this.FormTools2_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnytb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btngmail)).EndInit();
@@ -614,13 +636,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnexel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntelegram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnlinkedin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnteams)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -660,5 +677,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnlinkedin;
         private Bunifu.Framework.UI.BunifuImageButton btnteams;
         private Bunifu.Framework.UI.BunifuImageButton btnzoom;
+        private System.Windows.Forms.Label label5;
     }
 }

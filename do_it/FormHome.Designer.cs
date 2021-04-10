@@ -95,7 +95,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label1.Location = new System.Drawing.Point(53, 211);
+            this.label1.Location = new System.Drawing.Point(49, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(345, 25);
             this.label1.TabIndex = 25;
@@ -118,7 +118,7 @@
             this.txtBoxNote.LineIdleColor = System.Drawing.Color.DarkGray;
             this.txtBoxNote.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txtBoxNote.LineThickness = 3;
-            this.txtBoxNote.Location = new System.Drawing.Point(55, 231);
+            this.txtBoxNote.Location = new System.Drawing.Point(55, 238);
             this.txtBoxNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxNote.MaxLength = 32767;
             this.txtBoxNote.Name = "txtBoxNote";
@@ -176,7 +176,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(495, 231);
+            this.bunifuButton1.Location = new System.Drawing.Point(495, 233);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 40;
@@ -233,7 +233,7 @@
             this.chkBoxPulicNote.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.chkBoxPulicNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkBoxPulicNote.CustomCheckmarkImage = null;
-            this.chkBoxPulicNote.Location = new System.Drawing.Point(55, 271);
+            this.chkBoxPulicNote.Location = new System.Drawing.Point(55, 277);
             this.chkBoxPulicNote.MinimumSize = new System.Drawing.Size(17, 17);
             this.chkBoxPulicNote.Name = "chkBoxPulicNote";
             this.chkBoxPulicNote.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
@@ -275,7 +275,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label3.Location = new System.Drawing.Point(82, 271);
+            this.label3.Location = new System.Drawing.Point(82, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 32;

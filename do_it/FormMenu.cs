@@ -28,6 +28,7 @@ namespace do_it
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
+            panelForms.Visible = false;
             panelHome.Visible = true;
             timer1.Start();
             //btnhome_Click(sender, e);
@@ -91,8 +92,10 @@ namespace do_it
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
             FormLoginSignUp f = new FormLoginSignUp();
-            f.Show();
             this.Hide();
+            f.ShowDialog();
+            this.Close();
+            
         }
         //Form_Task
         public void formtask(object panelT)
@@ -111,6 +114,7 @@ namespace do_it
         //Email_Button
         private void btnemail_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
            //lbel1.Visible = false;
@@ -119,6 +123,7 @@ namespace do_it
         //Home_Button
         private void btnhome_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = false;
             panelHome.Visible = true;
             //panelForms.Controls.RemoveAt(0);
             //panelForms.Visible = false;
@@ -132,6 +137,7 @@ namespace do_it
       //Task_Button
       public void btntask_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
@@ -141,6 +147,7 @@ namespace do_it
         //Tools_Botton
         private void btntools_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
@@ -149,6 +156,7 @@ namespace do_it
         //Docs_Button
         private void btndocs_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
@@ -195,7 +203,9 @@ namespace do_it
         //Public_Button
         private void btnpublic_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
+            formtask(new FormPublic());
             //panelForms.Visible = true;
             //label1.Visible = false;
         }
@@ -207,6 +217,7 @@ namespace do_it
         //Notes_Button
         private void btnnote_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             formtask(new FormNotes());
         }
@@ -255,6 +266,8 @@ namespace do_it
             cn = null;
             com = null;
         }
+
+        
 
         ///-------------------------------------------///
 

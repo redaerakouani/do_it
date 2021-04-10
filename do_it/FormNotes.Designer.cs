@@ -65,6 +65,7 @@
             this.txtBox_Search_NoteTitle = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Btn_Add_note = new System.Windows.Forms.PictureBox();
             this.note2 = new System.Windows.Forms.TabPage();
+            this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.btn_back = new System.Windows.Forms.PictureBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -89,7 +90,6 @@
             this.Red_pen = new System.Windows.Forms.PictureBox();
             this.Black_pen = new System.Windows.Forms.PictureBox();
             this.DrawingPanel = new System.Windows.Forms.Panel();
-            this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.NotePanel.SuspendLayout();
             this.Pgnote.SuspendLayout();
             this.note1.SuspendLayout();
@@ -146,10 +146,10 @@
             this.Pgnote.Location = new System.Drawing.Point(3, 3);
             this.Pgnote.Multiline = true;
             this.Pgnote.Name = "Pgnote";
-            this.Pgnote.Page = this.note2;
-            this.Pgnote.PageIndex = 1;
-            this.Pgnote.PageName = "note2";
-            this.Pgnote.PageTitle = "Pgnote2";
+            this.Pgnote.Page = this.note1;
+            this.Pgnote.PageIndex = 0;
+            this.Pgnote.PageName = "note1";
+            this.Pgnote.PageTitle = "Pgnote1";
             this.Pgnote.SelectedIndex = 0;
             this.Pgnote.Size = new System.Drawing.Size(681, 516);
             this.Pgnote.TabIndex = 0;
@@ -161,7 +161,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -169,7 +169,7 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 1F;
             this.Pgnote.Transition = animation1;
-            this.Pgnote.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
+            this.Pgnote.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // note1
             // 
@@ -296,8 +296,8 @@
             this.cb_public.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cb_public.BindingControl = null;
             this.cb_public.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.cb_public.Checked = true;
-            this.cb_public.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.cb_public.Checked = false;
+            this.cb_public.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Indeterminate;
             this.cb_public.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_public.CustomCheckmarkImage = null;
             this.cb_public.Location = new System.Drawing.Point(6, 329);
@@ -391,21 +391,21 @@
             this.txtnotedisplay.OnIdleState = stateProperties4;
             this.txtnotedisplay.PasswordChar = '\0';
             this.txtnotedisplay.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtnotedisplay.PlaceholderText = "Enter text";
+            this.txtnotedisplay.PlaceholderText = "";
             this.txtnotedisplay.ReadOnly = false;
             this.txtnotedisplay.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtnotedisplay.SelectedText = "";
             this.txtnotedisplay.SelectionLength = 0;
             this.txtnotedisplay.SelectionStart = 0;
             this.txtnotedisplay.ShortcutsEnabled = true;
-            this.txtnotedisplay.Size = new System.Drawing.Size(272, 271);
+            this.txtnotedisplay.Size = new System.Drawing.Size(272, 291);
             this.txtnotedisplay.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtnotedisplay.TabIndex = 34;
             this.txtnotedisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtnotedisplay.TextMarginBottom = 0;
             this.txtnotedisplay.TextMarginLeft = 5;
             this.txtnotedisplay.TextMarginTop = 0;
-            this.txtnotedisplay.TextPlaceholder = "Enter text";
+            this.txtnotedisplay.TextPlaceholder = "";
             this.txtnotedisplay.UseSystemPasswordChar = false;
             this.txtnotedisplay.WordWrap = true;
             // 
@@ -427,7 +427,7 @@
             this.lblGreeting.BackColor = System.Drawing.Color.Transparent;
             this.lblGreeting.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
             this.lblGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.lblGreeting.Location = new System.Drawing.Point(195, 10);
+            this.lblGreeting.Location = new System.Drawing.Point(195, 9);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(222, 45);
             this.lblGreeting.TabIndex = 32;
@@ -515,6 +515,7 @@
             this.txtBox_Search_NoteTitle.TextPlaceholder = "Type here to search";
             this.txtBox_Search_NoteTitle.UseSystemPasswordChar = false;
             this.txtBox_Search_NoteTitle.WordWrap = true;
+            this.txtBox_Search_NoteTitle.TextChanged += new System.EventHandler(this.txtBox_Search_NoteTitle_TextChanged);
             // 
             // Btn_Add_note
             // 
@@ -529,6 +530,7 @@
             // 
             // note2
             // 
+            this.note2.Controls.Add(this.cbAdd);
             this.note2.Controls.Add(this.btn_back);
             this.note2.Controls.Add(this.bunifuTextBox1);
             this.note2.Controls.Add(this.label4);
@@ -538,7 +540,6 @@
             this.note2.Controls.Add(this.TitleNote);
             this.note2.Controls.Add(this.pictureBox1);
             this.note2.Controls.Add(this.pictureBox3);
-            this.note2.Controls.Add(this.cbAdd);
             this.note2.Location = new System.Drawing.Point(4, 4);
             this.note2.Name = "note2";
             this.note2.Padding = new System.Windows.Forms.Padding(3);
@@ -546,6 +547,59 @@
             this.note2.TabIndex = 1;
             this.note2.Text = "Pgnote2";
             this.note2.UseVisualStyleBackColor = true;
+            // 
+            // cbAdd
+            // 
+            this.cbAdd.AllowBindingControlAnimation = true;
+            this.cbAdd.AllowBindingControlColorChanges = false;
+            this.cbAdd.AllowBindingControlLocation = true;
+            this.cbAdd.AllowCheckBoxAnimation = false;
+            this.cbAdd.AllowCheckmarkAnimation = true;
+            this.cbAdd.AllowOnHoverStates = true;
+            this.cbAdd.AutoCheck = true;
+            this.cbAdd.BackColor = System.Drawing.Color.Transparent;
+            this.cbAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cbAdd.BackgroundImage")));
+            this.cbAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cbAdd.BindingControl = null;
+            this.cbAdd.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.cbAdd.Checked = true;
+            this.cbAdd.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.cbAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbAdd.CustomCheckmarkImage = null;
+            this.cbAdd.Location = new System.Drawing.Point(680, 218);
+            this.cbAdd.MinimumSize = new System.Drawing.Size(17, 17);
+            this.cbAdd.Name = "cbAdd";
+            this.cbAdd.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.cbAdd.OnCheck.BorderRadius = 2;
+            this.cbAdd.OnCheck.BorderThickness = 2;
+            this.cbAdd.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.cbAdd.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.cbAdd.OnCheck.CheckmarkThickness = 2;
+            this.cbAdd.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.cbAdd.OnDisable.BorderRadius = 2;
+            this.cbAdd.OnDisable.BorderThickness = 2;
+            this.cbAdd.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbAdd.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.cbAdd.OnDisable.CheckmarkThickness = 2;
+            this.cbAdd.OnHoverChecked.BorderColor = System.Drawing.Color.DarkGray;
+            this.cbAdd.OnHoverChecked.BorderRadius = 2;
+            this.cbAdd.OnHoverChecked.BorderThickness = 2;
+            this.cbAdd.OnHoverChecked.CheckBoxColor = System.Drawing.Color.DarkGray;
+            this.cbAdd.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.cbAdd.OnHoverChecked.CheckmarkThickness = 2;
+            this.cbAdd.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
+            this.cbAdd.OnHoverUnchecked.BorderRadius = 2;
+            this.cbAdd.OnHoverUnchecked.BorderThickness = 2;
+            this.cbAdd.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbAdd.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.cbAdd.OnUncheck.BorderRadius = 2;
+            this.cbAdd.OnUncheck.BorderThickness = 2;
+            this.cbAdd.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.cbAdd.Size = new System.Drawing.Size(21, 21);
+            this.cbAdd.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.cbAdd.TabIndex = 46;
+            this.cbAdd.ThreeState = false;
+            this.cbAdd.ToolTipText = null;
             // 
             // btn_back
             // 
@@ -1003,59 +1057,6 @@
             this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
             this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
             this.DrawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseUp);
-            // 
-            // cbAdd
-            // 
-            this.cbAdd.AllowBindingControlAnimation = true;
-            this.cbAdd.AllowBindingControlColorChanges = false;
-            this.cbAdd.AllowBindingControlLocation = true;
-            this.cbAdd.AllowCheckBoxAnimation = false;
-            this.cbAdd.AllowCheckmarkAnimation = true;
-            this.cbAdd.AllowOnHoverStates = true;
-            this.cbAdd.AutoCheck = true;
-            this.cbAdd.BackColor = System.Drawing.Color.Transparent;
-            this.cbAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cbAdd.BackgroundImage")));
-            this.cbAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cbAdd.BindingControl = null;
-            this.cbAdd.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.cbAdd.Checked = true;
-            this.cbAdd.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.cbAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbAdd.CustomCheckmarkImage = null;
-            this.cbAdd.Location = new System.Drawing.Point(398, 247);
-            this.cbAdd.MinimumSize = new System.Drawing.Size(17, 17);
-            this.cbAdd.Name = "cbAdd";
-            this.cbAdd.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.cbAdd.OnCheck.BorderRadius = 2;
-            this.cbAdd.OnCheck.BorderThickness = 2;
-            this.cbAdd.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.cbAdd.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.cbAdd.OnCheck.CheckmarkThickness = 2;
-            this.cbAdd.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.cbAdd.OnDisable.BorderRadius = 2;
-            this.cbAdd.OnDisable.BorderThickness = 2;
-            this.cbAdd.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.cbAdd.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.cbAdd.OnDisable.CheckmarkThickness = 2;
-            this.cbAdd.OnHoverChecked.BorderColor = System.Drawing.Color.DarkGray;
-            this.cbAdd.OnHoverChecked.BorderRadius = 2;
-            this.cbAdd.OnHoverChecked.BorderThickness = 2;
-            this.cbAdd.OnHoverChecked.CheckBoxColor = System.Drawing.Color.DarkGray;
-            this.cbAdd.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.cbAdd.OnHoverChecked.CheckmarkThickness = 2;
-            this.cbAdd.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
-            this.cbAdd.OnHoverUnchecked.BorderRadius = 2;
-            this.cbAdd.OnHoverUnchecked.BorderThickness = 2;
-            this.cbAdd.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.cbAdd.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.cbAdd.OnUncheck.BorderRadius = 2;
-            this.cbAdd.OnUncheck.BorderThickness = 2;
-            this.cbAdd.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.cbAdd.Size = new System.Drawing.Size(21, 21);
-            this.cbAdd.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.cbAdd.TabIndex = 46;
-            this.cbAdd.ThreeState = false;
-            this.cbAdd.ToolTipText = null;
             // 
             // FormNotes
             // 

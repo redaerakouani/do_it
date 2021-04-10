@@ -44,7 +44,7 @@ namespace do_it
         }
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-            Process.Start("Teams.exe");
+           // Process.Start("");
         }
 
         private void bunifuImageButton2_Click_1(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace do_it
         private void timer2_Tick(object sender, EventArgs e)
         {
             curenttime = DateTime.Now.ToString("hh:mm:ss:tt");
-            //label1.Text = curenttime;
+            label5.Text = curenttime;
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -158,6 +158,7 @@ namespace do_it
         {
             timer2.Stop();
             label2.Text = "";
+            textBox1.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,7 +171,10 @@ namespace do_it
             Process.Start("www.linkedin.com");
         }
 
-      
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
