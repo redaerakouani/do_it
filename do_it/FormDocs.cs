@@ -76,29 +76,18 @@ namespace do_it
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Description", typeof(string));
-            dt.Columns.Add("start date", typeof(DateTime));
-            dt.Columns.Add("end date", typeof(DateTime));
-            dt.Columns.Add("Status", typeof(Boolean));
-            dt.Columns.Add("public", typeof(Boolean));
-
-
+            task_report r = new task_report();
             foreach(DataGridViewRow dgv in dataGridView1.Rows)
             {
-                dt.Rows.Add(dgv.Cells[5].Value, dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[6].Value, dgv.Cells[7].Value);
+                r.SetParameterValue(0, dgv.Cells[5].Value);
+                r.SetParameterValue(1, dgv.Cells[3].Value);
+                r.SetParameterValue(2, dgv.Cells[4].Value);
+                r.SetParameterValue(3, dgv.Cells[6].Value);
+                r.SetParameterValue(4, dgv.Cells[7].Value);
             }
 
 
-            ds.Tables.Add(dt);
-            ds.WriteXmlSchema("printing.xml");
-
-            FormPrinting f = new FormPrinting();
-            CrystalReport1 r =new  CrystalReport1();
-            r.SetDataSource(ds);
-
-            
+            FormPrinting f = new FormPrinting(r);
             f.ShowDialog();
         }
     }

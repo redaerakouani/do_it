@@ -44,7 +44,7 @@ namespace do_it
         }
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            Process.Start("https://teams.microsoft.com/");
         }
 
         private void bunifuImageButton2_Click_1(object sender, EventArgs e)
