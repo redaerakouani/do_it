@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTools2));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties69 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnteams = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnzoom = new Bunifu.Framework.UI.BunifuImageButton();
@@ -55,6 +55,7 @@
             this.btnpause = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnstrat = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +71,28 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRes = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btnSub = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.btnMul = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btnDiv = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btnDecimal = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnteams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnzoom)).BeginInit();
@@ -89,6 +111,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnpause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -109,7 +134,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.groupBox1.Location = new System.Drawing.Point(451, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(175, 450);
+            this.groupBox1.Size = new System.Drawing.Size(195, 450);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Apps";
@@ -196,7 +221,7 @@
             // 
             this.btnytb.Image = ((System.Drawing.Image)(resources.GetObject("btnytb.Image")));
             this.btnytb.ImageActive = null;
-            this.btnytb.Location = new System.Drawing.Point(100, 312);
+            this.btnytb.Location = new System.Drawing.Point(118, 312);
             this.btnytb.Name = "btnytb";
             this.btnytb.Size = new System.Drawing.Size(48, 55);
             this.btnytb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,7 +234,7 @@
             // 
             this.btnmap.Image = ((System.Drawing.Image)(resources.GetObject("btnmap.Image")));
             this.btnmap.ImageActive = null;
-            this.btnmap.Location = new System.Drawing.Point(100, 380);
+            this.btnmap.Location = new System.Drawing.Point(118, 380);
             this.btnmap.Name = "btnmap";
             this.btnmap.Size = new System.Drawing.Size(48, 55);
             this.btnmap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,7 +247,7 @@
             // 
             this.btngmail.Image = ((System.Drawing.Image)(resources.GetObject("btngmail.Image")));
             this.btngmail.ImageActive = null;
-            this.btngmail.Location = new System.Drawing.Point(100, 26);
+            this.btngmail.Location = new System.Drawing.Point(118, 26);
             this.btngmail.Name = "btngmail";
             this.btngmail.Size = new System.Drawing.Size(48, 55);
             this.btngmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -235,7 +260,7 @@
             // 
             this.btngoogle.Image = ((System.Drawing.Image)(resources.GetObject("btngoogle.Image")));
             this.btngoogle.ImageActive = null;
-            this.btngoogle.Location = new System.Drawing.Point(100, 99);
+            this.btngoogle.Location = new System.Drawing.Point(118, 99);
             this.btngoogle.Name = "btngoogle";
             this.btngoogle.Size = new System.Drawing.Size(48, 55);
             this.btngoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -248,7 +273,7 @@
             // 
             this.btndrive.Image = ((System.Drawing.Image)(resources.GetObject("btndrive.Image")));
             this.btndrive.ImageActive = null;
-            this.btndrive.Location = new System.Drawing.Point(100, 239);
+            this.btndrive.Location = new System.Drawing.Point(118, 239);
             this.btndrive.Name = "btndrive";
             this.btndrive.Size = new System.Drawing.Size(48, 55);
             this.btndrive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,7 +286,7 @@
             // 
             this.btnfacebook.Image = ((System.Drawing.Image)(resources.GetObject("btnfacebook.Image")));
             this.btnfacebook.ImageActive = null;
-            this.btnfacebook.Location = new System.Drawing.Point(100, 169);
+            this.btnfacebook.Location = new System.Drawing.Point(118, 169);
             this.btnfacebook.Name = "btnfacebook";
             this.btnfacebook.Size = new System.Drawing.Size(48, 55);
             this.btnfacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -336,6 +361,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label1);
@@ -355,6 +381,15 @@
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reminder";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 254);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "label5";
             // 
             // label4
             // 
@@ -450,11 +485,11 @@
             this.btnnstop.ColorContrastOnClick = 45;
             this.btnnstop.ColorContrastOnHover = 45;
             this.btnnstop.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnnstop.CustomizableEdges = borderEdges5;
+            borderEdges35.BottomLeft = true;
+            borderEdges35.BottomRight = true;
+            borderEdges35.TopLeft = true;
+            borderEdges35.TopRight = true;
+            this.btnnstop.CustomizableEdges = borderEdges35;
             this.btnnstop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnnstop.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnnstop.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -475,24 +510,24 @@
             this.btnnstop.IndicateFocus = false;
             this.btnnstop.Location = new System.Drawing.Point(20, 209);
             this.btnnstop.Name = "btnnstop";
-            stateProperties9.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties9.BorderRadius = 35;
-            stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties9.BorderThickness = 2;
-            stateProperties9.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.btnnstop.onHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.White;
-            stateProperties10.BorderRadius = 35;
-            stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties10.BorderThickness = 2;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.btnnstop.OnPressedState = stateProperties10;
+            stateProperties69.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties69.BorderRadius = 35;
+            stateProperties69.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties69.BorderThickness = 2;
+            stateProperties69.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties69.IconLeftImage = null;
+            stateProperties69.IconRightImage = null;
+            this.btnnstop.onHoverState = stateProperties69;
+            stateProperties70.BorderColor = System.Drawing.Color.White;
+            stateProperties70.BorderRadius = 35;
+            stateProperties70.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties70.BorderThickness = 2;
+            stateProperties70.FillColor = System.Drawing.Color.White;
+            stateProperties70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties70.IconLeftImage = null;
+            stateProperties70.IconRightImage = null;
+            this.btnnstop.OnPressedState = stateProperties70;
             this.btnnstop.Size = new System.Drawing.Size(66, 42);
             this.btnnstop.TabIndex = 32;
             this.btnnstop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -514,11 +549,11 @@
             this.btnStart.ColorContrastOnClick = 45;
             this.btnStart.ColorContrastOnHover = 45;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnStart.CustomizableEdges = borderEdges6;
+            borderEdges36.BottomLeft = true;
+            borderEdges36.BottomRight = true;
+            borderEdges36.TopLeft = true;
+            borderEdges36.TopRight = true;
+            this.btnStart.CustomizableEdges = borderEdges36;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStart.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnStart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -539,24 +574,24 @@
             this.btnStart.IndicateFocus = false;
             this.btnStart.Location = new System.Drawing.Point(136, 209);
             this.btnStart.Name = "btnStart";
-            stateProperties11.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.BorderRadius = 35;
-            stateProperties11.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties11.BorderThickness = 2;
-            stateProperties11.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties11.IconLeftImage = null;
-            stateProperties11.IconRightImage = null;
-            this.btnStart.onHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.White;
-            stateProperties12.BorderRadius = 35;
-            stateProperties12.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties12.BorderThickness = 2;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties12.IconLeftImage = null;
-            stateProperties12.IconRightImage = null;
-            this.btnStart.OnPressedState = stateProperties12;
+            stateProperties71.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties71.BorderRadius = 35;
+            stateProperties71.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties71.BorderThickness = 2;
+            stateProperties71.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties71.IconLeftImage = null;
+            stateProperties71.IconRightImage = null;
+            this.btnStart.onHoverState = stateProperties71;
+            stateProperties72.BorderColor = System.Drawing.Color.White;
+            stateProperties72.BorderRadius = 35;
+            stateProperties72.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties72.BorderThickness = 2;
+            stateProperties72.FillColor = System.Drawing.Color.White;
+            stateProperties72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties72.IconLeftImage = null;
+            stateProperties72.IconRightImage = null;
+            this.btnStart.OnPressedState = stateProperties72;
             this.btnStart.Size = new System.Drawing.Size(66, 42);
             this.btnStart.TabIndex = 31;
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -591,16 +626,326 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label5
+            // groupBox4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(138, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
+            this.groupBox4.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.groupBox4.Location = new System.Drawing.Point(9, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(202, 450);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Calculactrice";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.txtDisplay, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 24);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.61905F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.38095F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(190, 420);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // txtDisplay
+            // 
+            this.txtDisplay.BackColor = System.Drawing.Color.White;
+            this.txtDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDisplay.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDisplay.Location = new System.Drawing.Point(3, 3);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ReadOnly = true;
+            this.txtDisplay.Size = new System.Drawing.Size(184, 110);
+            this.txtDisplay.TabIndex = 0;
+            this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.btnRes, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btn0, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.btnAdd, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btn3, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btn2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btn1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnSub, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btn6, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btn5, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btn4, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnMul, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn9, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn8, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnDiv, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnClear, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnReset, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn7, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnDecimal, 2, 4);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 119);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.07358F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.7291F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(184, 298);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // btnRes
+            // 
+            this.btnRes.BackColor = System.Drawing.Color.Transparent;
+            this.btnRes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRes.Location = new System.Drawing.Point(141, 245);
+            this.btnRes.Name = "btnRes";
+            this.btnRes.Size = new System.Drawing.Size(40, 50);
+            this.btnRes.TabIndex = 19;
+            this.btnRes.Text = "=";
+            this.btnRes.UseVisualStyleBackColor = false;
+            this.btnRes.Click += new System.EventHandler(this.BtnRes_Click);
+            // 
+            // btn0
+            // 
+            this.btn0.BackColor = System.Drawing.Color.Transparent;
+            this.btn0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn0.Location = new System.Drawing.Point(49, 245);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(40, 50);
+            this.btn0.TabIndex = 17;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(141, 180);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 59);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // btn3
+            // 
+            this.btn3.BackColor = System.Drawing.Color.Transparent;
+            this.btn3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.Location = new System.Drawing.Point(95, 180);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(40, 59);
+            this.btn3.TabIndex = 14;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btn2
+            // 
+            this.btn2.BackColor = System.Drawing.Color.Transparent;
+            this.btn2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.Location = new System.Drawing.Point(49, 180);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(40, 59);
+            this.btn2.TabIndex = 13;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.Transparent;
+            this.btn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Location = new System.Drawing.Point(3, 180);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(40, 59);
+            this.btn1.TabIndex = 12;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btnSub
+            // 
+            this.btnSub.BackColor = System.Drawing.Color.Transparent;
+            this.btnSub.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub.Location = new System.Drawing.Point(141, 121);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(40, 53);
+            this.btnSub.TabIndex = 11;
+            this.btnSub.Text = "-";
+            this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.BtnSub_Click);
+            // 
+            // btn6
+            // 
+            this.btn6.BackColor = System.Drawing.Color.Transparent;
+            this.btn6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6.Location = new System.Drawing.Point(95, 121);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(40, 53);
+            this.btn6.TabIndex = 10;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btn5
+            // 
+            this.btn5.BackColor = System.Drawing.Color.Transparent;
+            this.btn5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn5.Location = new System.Drawing.Point(49, 121);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(40, 53);
+            this.btn5.TabIndex = 9;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btn4
+            // 
+            this.btn4.BackColor = System.Drawing.Color.Transparent;
+            this.btn4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Location = new System.Drawing.Point(3, 121);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(40, 53);
+            this.btn4.TabIndex = 8;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btnMul
+            // 
+            this.btnMul.BackColor = System.Drawing.Color.Transparent;
+            this.btnMul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMul.Location = new System.Drawing.Point(141, 62);
+            this.btnMul.Name = "btnMul";
+            this.btnMul.Size = new System.Drawing.Size(40, 53);
+            this.btnMul.TabIndex = 7;
+            this.btnMul.Text = "*";
+            this.btnMul.UseVisualStyleBackColor = false;
+            this.btnMul.Click += new System.EventHandler(this.BtnMul_Click);
+            // 
+            // btn9
+            // 
+            this.btn9.BackColor = System.Drawing.Color.Transparent;
+            this.btn9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn9.Location = new System.Drawing.Point(95, 62);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(40, 53);
+            this.btn9.TabIndex = 6;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btn8
+            // 
+            this.btn8.BackColor = System.Drawing.Color.Transparent;
+            this.btn8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn8.Location = new System.Drawing.Point(49, 62);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(40, 53);
+            this.btn8.TabIndex = 5;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btnDiv
+            // 
+            this.btnDiv.BackColor = System.Drawing.Color.Transparent;
+            this.btnDiv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiv.Location = new System.Drawing.Point(141, 3);
+            this.btnDiv.Name = "btnDiv";
+            this.btnDiv.Size = new System.Drawing.Size(40, 53);
+            this.btnDiv.TabIndex = 4;
+            this.btnDiv.Text = "/";
+            this.btnDiv.UseVisualStyleBackColor = false;
+            this.btnDiv.Click += new System.EventHandler(this.BtnDiv_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.Location = new System.Drawing.Point(95, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(40, 53);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.Location = new System.Drawing.Point(49, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(40, 53);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // btn7
+            // 
+            this.btn7.BackColor = System.Drawing.Color.Transparent;
+            this.btn7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7.Location = new System.Drawing.Point(3, 62);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(40, 53);
+            this.btn7.TabIndex = 0;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.BtnNum_Click);
+            // 
+            // btnDecimal
+            // 
+            this.btnDecimal.BackColor = System.Drawing.Color.Transparent;
+            this.btnDecimal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDecimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnDecimal.Location = new System.Drawing.Point(95, 245);
+            this.btnDecimal.Name = "btnDecimal";
+            this.btnDecimal.Size = new System.Drawing.Size(40, 50);
+            this.btnDecimal.TabIndex = 20;
+            this.btnDecimal.Text = ".";
+            this.btnDecimal.UseVisualStyleBackColor = false;
+            this.btnDecimal.Click += new System.EventHandler(this.BtnDecimal_Click);
             // 
             // FormTools2
             // 
@@ -608,7 +953,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(658, 480);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -636,8 +981,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnstrat)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -678,5 +1026,27 @@
         private Bunifu.Framework.UI.BunifuImageButton btnteams;
         private Bunifu.Framework.UI.BunifuImageButton btnzoom;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnSub;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button btnMul;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btnDiv;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button btnRes;
+        private System.Windows.Forms.Button btn0;
+        private System.Windows.Forms.Button btnDecimal;
     }
 }

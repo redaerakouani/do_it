@@ -123,8 +123,30 @@ namespace do_it
         //Home_Button
         private void btnhome_Click(object sender, EventArgs e)
         {
+            listBoxTodayTasks.Items.Clear();
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
             panelForms.Visible = false;
             panelHome.Visible = true;
+
+            string req2 = "select DESCRIPTION from TASK where ID_USER = " + get_userID() + " AND STATUS = '0' AND datediff(dd,START_TIME,getdate())=0";
+            com = new SqlCommand(req2, cn);
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                listBoxTodayTasks.Items.Add("• " + dr[0]);
+
+            }
+            if (listBoxTodayTasks.Items.Count == 0)
+            {
+                panelTasks.Hide();
+                panelNoTasks.Show();
+            }
+            else
+            {
+                panelTasks.Show();
+                panelNoTasks.Hide();
+            }
             //panelForms.Controls.RemoveAt(0);
             //panelForms.Visible = false;
             //label1.Visible = true;
@@ -177,6 +199,9 @@ namespace do_it
                 btnhome.Text = "Home";
                 btntools.Text = "tools";
                 btndocs.Text = "Docs";
+               
+
+
                 panelForms.Width = 647;
                 panelHome.Width = 647;
                 Size = new Size(847, 542);
