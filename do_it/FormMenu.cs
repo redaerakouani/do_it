@@ -160,6 +160,7 @@ namespace do_it
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
+            formtask(new FormDocs());
         }
         //btn Show MainPanel
         private void bunifuButton1_Click_1(object sender, EventArgs e)

@@ -16,14 +16,14 @@ namespace do_it {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class task_report : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public task_report() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "task report.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace do_it {
         
         public override string FullResourceName {
             get {
-                return "do_it.task report.rpt";
+                return "do_it.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -87,52 +87,12 @@ namespace do_it {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Description {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_start_date {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_end_date {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Status {
-            get {
-                return this.DataDefinition.ParameterFields[3];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Public {
-            get {
-                return this.DataDefinition.ParameterFields[4];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedtask_report : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public Cachedtask_report() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -169,7 +129,7 @@ namespace do_it {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            task_report rpt = new task_report();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -76,7 +76,7 @@ namespace do_it
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
-            task_report r = new task_report();
+            CrystalReport1 r = new CrystalReport1();
             foreach(DataGridViewRow dgv in dataGridView1.Rows)
             {
                 r.SetParameterValue(0, dgv.Cells[5].Value);
@@ -87,8 +87,8 @@ namespace do_it
             }
 
 
-            FormPrinting f = new FormPrinting(r);
-            f.ShowDialog();
+               //FormPrinting f = new FormPrinting(r);
+            //f.ShowDialog();
         }
     }
 }
