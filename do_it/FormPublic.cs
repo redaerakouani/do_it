@@ -109,31 +109,106 @@ namespace do_it
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             string req1 = "select t.ID_TASK,t.DESCRIPTION,u.FULL_NAME,c.CAT_NAME,t.STATUS,t.START_TIME,t.END_TIME from TASK t inner join users u on t.ID_USER=u.ID_USER inner join CATEGORIE c on c.ID_CATEGORIE_=t.ID_CATEGORIE_ where t.PUBLIC_TASK='1' and t.DESCRIPTION like'%" + txtSearch.Text + "%'";
+            string req2 = "select t.ID_TASK,t.DESCRIPTION,u.FULL_NAME,c.CAT_NAME,t.STATUS,t.START_TIME,t.END_TIME from TASK t inner join users u on t.ID_USER=u.ID_USER inner join CATEGORIE c on c.ID_CATEGORIE_=t.ID_CATEGORIE_ where t.PUBLIC_TASK='1' and u.FULL_NAME like'%" + txtSearch.Text + "%'";
+            string req3 = "select n.ID_NOTE,n.TITLE_NOTE,n.TEXT_NOTE,u.FULL_NAME,n.DATE_NOTE,n.SKETCH_NOTE from NOTE n inner join users u on n.ID_USER = u.ID_USER where n.PUBLIC_NOTE = '1' and t.DESCRIPTION like'%" + txtSearch.Text + "%'";
+            string req4 = "select n.ID_NOTE,n.TITLE_NOTE,n.TEXT_NOTE,u.FULL_NAME,n.DATE_NOTE,n.SKETCH_NOTE from NOTE n inner join users u on n.ID_USER=u.ID_USER where n.PUBLIC_NOTE='1' and u.FULL_NAME like'%" + txtSearch.Text + "%'";
+
+
             DataTable dataTable = new DataTable();
-            if (rdBtnTitle.Checked==true && rdBtnTask.Checked==true)
+            if(rdBtnTask.Checked == true)
             {
-                SqlCommand com = new SqlCommand(req1, cn);
-                SqlDataReader dr = com.ExecuteReader();
-                SqlDataReader sqlDataReader = dr;
-                TaskColumnsAdd(dataTable);
-                while (sqlDataReader.Read())
+                if (rdBtnTitle.Checked == true)
                 {
-                    DataRow row = dataTable.NewRow();
-                    row["ID Task"] = sqlDataReader["ID_TASK"];
-                    row["Description"] = sqlDataReader["DESCRIPTION"];
-                    row["User"] = sqlDataReader["FULL_NAME"];
-                    row["Categorie"] = sqlDataReader["CAT_NAME"];
-                    row["Status"] = sqlDataReader["STATUS"];
-                    row["Start time"] = sqlDataReader["START_TIME"];
-                    row["End time"] = sqlDataReader["END_TIME"];
-                    dataTable.Rows.Add(row);
+                    SqlCommand com = new SqlCommand(req1, cn);
+                    SqlDataReader dr = com.ExecuteReader();
+                    SqlDataReader sqlDataReader = dr;
+                    TaskColumnsAdd(dataTable);
+                    while (sqlDataReader.Read())
+                    {
+                        DataRow row = dataTable.NewRow();
+                        row["ID Task"] = sqlDataReader["ID_TASK"];
+                        row["Description"] = sqlDataReader["DESCRIPTION"];
+                        row["User"] = sqlDataReader["FULL_NAME"];
+                        row["Categorie"] = sqlDataReader["CAT_NAME"];
+                        row["Status"] = sqlDataReader["STATUS"];
+                        row["Start time"] = sqlDataReader["START_TIME"];
+                        row["End time"] = sqlDataReader["END_TIME"];
+                        dataTable.Rows.Add(row);
+                    }
+                    sqlDataReader.Close();
+                    Grid_Display.DataSource = dataTable;
+                    //var bd = (BindingSource)Grid_Display.DataSource;
+                    //var dt = (DataTable)bd.DataSource;
+                    //dt.DefaultView.RowFilter = string.Format("FULL_NAME like '%" + txtSearch.Text + "%'");
+                }else
+                {
+                    SqlCommand com = new SqlCommand(req2, cn);
+                    SqlDataReader dr = com.ExecuteReader();
+                    SqlDataReader sqlDataReader = dr;
+                    TaskColumnsAdd(dataTable);
+                    while (sqlDataReader.Read())
+                    {
+                        DataRow row = dataTable.NewRow();
+                        row["ID Task"] = sqlDataReader["ID_TASK"];
+                        row["Description"] = sqlDataReader["DESCRIPTION"];
+                        row["User"] = sqlDataReader["FULL_NAME"];
+                        row["Categorie"] = sqlDataReader["CAT_NAME"];
+                        row["Status"] = sqlDataReader["STATUS"];
+                        row["Start time"] = sqlDataReader["START_TIME"];
+                        row["End time"] = sqlDataReader["END_TIME"];
+                        dataTable.Rows.Add(row);
+                    }
+                    sqlDataReader.Close();
+                    Grid_Display.DataSource = dataTable;
                 }
-                sqlDataReader.Close();
-                Grid_Display.DataSource = dataTable;
-                //var bd = (BindingSource)Grid_Display.DataSource;
-                //var dt = (DataTable)bd.DataSource;
-                //dt.DefaultView.RowFilter = string.Format("FULL_NAME like '%" + txtSearch.Text + "%'");
             }
+            else
+            {
+                if (rdBtnTitle.Checked == true)
+                {
+                    SqlCommand com = new SqlCommand(req3, cn);
+                    SqlDataReader dr = com.ExecuteReader();
+                    SqlDataReader sqlDataReader = dr;
+                    NoteColumnsAdd(dataTable);
+                    while (sqlDataReader.Read())
+                    {
+                        DataRow row = dataTable.NewRow();
+                        row["ID NOTE"] = sqlDataReader["ID_NOTE"];
+                        row["Title"] = sqlDataReader["TITLE_NOTE"];
+                        row["Note text"] = sqlDataReader["TEXT_NOTE"];
+                        row["User"] = sqlDataReader["FULL_NAME"];
+                        row["Last Modified on"] = sqlDataReader["DATE_NOTE"];
+                        row["Sketck file"] = sqlDataReader["SKETCH_NOTE"];
+                        dataTable.Rows.Add(row);
+                    }
+                    sqlDataReader.Close();
+                    Grid_Display.DataSource = dataTable;
+                    //var bd = (BindingSource)Grid_Display.DataSource;
+                    //var dt = (DataTable)bd.DataSource;
+                    //dt.DefaultView.RowFilter = string.Format("FULL_NAME like '%" + txtSearch.Text + "%'");
+                }
+                else
+                {
+                    SqlCommand com = new SqlCommand(req2, cn);
+                    SqlDataReader dr = com.ExecuteReader();
+                    SqlDataReader sqlDataReader = dr;
+                    NoteColumnsAdd(dataTable);
+                    while (sqlDataReader.Read())
+                    {
+                        DataRow row = dataTable.NewRow();
+                        row["ID NOTE"] = sqlDataReader["ID_NOTE"];
+                        row["Title"] = sqlDataReader["TITLE_NOTE"];
+                        row["Note text"] = sqlDataReader["TEXT_NOTE"];
+                        row["User"] = sqlDataReader["FULL_NAME"];
+                        row["Last Modified on"] = sqlDataReader["DATE_NOTE"];
+                        row["Sketck file"] = sqlDataReader["SKETCH_NOTE"];
+                        dataTable.Rows.Add(row);
+                    }
+                    sqlDataReader.Close();
+                    Grid_Display.DataSource = dataTable;
+                }
+            }
+            
         }
     }
 }
