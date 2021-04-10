@@ -692,6 +692,10 @@ namespace do_it {
             
             private global::System.Data.DataColumn columnPUBLIC_NOTE;
             
+            private global::System.Data.DataColumn columnTITLE_NOTE;
+            
+            private global::System.Data.DataColumn columnSKETCH_NOTE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public NOTEDataTable() {
@@ -767,6 +771,22 @@ namespace do_it {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TITLE_NOTEColumn {
+                get {
+                    return this.columnTITLE_NOTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SKETCH_NOTEColumn {
+                get {
+                    return this.columnSKETCH_NOTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -802,14 +822,16 @@ namespace do_it {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public NOTERow AddNOTERow(usersRow parentusersRowByFK_NOTE_ECRIT_USER, string TEXT_NOTE, System.DateTime DATE_NOTE, bool PUBLIC_NOTE) {
+            public NOTERow AddNOTERow(usersRow parentusersRowByFK_NOTE_ECRIT_USER, string TEXT_NOTE, System.DateTime DATE_NOTE, bool PUBLIC_NOTE, string TITLE_NOTE, string SKETCH_NOTE) {
                 NOTERow rowNOTERow = ((NOTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         TEXT_NOTE,
                         DATE_NOTE,
-                        PUBLIC_NOTE};
+                        PUBLIC_NOTE,
+                        TITLE_NOTE,
+                        SKETCH_NOTE};
                 if ((parentusersRowByFK_NOTE_ECRIT_USER != null)) {
                     columnValuesArray[1] = parentusersRowByFK_NOTE_ECRIT_USER[0];
                 }
@@ -847,6 +869,8 @@ namespace do_it {
                 this.columnTEXT_NOTE = base.Columns["TEXT_NOTE"];
                 this.columnDATE_NOTE = base.Columns["DATE_NOTE"];
                 this.columnPUBLIC_NOTE = base.Columns["PUBLIC_NOTE"];
+                this.columnTITLE_NOTE = base.Columns["TITLE_NOTE"];
+                this.columnSKETCH_NOTE = base.Columns["SKETCH_NOTE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -862,6 +886,10 @@ namespace do_it {
                 base.Columns.Add(this.columnDATE_NOTE);
                 this.columnPUBLIC_NOTE = new global::System.Data.DataColumn("PUBLIC_NOTE", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPUBLIC_NOTE);
+                this.columnTITLE_NOTE = new global::System.Data.DataColumn("TITLE_NOTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTITLE_NOTE);
+                this.columnSKETCH_NOTE = new global::System.Data.DataColumn("SKETCH_NOTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSKETCH_NOTE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_NOTE}, true));
                 this.columnID_NOTE.AutoIncrement = true;
@@ -872,6 +900,8 @@ namespace do_it {
                 this.columnID_NOTE.Unique = true;
                 this.columnID_USER.AllowDBNull = false;
                 this.columnTEXT_NOTE.MaxLength = 8000;
+                this.columnTITLE_NOTE.MaxLength = 50;
+                this.columnSKETCH_NOTE.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1840,6 +1870,38 @@ namespace do_it {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TITLE_NOTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableNOTE.TITLE_NOTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'TITLE_NOTE\' dans la table \'NOTE\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNOTE.TITLE_NOTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SKETCH_NOTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableNOTE.SKETCH_NOTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'SKETCH_NOTE\' dans la table \'NOTE\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNOTE.SKETCH_NOTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public usersRow usersRow {
                 get {
                     return ((usersRow)(this.GetParentRow(this.Table.ParentRelations["FK_NOTE_ECRIT_USER"])));
@@ -1883,6 +1945,30 @@ namespace do_it {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPUBLIC_NOTENull() {
                 this[this.tableNOTE.PUBLIC_NOTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTITLE_NOTENull() {
+                return this.IsNull(this.tableNOTE.TITLE_NOTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTITLE_NOTENull() {
+                this[this.tableNOTE.TITLE_NOTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSKETCH_NOTENull() {
+                return this.IsNull(this.tableNOTE.SKETCH_NOTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSKETCH_NOTENull() {
+                this[this.tableNOTE.SKETCH_NOTEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2846,10 +2932,12 @@ SELECT ID_CATEGORIE_, CAT_NAME FROM CATEGORIE WHERE (ID_CATEGORIE_ = @ID_CATEGOR
             tableMapping.ColumnMappings.Add("TEXT_NOTE", "TEXT_NOTE");
             tableMapping.ColumnMappings.Add("DATE_NOTE", "DATE_NOTE");
             tableMapping.ColumnMappings.Add("PUBLIC_NOTE", "PUBLIC_NOTE");
+            tableMapping.ColumnMappings.Add("TITLE_NOTE", "TITLE_NOTE");
+            tableMapping.ColumnMappings.Add("SKETCH_NOTE", "SKETCH_NOTE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[NOTE] WHERE (([ID_NOTE] = @Original_ID_NOTE) AND ([ID_USER] = @Original_ID_USER) AND ((@IsNull_TEXT_NOTE = 1 AND [TEXT_NOTE] IS NULL) OR ([TEXT_NOTE] = @Original_TEXT_NOTE)) AND ((@IsNull_DATE_NOTE = 1 AND [DATE_NOTE] IS NULL) OR ([DATE_NOTE] = @Original_DATE_NOTE)) AND ((@IsNull_PUBLIC_NOTE = 1 AND [PUBLIC_NOTE] IS NULL) OR ([PUBLIC_NOTE] = @Original_PUBLIC_NOTE)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [NOTE] WHERE (([ID_NOTE] = @Original_ID_NOTE) AND ([ID_USER] = @Original_ID_USER) AND ((@IsNull_TEXT_NOTE = 1 AND [TEXT_NOTE] IS NULL) OR ([TEXT_NOTE] = @Original_TEXT_NOTE)) AND ((@IsNull_DATE_NOTE = 1 AND [DATE_NOTE] IS NULL) OR ([DATE_NOTE] = @Original_DATE_NOTE)) AND ((@IsNull_PUBLIC_NOTE = 1 AND [PUBLIC_NOTE] IS NULL) OR ([PUBLIC_NOTE] = @Original_PUBLIC_NOTE)) AND ((@IsNull_TITLE_NOTE = 1 AND [TITLE_NOTE] IS NULL) OR ([TITLE_NOTE] = @Original_TITLE_NOTE)) AND ((@IsNull_SKETCH_NOTE = 1 AND [SKETCH_NOTE] IS NULL) OR ([SKETCH_NOTE] = @Original_SKETCH_NOTE)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2859,25 +2947,32 @@ SELECT ID_CATEGORIE_, CAT_NAME FROM CATEGORIE WHERE (ID_CATEGORIE_ = @ID_CATEGOR
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATE_NOTE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATE_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PUBLIC_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PUBLIC_NOTE", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TITLE_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TITLE_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SKETCH_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SKETCH_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[NOTE] ([ID_USER], [TEXT_NOTE], [DATE_NOTE], [PUBLIC_NOTE]) VAL" +
-                "UES (@ID_USER, @TEXT_NOTE, @DATE_NOTE, @PUBLIC_NOTE);\r\nSELECT ID_NOTE, ID_USER, " +
-                "TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_NOTE = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [NOTE] ([ID_USER], [TEXT_NOTE], [DATE_NOTE], [PUBLIC_NOTE], [TITLE_NOTE], [SKETCH_NOTE]) VALUES (@ID_USER, @TEXT_NOTE, @DATE_NOTE, @PUBLIC_NOTE, @TITLE_NOTE, @SKETCH_NOTE);
+SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE, TITLE_NOTE, SKETCH_NOTE FROM NOTE WHERE (ID_NOTE = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEXT_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEXT_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATE_NOTE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATE_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PUBLIC_NOTE", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TITLE_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SKETCH_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[NOTE] SET [ID_USER] = @ID_USER, [TEXT_NOTE] = @TEXT_NOTE, [DATE_NOTE] = @DATE_NOTE, [PUBLIC_NOTE] = @PUBLIC_NOTE WHERE (([ID_NOTE] = @Original_ID_NOTE) AND ([ID_USER] = @Original_ID_USER) AND ((@IsNull_TEXT_NOTE = 1 AND [TEXT_NOTE] IS NULL) OR ([TEXT_NOTE] = @Original_TEXT_NOTE)) AND ((@IsNull_DATE_NOTE = 1 AND [DATE_NOTE] IS NULL) OR ([DATE_NOTE] = @Original_DATE_NOTE)) AND ((@IsNull_PUBLIC_NOTE = 1 AND [PUBLIC_NOTE] IS NULL) OR ([PUBLIC_NOTE] = @Original_PUBLIC_NOTE)));
-SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_NOTE = @ID_NOTE)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [NOTE] SET [ID_USER] = @ID_USER, [TEXT_NOTE] = @TEXT_NOTE, [DATE_NOTE] = @DATE_NOTE, [PUBLIC_NOTE] = @PUBLIC_NOTE, [TITLE_NOTE] = @TITLE_NOTE, [SKETCH_NOTE] = @SKETCH_NOTE WHERE (([ID_NOTE] = @Original_ID_NOTE) AND ([ID_USER] = @Original_ID_USER) AND ((@IsNull_TEXT_NOTE = 1 AND [TEXT_NOTE] IS NULL) OR ([TEXT_NOTE] = @Original_TEXT_NOTE)) AND ((@IsNull_DATE_NOTE = 1 AND [DATE_NOTE] IS NULL) OR ([DATE_NOTE] = @Original_DATE_NOTE)) AND ((@IsNull_PUBLIC_NOTE = 1 AND [PUBLIC_NOTE] IS NULL) OR ([PUBLIC_NOTE] = @Original_PUBLIC_NOTE)) AND ((@IsNull_TITLE_NOTE = 1 AND [TITLE_NOTE] IS NULL) OR ([TITLE_NOTE] = @Original_TITLE_NOTE)) AND ((@IsNull_SKETCH_NOTE = 1 AND [SKETCH_NOTE] IS NULL) OR ([SKETCH_NOTE] = @Original_SKETCH_NOTE)));
+SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE, TITLE_NOTE, SKETCH_NOTE FROM NOTE WHERE (ID_NOTE = @ID_NOTE)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEXT_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEXT_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATE_NOTE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATE_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PUBLIC_NOTE", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TITLE_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SKETCH_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_USER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TEXT_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEXT_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2886,6 +2981,10 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATE_NOTE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATE_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PUBLIC_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PUBLIC_NOTE", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TITLE_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TITLE_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TITLE_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SKETCH_NOTE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SKETCH_NOTE", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SKETCH_NOTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_NOTE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2902,18 +3001,19 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM dbo.NOTE";
+            this._commandCollection[0].CommandText = "SELECT        ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE, TITLE_NOTE, SK" +
+                "ETCH_NOTE\r\nFROM            NOTE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE\r\nFROM          " +
-                "  NOTE\r\nWHERE        (ID_USER = @iduser)";
+            this._commandCollection[1].CommandText = "SELECT DATE_NOTE, ID_NOTE, ID_USER, PUBLIC_NOTE, SKETCH_NOTE, TEXT_NOTE, TITLE_NO" +
+                "TE FROM NOTE WHERE (ID_USER = @iduser)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE\r\nFROM          " +
-                "  NOTE\r\nWHERE        (ID_USER = @iduser) AND (PUBLIC_NOTE = @pub)";
+            this._commandCollection[2].CommandText = "SELECT DATE_NOTE, ID_NOTE, ID_USER, PUBLIC_NOTE, SKETCH_NOTE, TEXT_NOTE, TITLE_NO" +
+                "TE FROM NOTE WHERE (ID_USER = @iduser) AND (PUBLIC_NOTE = @pub)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iduser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_USER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pub", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PUBLIC_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3040,7 +3140,7 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE) {
+        public virtual int Delete(int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE, string Original_TITLE_NOTE, string Original_SKETCH_NOTE) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_NOTE));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_USER));
             if ((Original_TEXT_NOTE == null)) {
@@ -3067,6 +3167,22 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            if ((Original_TITLE_NOTE == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_TITLE_NOTE));
+            }
+            if ((Original_SKETCH_NOTE == null)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_SKETCH_NOTE));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3087,7 +3203,7 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE) {
+        public virtual int Insert(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE, string TITLE_NOTE, string SKETCH_NOTE) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_USER));
             if ((TEXT_NOTE == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3106,6 +3222,18 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((TITLE_NOTE == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(TITLE_NOTE));
+            }
+            if ((SKETCH_NOTE == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(SKETCH_NOTE));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3127,7 +3255,7 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE, int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE, int ID_NOTE) {
+        public virtual int Update(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE, string TITLE_NOTE, string SKETCH_NOTE, int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE, string Original_TITLE_NOTE, string Original_SKETCH_NOTE, int ID_NOTE) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_USER));
             if ((TEXT_NOTE == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3147,33 +3275,61 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_NOTE));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_USER));
+            if ((TITLE_NOTE == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(TITLE_NOTE));
+            }
+            if ((SKETCH_NOTE == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(SKETCH_NOTE));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID_NOTE));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ID_USER));
             if ((Original_TEXT_NOTE == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_TEXT_NOTE));
-            }
-            if ((Original_DATE_NOTE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_DATE_NOTE.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_PUBLIC_NOTE.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_TEXT_NOTE));
+            }
+            if ((Original_DATE_NOTE.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_PUBLIC_NOTE.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_DATE_NOTE.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(ID_NOTE));
+            if ((Original_PUBLIC_NOTE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_PUBLIC_NOTE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_TITLE_NOTE == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_TITLE_NOTE));
+            }
+            if ((Original_SKETCH_NOTE == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_SKETCH_NOTE));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(ID_NOTE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3194,8 +3350,8 @@ SELECT ID_NOTE, ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE FROM NOTE WHERE (ID_N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE, int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE) {
-            return this.Update(ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE, Original_ID_NOTE, Original_ID_USER, Original_TEXT_NOTE, Original_DATE_NOTE, Original_PUBLIC_NOTE, Original_ID_NOTE);
+        public virtual int Update(int ID_USER, string TEXT_NOTE, global::System.Nullable<global::System.DateTime> DATE_NOTE, global::System.Nullable<bool> PUBLIC_NOTE, string TITLE_NOTE, string SKETCH_NOTE, int Original_ID_NOTE, int Original_ID_USER, string Original_TEXT_NOTE, global::System.Nullable<global::System.DateTime> Original_DATE_NOTE, global::System.Nullable<bool> Original_PUBLIC_NOTE, string Original_TITLE_NOTE, string Original_SKETCH_NOTE) {
+            return this.Update(ID_USER, TEXT_NOTE, DATE_NOTE, PUBLIC_NOTE, TITLE_NOTE, SKETCH_NOTE, Original_ID_NOTE, Original_ID_USER, Original_TEXT_NOTE, Original_DATE_NOTE, Original_PUBLIC_NOTE, Original_TITLE_NOTE, Original_SKETCH_NOTE, Original_ID_NOTE);
         }
     }
     

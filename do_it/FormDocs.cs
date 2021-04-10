@@ -13,6 +13,7 @@ namespace do_it
 {
     public partial class FormDocs : Form
     {
+        private Boolean _isTask=false;
         public FormDocs()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace do_it
 
         private void btnshowAll_Click(object sender, EventArgs e)
         {
+            _isTask = true;
             dataGridView1.DataSource = tASKBindingSource;
             this.tASKTableAdapter.FillBy(this.dO_ITDataSet.TASK, Program.get_userID());
             pnlOthersFilters.Visible = true;
@@ -46,6 +48,7 @@ namespace do_it
 
         private void btnallNotes_Click(object sender, EventArgs e)
         {
+            _isTask = false;
             pnlOthersFilters.Visible = false;
             dataGridView1.DataSource = nOTEBindingSource;
             this.nOTETableAdapter.FillBy(this.dO_ITDataSet.NOTE, Program.get_userID());
@@ -76,19 +79,36 @@ namespace do_it
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
-            CrystalReport1 r = new CrystalReport1();
-            foreach(DataGridViewRow dgv in dataGridView1.Rows)
+            FormPrinting f ;
+            raport_task3 r = new raport_task3();
+            report_note r2 = new report_note();
+            //foreach(DataGridViewRow dgv in dataGridView1.Rows)
+            //{
+            //    r.SetParameterValue(0, dgv.Cells[5].Value);
+            //    r.SetParameterValue(1, dgv.Cells[3].Value);
+            //    r.SetParameterValue(2, dgv.Cells[4].Value);
+            //    r.SetParameterValue(3, dgv.Cells[6].Value);
+            //    r.SetParameterValue(4, dgv.Cells[7].Value);
+            //}
+            r.SetDataSource(dO_ITDataSet);
+
+            r2.SetDataSource(dO_ITDataSet);
+
+            if(_isTask)
             {
-                r.SetParameterValue(0, dgv.Cells[5].Value);
-                r.SetParameterValue(1, dgv.Cells[3].Value);
-                r.SetParameterValue(2, dgv.Cells[4].Value);
-                r.SetParameterValue(3, dgv.Cells[6].Value);
-                r.SetParameterValue(4, dgv.Cells[7].Value);
+                f = new FormPrinting(r);
+                
+
+            }
+            else
+            {
+                f = new FormPrinting(r2);
+                
             }
 
+                 
 
-               //FormPrinting f = new FormPrinting(r);
-            //f.ShowDialog();
+            f.ShowDialog();
         }
     }
 }
