@@ -28,9 +28,10 @@ namespace do_it
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
+            panelForms.Visible = false;
+            panelHome.Visible = true;
             timer1.Start();
-            btnhome_Click(sender, e);
+            //btnhome_Click(sender, e);
 
 
             //Home load
@@ -70,10 +71,6 @@ namespace do_it
                 lblGreeting.Text = "Good afternoon,";
             else
                 lblGreeting.Text = "Good evening,";
-
-            txtBoxNote.Text = DateTime.Now.ToString("MM/dd/yyyy");
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,23 +78,26 @@ namespace do_it
             // label1.Text = DateTime.Now.ToLongTimeString();
             //label2.Text = DateTime.Now.ToLongDateString();
         }
-
+        //Escape_Button
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //Minimize_Button
         private void btnminize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
+        //Button_LoginSignup
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
             FormLoginSignUp f = new FormLoginSignUp();
-            f.Show();
             this.Hide();
+            f.ShowDialog();
+            this.Close();
+            
         }
+        //Form_Task
         public void formtask(object panelT)
         {
             if (this.panelForms.Controls.Count > 0)
@@ -109,37 +109,23 @@ namespace do_it
             this.panelForms.Tag = f;
             f.Show();
         }
-
-
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            panelForms.Visible = true;
-            //label1.Visible = false;
-            formtask(new FormNotes());
-
-        }
-
-        private void panelForms_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void btnmenu_Click(object sender, EventArgs e)
-        {
-        }
-
+        ///-------------------------------------------///
+        //Buttons_click_event
+        //Email_Button
         private void btnemail_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
-            //label1.Visible = false;
+           //lbel1.Visible = false;
             formtask(new Formmail());
         }
-
+        //Home_Button
         private void btnhome_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = false;
             panelHome.Visible = true;
-            //   panelForms.Controls.RemoveAt(0);
+            //panelForms.Controls.RemoveAt(0);
             //panelForms.Visible = false;
             //label1.Visible = true;
             //panelForms.Visible = true;
@@ -148,32 +134,34 @@ namespace do_it
             //formtask(new FormHome());
             // this.FormMenu_Load(sender, e);   
         }
-      
+      //Task_Button
       public void btntask_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
             formtask(new formTask());
 
         }
-
+        //Tools_Botton
         private void btntools_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
             formtask(new FormTools2());
         }
-
+        //Docs_Button
         private void btndocs_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
             //panelForms.Visible = true;
             //label1.Visible = false;
-            formtask(new FormDocs());
         }
-
+        //btn Show MainPanel
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
 
@@ -191,10 +179,6 @@ namespace do_it
                 panelForms.Width = 647;
                 panelHome.Width = 647;
                 Size = new Size(847, 542);
-
-
-
-
             }
             else
             {
@@ -211,23 +195,34 @@ namespace do_it
 
             }
         }
-
+        //Admin_Load_Page_Button
         private void btnClients_Click(object sender, EventArgs e)
         {
             formtask(new FormClients());
         }
-
-        private void panelForms_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //Public_Button
         private void btnpublic_Click(object sender, EventArgs e)
         {
+            panelForms.Visible = true;
             panelHome.Visible = false;
+            formtask(new FormPublic());
             //panelForms.Visible = true;
             //label1.Visible = false;
         }
+        //Go_To_Task_Button
+        private void btnGoTasks_Click(object sender, EventArgs e)
+        {
+            btntask.PerformClick();
+        }
+        //Notes_Button
+        private void btnnote_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            panelHome.Visible = false;
+            formtask(new FormNotes());
+        }
+        ///-------------------------------------------///
+        //Get_ID_Method
         public string get_userID()
         {
             string id = "";
@@ -250,6 +245,8 @@ namespace do_it
             return id;
 
         }
+        ///-------------------------------------------///
+        //Button_add_New_Note_From_Home
         private void btnAddNote_Click(object sender, EventArgs e)
         {
             SqlConnection cn = new SqlConnection(cs);
@@ -258,7 +255,7 @@ namespace do_it
             SqlCommand com = new SqlCommand(req, cn);
             com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
             com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
-            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + "'s " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
+            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + "''s " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
             com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
             com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
 
@@ -270,34 +267,9 @@ namespace do_it
             com = null;
         }
 
-        private void btnGoTasks_Click(object sender, EventArgs e)
-        {
-            btntask.PerformClick();
-        }
+        
 
-        private void btnpublic_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnnote_Click(object sender, EventArgs e)
-        {
-            panelHome.Visible = false;
-            formtask(new FormNotes());
-        }
-
-        private void paneltop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelHome_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
+        ///-------------------------------------------///
 
         //private void panelForms_ControlRemoved(object sender, ControlEventArgs e)
         //{

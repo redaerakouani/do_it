@@ -30,46 +30,46 @@ namespace do_it
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            Process.Start("www.facebook.com");
+            Process.Start(" www.facebook.com");
         }
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            Process.Start("www.drive.google.com");
+            Process.Start(" www.drive.google.com");
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-            Process.Start("www.youtube.com");
+            Process.Start(" www.youtube.com");
         }
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-            Process.Start("https://teams.microsoft.com/");
+           // Process.Start("");
         }
 
         private void bunifuImageButton2_Click_1(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            //Process.Start("");
         }
 
         private void bunifuImageButton3_Click_1(object sender, EventArgs e)
         {
-            Process.Start("WINWORD.exe");
+            Process.Start("WINWORD.EXE");
         }
 
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            Process.Start("EXCEL.EXE");
         }
 
         private void bunifuImageButton5_Click_1(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            //Process.Start("Zoom.exe");
         }
 
         private void btnmap_Click(object sender, EventArgs e)
         {
-            Process.Start("www..com");
+            //Process.Start("www..com");
         }
 
         private void FormTools2_Load(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace do_it
         private void timer2_Tick(object sender, EventArgs e)
         {
             curenttime = DateTime.Now.ToString("hh:mm:ss:tt");
-            //label1.Text = curenttime;
+            label5.Text = curenttime;
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -158,6 +158,7 @@ namespace do_it
         {
             timer2.Stop();
             label2.Text = "";
+            textBox1.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,7 +171,10 @@ namespace do_it
             Process.Start("www.linkedin.com");
         }
 
-      
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -26,7 +26,7 @@ namespace do_it
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
 
-            string req1 = "select FULL_NAME from users where ID_USER = "+get_userID();
+            string req1 = "select FULL_NAME from users where ID_USER = " + get_userID();
             string req2 = "select DESCRIPTION from TASK where ID_USER = " + get_userID() + " AND STATUS = '0' AND datediff(dd,START_TIME,getdate())=0";
             SqlCommand com = new SqlCommand(req1, cn);
 
@@ -40,10 +40,10 @@ namespace do_it
             dr = com.ExecuteReader();
             while (dr.Read())
             {
-                listBoxTodayTasks.Items.Add("• "+dr[0]);
+                listBoxTodayTasks.Items.Add("• " + dr[0]);
 
             }
-            if(listBoxTodayTasks.Items.Count==0)
+            if (listBoxTodayTasks.Items.Count == 0)
             {
                 panelTasks.Hide();
                 panelNoTasks.Show();
@@ -55,12 +55,13 @@ namespace do_it
             }
             if (DateTime.Now.Hour > 4 && DateTime.Now.Hour < 12)
                 lblGreeting.Text = "Good morning,";
-            else if(DateTime.Now.Hour < 18)
+            else if (DateTime.Now.Hour < 18)
                 lblGreeting.Text = "Good afternoon,";
             else
                 lblGreeting.Text = "Good evening,";
 
             txtBoxNote.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            
         }
         public string get_userID()
         {
@@ -92,7 +93,7 @@ namespace do_it
             SqlCommand com = new SqlCommand(req,cn);
             com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
             com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
-            com.Parameters.Add(new SqlParameter("@title", "["+DateTime.Now.ToString("MM/dd/yyyy HH:mm") +"] "+lblName.Text+"'s "+(lblGreeting.Text.Split(' ',','))[1]+" note"));
+            com.Parameters.Add(new SqlParameter("@title", "["+DateTime.Now.ToString("MM/dd/yyyy") +"] "+lblName.Text+"'s "+(lblGreeting.Text.Split(' ',','))[1]+" note"));
             com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
             com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
 

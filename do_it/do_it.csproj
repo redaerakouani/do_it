@@ -63,6 +63,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -75,20 +78,12 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Documents\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Device" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,9 +101,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DO_ITDataSet.cs">
-      <DependentUpon>DO_ITDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DO_ITDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,12 +111,6 @@
     </Compile>
     <Compile Include="FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDocs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDocs.Designer.cs">
-      <DependentUpon>FormDocs.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
@@ -156,11 +142,11 @@
     <Compile Include="FormNotes.Designer.cs">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrinting.cs">
+    <Compile Include="FormPublic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrinting.Designer.cs">
-      <DependentUpon>FormPrinting.cs</DependentUpon>
+    <Compile Include="FormPublic.Designer.cs">
+      <DependentUpon>FormPublic.cs</DependentUpon>
     </Compile>
     <Compile Include="formTask.cs">
       <SubType>Form</SubType>
@@ -182,17 +168,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="task report.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>task report.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDocs.resx">
-      <DependentUpon>FormDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
@@ -209,8 +186,8 @@
     <EmbeddedResource Include="FormNotes.resx">
       <DependentUpon>FormNotes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrinting.resx">
-      <DependentUpon>FormPrinting.cs</DependentUpon>
+    <EmbeddedResource Include="FormPublic.resx">
+      <DependentUpon>FormPublic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTask.resx">
       <DependentUpon>formTask.cs</DependentUpon>
@@ -225,10 +202,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="task report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>task report.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
@@ -261,10 +234,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <None Include="Resources\info_30px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info_30px.png" />
+    <None Include="Resources\note.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2021-04-07_19-36-05.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
