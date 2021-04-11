@@ -31,7 +31,7 @@ namespace do_it
             panelForms.Visible = false;
             panelHome.Visible = true;
             timer1.Start();
-            //btnhome_Click(sender, e);
+            
 
 
             //Home load
@@ -73,11 +73,7 @@ namespace do_it
                 lblGreeting.Text = "Good evening,";
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            // label1.Text = DateTime.Now.ToLongTimeString();
-            //label2.Text = DateTime.Now.ToLongDateString();
-        }
+      
         //Escape_Button
         private void btnclose_Click(object sender, EventArgs e)
         {
@@ -114,11 +110,14 @@ namespace do_it
         //Email_Button
         private void btnemail_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            //panelForms.Visible = true;
-           //lbel1.Visible = false;
-            formtask(new Formmail());
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+                formtask(new Formmail());
+            }
+            catch { }
+            
         }
         //Home_Button
         private void btnhome_Click(object sender, EventArgs e)
@@ -147,42 +146,45 @@ namespace do_it
                 panelTasks.Show();
                 panelNoTasks.Hide();
             }
-            //panelForms.Controls.RemoveAt(0);
-            //panelForms.Visible = false;
-            //label1.Visible = true;
-            //panelForms.Visible = true;
-            //panelForms.Visible = false;
-            //label1.Visible = false;
-            //formtask(new FormHome());
-            // this.FormMenu_Load(sender, e);   
+             
         }
       //Task_Button
       public void btntask_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            //panelForms.Visible = true;
-            //label1.Visible = false;
-            formtask(new formTask());
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+                formtask(new formTask());
+
+            }
+            catch { }
+            
 
         }
         //Tools_Botton
         private void btntools_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            //panelForms.Visible = true;
-            //label1.Visible = false;
-            formtask(new FormTools2());
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+              formtask(new FormTools2());
+            }
+            catch { }
+            
         }
         //Docs_Button
         private void btndocs_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            //panelForms.Visible = true;
-            //label1.Visible = false;
-           formtask(new FormDocs());
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+               formtask(new FormDocs());
+            }
+            catch { }
+                
         }
         //btn Show MainPanel
         private void bunifuButton1_Click_1(object sender, EventArgs e)
@@ -224,16 +226,24 @@ namespace do_it
         //Admin_Load_Page_Button
         private void btnClients_Click(object sender, EventArgs e)
         {
-            formtask(new FormClients());
+            try
+            {
+                formtask(new FormClients());
+            }
+            catch { }
+            
         }
         //Public_Button
         private void btnpublic_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            formtask(new FormPublic());
-            //panelForms.Visible = true;
-            //label1.Visible = false;
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+                formtask(new FormPublic());
+            }
+            catch { }
+            
         }
         //Go_To_Task_Button
         private void btnGoTasks_Click(object sender, EventArgs e)
@@ -243,9 +253,14 @@ namespace do_it
         //Notes_Button
         private void btnnote_Click(object sender, EventArgs e)
         {
-            panelForms.Visible = true;
-            panelHome.Visible = false;
-            formtask(new FormNotes());
+            try
+            {
+                panelForms.Visible = true;
+                panelHome.Visible = false;
+                formtask(new FormNotes());
+            }
+            catch { }
+            
         }
         ///-------------------------------------------///
         //Get_ID_Method
@@ -295,16 +310,6 @@ namespace do_it
 
         
 
-        ///-------------------------------------------///
-
-        //private void panelForms_ControlRemoved(object sender, ControlEventArgs e)
-        //{
-        //    if (panelForms.Controls.Count == 0) {
-        //        btntask.PerformClick();
-        //    }
-
-        //    //else {Program.goToTask = false;}
-
-        //}
+        
     }
 }

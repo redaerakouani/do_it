@@ -121,12 +121,13 @@ namespace do_it
         }
         string curenttime;
         string messagetime;
-
+        
         private void timer2_Tick(object sender, EventArgs e)
         {
             curenttime = DateTime.Now.ToString("hh:mm:ss");
             label5.Text = curenttime;
         }
+        
 
         private void timer3_Tick(object sender, EventArgs e)
         {

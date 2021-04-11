@@ -117,7 +117,7 @@
             this.btnalltasks.IdleIconLeftImage = null;
             this.btnalltasks.IdleIconRightImage = null;
             this.btnalltasks.IndicateFocus = false;
-            this.btnalltasks.Location = new System.Drawing.Point(33, 26);
+            this.btnalltasks.Location = new System.Drawing.Point(43, 27);
             this.btnalltasks.Name = "btnalltasks";
             stateProperties1.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties1.BorderRadius = 35;
@@ -181,7 +181,7 @@
             this.btnallNotes.IdleIconLeftImage = null;
             this.btnallNotes.IdleIconRightImage = null;
             this.btnallNotes.IndicateFocus = false;
-            this.btnallNotes.Location = new System.Drawing.Point(33, 102);
+            this.btnallNotes.Location = new System.Drawing.Point(43, 95);
             this.btnallNotes.Name = "btnallNotes";
             stateProperties3.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties3.BorderRadius = 35;
@@ -279,10 +279,10 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(234, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(273, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(414, 272);
+            this.dataGridView1.Size = new System.Drawing.Size(389, 397);
             this.dataGridView1.TabIndex = 21;
             // 
             // groupBox1
@@ -291,7 +291,7 @@
             this.groupBox1.Controls.Add(this.btnallNotes);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 455);
+            this.groupBox1.Size = new System.Drawing.Size(242, 172);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -303,9 +303,9 @@
             this.groupBox2.Controls.Add(this.btnfiltre);
             this.groupBox2.Controls.Add(this.SwitchPUB);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(234, 28);
+            this.groupBox2.Location = new System.Drawing.Point(12, 260);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(414, 121);
+            this.groupBox2.Size = new System.Drawing.Size(242, 223);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filters";
@@ -316,9 +316,9 @@
             this.pnlOthersFilters.Controls.Add(this.label3);
             this.pnlOthersFilters.Controls.Add(this.SwitchSTATUS);
             this.pnlOthersFilters.Controls.Add(this.lblCat);
-            this.pnlOthersFilters.Location = new System.Drawing.Point(25, 14);
+            this.pnlOthersFilters.Location = new System.Drawing.Point(6, 17);
             this.pnlOthersFilters.Name = "pnlOthersFilters";
-            this.pnlOthersFilters.Size = new System.Drawing.Size(250, 65);
+            this.pnlOthersFilters.Size = new System.Drawing.Size(230, 96);
             this.pnlOthersFilters.TabIndex = 20;
             this.pnlOthersFilters.Visible = false;
             // 
@@ -330,7 +330,7 @@
             this.cATEGORIEComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cATEGORIEComboBox.ForeColor = System.Drawing.Color.White;
             this.cATEGORIEComboBox.FormattingEnabled = true;
-            this.cATEGORIEComboBox.Location = new System.Drawing.Point(18, 28);
+            this.cATEGORIEComboBox.Location = new System.Drawing.Point(95, 18);
             this.cATEGORIEComboBox.Name = "cATEGORIEComboBox";
             this.cATEGORIEComboBox.Size = new System.Drawing.Size(124, 32);
             this.cATEGORIEComboBox.TabIndex = 0;
@@ -351,7 +351,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(185, 7);
+            this.label3.Location = new System.Drawing.Point(16, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 18);
             this.label3.TabIndex = 19;
@@ -363,7 +363,7 @@
             this.SwitchSTATUS.BackColor = System.Drawing.Color.Transparent;
             this.SwitchSTATUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SwitchSTATUS.BackgroundImage")));
             this.SwitchSTATUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SwitchSTATUS.Location = new System.Drawing.Point(184, 33);
+            this.SwitchSTATUS.Location = new System.Drawing.Point(148, 56);
             this.SwitchSTATUS.Name = "SwitchSTATUS";
             this.SwitchSTATUS.Size = new System.Drawing.Size(51, 23);
             this.SwitchSTATUS.TabIndex = 2;
@@ -376,12 +376,12 @@
             toggleState1.BorderThickness = 1;
             toggleState1.BorderThicknessInner = 1;
             this.SwitchSTATUS.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.Empty;
-            toggleState2.BackColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
-            toggleState2.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderRadius = 1;
-            toggleState2.BorderRadiusInner = 1;
+            toggleState2.BackColor = System.Drawing.Color.Gray;
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.Gray;
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 15;
             toggleState2.BorderThickness = 1;
             toggleState2.BorderThicknessInner = 1;
             this.SwitchSTATUS.ToggleStateOff = toggleState2;
@@ -394,13 +394,13 @@
             toggleState3.BorderThickness = 1;
             toggleState3.BorderThicknessInner = 1;
             this.SwitchSTATUS.ToggleStateOn = toggleState3;
-            this.SwitchSTATUS.Value = true;
+            this.SwitchSTATUS.Value = false;
             // 
             // lblCat
             // 
             this.lblCat.AutoSize = true;
             this.lblCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCat.Location = new System.Drawing.Point(20, 7);
+            this.lblCat.Location = new System.Drawing.Point(16, 24);
             this.lblCat.Name = "lblCat";
             this.lblCat.Size = new System.Drawing.Size(72, 18);
             this.lblCat.TabIndex = 17;
@@ -410,7 +410,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(321, 21);
+            this.label2.Location = new System.Drawing.Point(22, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 18;
@@ -453,7 +453,7 @@
             this.btnfiltre.IdleIconLeftImage = null;
             this.btnfiltre.IdleIconRightImage = null;
             this.btnfiltre.IndicateFocus = false;
-            this.btnfiltre.Location = new System.Drawing.Point(136, 80);
+            this.btnfiltre.Location = new System.Drawing.Point(42, 163);
             this.btnfiltre.Name = "btnfiltre";
             stateProperties7.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties7.BorderRadius = 35;
@@ -487,7 +487,7 @@
             this.SwitchPUB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SwitchPUB.BackgroundImage")));
             this.SwitchPUB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SwitchPUB.ForeColor = System.Drawing.Color.Black;
-            this.SwitchPUB.Location = new System.Drawing.Point(318, 47);
+            this.SwitchPUB.Location = new System.Drawing.Point(154, 119);
             this.SwitchPUB.Name = "SwitchPUB";
             this.SwitchPUB.Size = new System.Drawing.Size(51, 23);
             this.SwitchPUB.TabIndex = 1;
@@ -500,12 +500,12 @@
             toggleState4.BorderThickness = 1;
             toggleState4.BorderThicknessInner = 1;
             this.SwitchPUB.ToggleStateDisabled = toggleState4;
-            toggleState5.BackColor = System.Drawing.Color.Empty;
-            toggleState5.BackColorInner = System.Drawing.Color.Empty;
-            toggleState5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
-            toggleState5.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState5.BorderRadius = 1;
-            toggleState5.BorderRadiusInner = 1;
+            toggleState5.BackColor = System.Drawing.Color.Gray;
+            toggleState5.BackColorInner = System.Drawing.Color.White;
+            toggleState5.BorderColor = System.Drawing.Color.Gray;
+            toggleState5.BorderColorInner = System.Drawing.Color.White;
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 15;
             toggleState5.BorderThickness = 1;
             toggleState5.BorderThicknessInner = 1;
             this.SwitchPUB.ToggleStateOff = toggleState5;
@@ -518,7 +518,7 @@
             toggleState6.BorderThickness = 1;
             toggleState6.BorderThicknessInner = 1;
             this.SwitchPUB.ToggleStateOn = toggleState6;
-            this.SwitchPUB.Value = true;
+            this.SwitchPUB.Value = false;
             // 
             // tASKBindingSource
             // 
