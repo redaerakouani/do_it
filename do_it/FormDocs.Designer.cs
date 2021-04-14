@@ -289,7 +289,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnalltasks);
             this.groupBox1.Controls.Add(this.btnallNotes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(242, 172);
             this.groupBox1.TabIndex = 22;
@@ -303,7 +303,7 @@
             this.groupBox2.Controls.Add(this.btnfiltre);
             this.groupBox2.Controls.Add(this.SwitchPUB);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(12, 260);
+            this.groupBox2.Location = new System.Drawing.Point(12, 232);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(242, 223);
             this.groupBox2.TabIndex = 23;
