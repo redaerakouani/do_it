@@ -244,7 +244,7 @@
             this.btncancle.IdleIconLeftImage = null;
             this.btncancle.IdleIconRightImage = null;
             this.btncancle.IndicateFocus = false;
-            this.btncancle.Location = new System.Drawing.Point(512, 473);
+            this.btncancle.Location = new System.Drawing.Point(512, 464);
             this.btncancle.Name = "btncancle";
             stateProperties5.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties5.BorderRadius = 35;
@@ -308,7 +308,7 @@
             this.btnSend.IdleIconLeftImage = null;
             this.btnSend.IdleIconRightImage = null;
             this.btnSend.IndicateFocus = false;
-            this.btnSend.Location = new System.Drawing.Point(85, 474);
+            this.btnSend.Location = new System.Drawing.Point(85, 465);
             this.btnSend.Name = "btnSend";
             stateProperties7.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties7.BorderRadius = 35;

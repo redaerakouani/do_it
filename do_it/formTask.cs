@@ -278,10 +278,8 @@ namespace do_it
             //bunifuDatepicker2.Enabled=true;
         }
 
-        private void txt_new_tsk_TextChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
+        
     }
 }

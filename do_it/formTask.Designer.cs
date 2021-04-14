@@ -188,7 +188,6 @@
             this.txt_new_tsk.TextPlaceholder = "New task";
             this.txt_new_tsk.UseSystemPasswordChar = false;
             this.txt_new_tsk.WordWrap = true;
-            this.txt_new_tsk.TextChanged += new System.EventHandler(this.txt_new_tsk_TextChanged);
             this.txt_new_tsk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_new_tsk_KeyDown);
             // 
             // dO_ITDataSet1

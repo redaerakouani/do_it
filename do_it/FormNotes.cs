@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace do_it
         string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
         SqlConnection cn = new SqlConnection();
         SqlCommand com = new SqlCommand();
+        ////textBox_Note_Content
+        public bool TextWasChanged = false;
         //scketching 
         public int x = -1;
         public int y = -1;
@@ -25,6 +28,17 @@ namespace do_it
         public Point old = new Point();
         public Graphics g;
         public Pen p;
+        //public int a=0, b=0;
+        //public double diffxy;
+        //public int curx, cury, diffx, diffy;
+        public FormNotes()
+        {
+            InitializeComponent();
+            g = DrawingPanel.CreateGraphics();
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            p = new Pen(Color.Black);
+            p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+        }
 
         private void FormNotes_Load(object sender, EventArgs e)
         {
@@ -84,11 +98,24 @@ namespace do_it
             Pgnote.SetPage(note2);
             cbAdd.Checked = true;
         }
+        //Note_TextBox
+        private void NoteText_TextChanged(object sender, EventArgs e)
+        {
+            TextWasChanged = true;
+            // ((TextBox)sender).Tag = "true";
+        }
         //Button_Back_To_DisplayNotesPage
         private void btn_back_Click(object sender, EventArgs e)
         {
+            if (TextWasChanged==false) { 
             Pgnote.SetPage(note1);
             txtnotedisplay.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please save your modifications first.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
 
         }
         //Button_Go_To_Sketching
@@ -130,6 +157,7 @@ namespace do_it
         {
             cn = new SqlConnection(cs);
             cn.Open();
+            try {
             string req = "select TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataReader dr = com.ExecuteReader();
@@ -141,6 +169,12 @@ namespace do_it
             }
             dr.Close();
             dr = null;
+            }
+            catch
+            {
+
+            }
+      
            
         }
         //Button_Save
@@ -173,7 +207,7 @@ namespace do_it
             remplirlist();
             TitleNote.Text = "";
             NoteText.Text = "";
-
+            Pgnote.SetPage(note1);
             cn.Close();
             cn = null;
             com = null;
@@ -216,18 +250,19 @@ namespace do_it
         }
         //------------------------------------------------------------------------------------------------------//
         //sketching_Modifs
-        public FormNotes()
-        {
-            InitializeComponent();
-            g = DrawingPanel.CreateGraphics();
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            p = new Pen(Color.Black);
-            p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-        }
+
+
 
         private void DrawingPanel_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    moving = true;
+            //    b++;
+            //}
+            //curx = e.X;
+            //cury = e.Y;
             x = e.X;
             y = e.Y;
         }
@@ -246,6 +281,19 @@ namespace do_it
         private void DrawingPanel_MouseUp(object sender, MouseEventArgs e)
         {
             moving = false;
+            //h = e.X - x;
+            //w = e.Y - y;
+            //Graphics g = this.CreateGraphics();
+            //Rectangle shape = new Rectangle(x, y, h, w);
+            //if (rectgrb.Checked)
+            //{
+            //    g.DrawRectangle(p, shape);
+            //}
+            //else { 
+            //    if(Cerclerb.Checked)
+            //        g.DrawEllipse(p, shape);
+            //}
+
             x = -1;
             y = -1;
 
@@ -289,13 +337,45 @@ namespace do_it
         {
             p.Color = Color.White;
         }
+
+        //private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    if (moving == true)
+        //    {
+        //        x = e.X;
+        //        y = e.Y;
+        //    }
+        //}
+
+        private void ShapeLine_Click(object sender, EventArgs e)
+        {
+            //Graphics g = this.CreateGraphics();
+           // a = 1;
+            //g.DrawLine(x, y, h, w);
+        }
+
+        private void ShapeRect_Click(object sender, EventArgs e)
+        {
+          //  a = 2;
+        //    Graphics g = this.CreateGraphics();
+        //    Rectangle shape = new Rectangle(x, y, h, w);
+        //    g.DrawRectangle(p, shape);
+        }
+
+        private void ShapeCircle_Click(object sender, EventArgs e)
+        {
+           // a = 3;
+            //Graphics g = this.CreateGraphics();
+            //Rectangle shape = new Rectangle(x, y, h, w);
+            //g.DrawEllipse(p, shape);
+        }
+
         //Button_Exit_Sketch
         private void btnexit_Click(object sender, EventArgs e)
         {
-            base.Close();
+            Pgnote.SetPage(note2);
+            //base.Close();
         }
-
-        
     }
 
 }

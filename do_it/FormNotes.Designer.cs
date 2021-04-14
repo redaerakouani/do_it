@@ -435,10 +435,14 @@
             // 
             // lstnotes
             // 
+            this.lstnotes.BackColor = System.Drawing.Color.White;
+            this.lstnotes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.lstnotes.ForeColor = System.Drawing.Color.DimGray;
             this.lstnotes.FormattingEnabled = true;
+            this.lstnotes.ItemHeight = 15;
             this.lstnotes.Location = new System.Drawing.Point(21, 109);
             this.lstnotes.Name = "lstnotes";
-            this.lstnotes.Size = new System.Drawing.Size(266, 329);
+            this.lstnotes.Size = new System.Drawing.Size(266, 319);
             this.lstnotes.TabIndex = 30;
             this.lstnotes.SelectedIndexChanged += new System.EventHandler(this.lstnotes_SelectedIndexChanged);
             // 
@@ -827,6 +831,7 @@
             this.NoteText.Size = new System.Drawing.Size(556, 359);
             this.NoteText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.NoteText.TabIndex = 40;
+            this.NoteText.Tag = "ChangeContent";
             this.NoteText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.NoteText.TextMarginBottom = 0;
             this.NoteText.TextMarginLeft = 5;
@@ -834,6 +839,7 @@
             this.NoteText.TextPlaceholder = "Enter text";
             this.NoteText.UseSystemPasswordChar = false;
             this.NoteText.WordWrap = true;
+            this.NoteText.TextChanged += new System.EventHandler(this.NoteText_TextChanged);
             // 
             // TitleNote
             // 
@@ -982,6 +988,7 @@
             this.ShapeLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShapeLine.TabIndex = 5;
             this.ShapeLine.TabStop = false;
+            this.ShapeLine.Click += new System.EventHandler(this.ShapeLine_Click);
             // 
             // ShapeRect
             // 
@@ -992,9 +999,11 @@
             this.ShapeRect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShapeRect.TabIndex = 6;
             this.ShapeRect.TabStop = false;
+            this.ShapeRect.Click += new System.EventHandler(this.ShapeRect_Click);
             // 
             // Grey_pen
             // 
+            this.Grey_pen.BackColor = System.Drawing.Color.Gray;
             this.Grey_pen.Image = ((System.Drawing.Image)(resources.GetObject("Grey_pen.Image")));
             this.Grey_pen.Location = new System.Drawing.Point(12, 124);
             this.Grey_pen.Name = "Grey_pen";
@@ -1006,6 +1015,7 @@
             // 
             // Blue_pen
             // 
+            this.Blue_pen.BackColor = System.Drawing.Color.Blue;
             this.Blue_pen.Image = ((System.Drawing.Image)(resources.GetObject("Blue_pen.Image")));
             this.Blue_pen.Location = new System.Drawing.Point(12, 85);
             this.Blue_pen.Name = "Blue_pen";
@@ -1024,9 +1034,11 @@
             this.ShapeCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShapeCircle.TabIndex = 4;
             this.ShapeCircle.TabStop = false;
+            this.ShapeCircle.Click += new System.EventHandler(this.ShapeCircle_Click);
             // 
             // Red_pen
             // 
+            this.Red_pen.BackColor = System.Drawing.Color.Red;
             this.Red_pen.Image = ((System.Drawing.Image)(resources.GetObject("Red_pen.Image")));
             this.Red_pen.Location = new System.Drawing.Point(12, 46);
             this.Red_pen.Name = "Red_pen";
@@ -1038,6 +1050,7 @@
             // 
             // Black_pen
             // 
+            this.Black_pen.BackColor = System.Drawing.Color.Black;
             this.Black_pen.Image = ((System.Drawing.Image)(resources.GetObject("Black_pen.Image")));
             this.Black_pen.Location = new System.Drawing.Point(12, 7);
             this.Black_pen.Name = "Black_pen";
@@ -1050,9 +1063,10 @@
             // DrawingPanel
             // 
             this.DrawingPanel.BackColor = System.Drawing.Color.White;
-            this.DrawingPanel.Location = new System.Drawing.Point(6, 6);
+            this.DrawingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DrawingPanel.Location = new System.Drawing.Point(3, 3);
             this.DrawingPanel.Name = "DrawingPanel";
-            this.DrawingPanel.Size = new System.Drawing.Size(573, 481);
+            this.DrawingPanel.Size = new System.Drawing.Size(667, 484);
             this.DrawingPanel.TabIndex = 1;
             this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
             this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
