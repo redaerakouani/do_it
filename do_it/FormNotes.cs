@@ -46,7 +46,7 @@ namespace do_it
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             //Greeting_Label
-            string req = "select FULL_NAME from users where ID_USER = " + get_userID();
+            string req = "select FULL_NAME from users where ID_USER = " +Program.get_userID();
             SqlCommand com = new SqlCommand(req, cn);
             SqlDataReader dr = com.ExecuteReader();
             while (dr.Read())
@@ -66,7 +66,7 @@ namespace do_it
         {
             if (MessageBox.Show("are you sure you want to delete this note ", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" + get_userID() + "'";
+                string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" +Program.get_userID() + "'";
                 cn = new SqlConnection(cs);
                 cn.Open();
                 com = new SqlCommand(req, cn);
@@ -80,7 +80,7 @@ namespace do_it
         public void remplirlist()
         {
             lstnotes.Items.Clear();
-            string req = "select TITLE_NOTE from NOTE where ID_USER = " + get_userID();
+            string req = "select TITLE_NOTE from NOTE where ID_USER = " +Program.get_userID();
             cn = new SqlConnection(cs);
             cn.Open();
             com = new SqlCommand(req, cn);
@@ -186,7 +186,7 @@ namespace do_it
             {
                 string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
                 SqlCommand com = new SqlCommand(req1, cn);
-                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
+                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
                 com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
                 com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
                 com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
@@ -195,7 +195,7 @@ namespace do_it
             }
             else
             {
-                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public WHERE ID_USER='" + get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
+                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public WHERE ID_USER='" +Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
                 SqlCommand com = new SqlCommand(req2, cn);
                 com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
                 com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
@@ -219,7 +219,7 @@ namespace do_it
             lstnotes.Items.Clear();
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
-            string req = "select TITLE_NOTE from NOTE where TITLE_NOTE like '%"+txtBox_Search_NoteTitle.Text+"%' and ID_USER = '"+get_userID()+"'";
+            string req = "select TITLE_NOTE from NOTE where TITLE_NOTE like '%"+txtBox_Search_NoteTitle.Text+"%' and ID_USER = '"+Program.get_userID()+"'";
             com = new SqlCommand(req, cn);
             SqlDataReader dr = com.ExecuteReader();
             while (dr.Read())

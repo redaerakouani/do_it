@@ -179,6 +179,7 @@
     <Compile Include="FormTools2.Designer.cs">
       <DependentUpon>FormTools2.cs</DependentUpon>
     </Compile>
+    <Compile Include="hashing.cs" />
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>

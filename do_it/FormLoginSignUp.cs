@@ -56,7 +56,7 @@ namespace do_it
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@fullname", txtfullname.Text.Trim());
             com.Parameters.AddWithValue("@login", txtEmail.Text.Trim());
-            com.Parameters.AddWithValue("@password_user", Txtpwdsignup.Text.Trim());
+            com.Parameters.AddWithValue("@password_user",hashing.hash_passeword( Txtpwdsignup.Text.Trim()));
             com.ExecuteNonQuery();
             lblerrorsignup.Text="Successfull";
                 lblerrorsignup.ForeColor = Color.DarkGreen;
@@ -84,7 +84,7 @@ namespace do_it
             SqlCommand com2 = new SqlCommand(req, cn);
             com2.Parameters.Add(new SqlParameter("@login", txtmail.Text));
 
-            com2.Parameters.Add(new SqlParameter( "@paswd", txtpwd.Text));
+            com2.Parameters.Add(new SqlParameter( "@paswd",hashing.hash_passeword(txtpwd.Text)));
             SqlDataReader dr;
             dr = com2.ExecuteReader();
             if (dr.Read())
