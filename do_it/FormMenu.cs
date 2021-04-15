@@ -22,8 +22,7 @@ namespace do_it
         public FormMenu()
         {
             InitializeComponent();
-            bunifuFormDock1.SubscribeControlToDragEvents(bunifuGradientPanel1);
-            bunifuFormDock1.SubscribeControlToDragEvents(panelForms);
+            bunifuFormDock1.SubscribeControlToDragEvents(bunifuGradientPanel1);            bunifuFormDock1.SubscribeControlToDragEvents(panelForms);
             bunifuFormDock1.SubscribeControlToDragEvents(panelHome);
 
 
@@ -300,7 +299,7 @@ namespace do_it
             SqlCommand com = new SqlCommand(req, cn);
             com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
             com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
-            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + "''s " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
+            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + " " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
             com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
             com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
 
