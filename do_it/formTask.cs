@@ -156,8 +156,7 @@ namespace do_it
 
         private void formTask_Load(object sender, EventArgs e)
         {
-            //bunifuDatepicker1.Enabled = false;
-            //bunifuDatepicker2.Enabled = false;
+           
 
 
             string req2 = "select CAT_NAME from CATEGORIE";
@@ -224,29 +223,11 @@ namespace do_it
             comd.ExecuteNonQuery();
 
         }
-
-      
-
-    
-
         private void txt_new_tsk_KeyDown(object sender, KeyEventArgs e)
         {
             panelDatePicker.Enabled = true;
-
-            //bunifuDatepicker1.Enabled=true;
-            //bunifuDatepicker2.Enabled=true;
         }
-
-        private void bunifuCheckBox1_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void panelDatePicker_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //Button_Add_Task
         private void btnadd_Click(object sender, EventArgs e)
         {
             if (txt_new_tsk.Text == "") MessageBox.Show("add task first...!");
@@ -269,10 +250,10 @@ namespace do_it
 
             }
         }
-
+        //Buttom_Delete_Task
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("are you sure you want to delete this task ", "delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("are you sure you want to delete this task ", "Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string req = "delete from TASK where ID_USER in (select ID_USER from users where FULL_NAME = '" + Program.activeUser + "') and DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
                 cn = new SqlConnection(cs);
