@@ -55,7 +55,7 @@ namespace do_it
                 SqlCommand com = new SqlCommand(req1 + reqString, cn);
                 SqlDataReader dr = com.ExecuteReader();
                 SqlDataReader sqlDataReader = dr;
-                dt.Columns.Add("ID Task");
+               // dt.Columns.Add("ID Task");
                 dt.Columns.Add("Description");
                 dt.Columns.Add("User");
                 dt.Columns.Add("Categorie");
@@ -65,7 +65,7 @@ namespace do_it
                 while (sqlDataReader.Read())
                 {
                     DataRow row = dt.NewRow();
-                    row["ID Task"] = sqlDataReader["ID_TASK"];
+                   // row["ID Task"] = sqlDataReader["ID_TASK"];
                     row["Description"] = sqlDataReader["DESCRIPTION"];
                     row["User"] = sqlDataReader["FULL_NAME"];
                     row["Categorie"] = sqlDataReader["CAT_NAME"];

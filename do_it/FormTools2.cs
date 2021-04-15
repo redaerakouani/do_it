@@ -124,7 +124,7 @@ namespace do_it
         
         private void timer2_Tick(object sender, EventArgs e)
         {
-            curenttime = DateTime.Now.ToString("hh:mm:ss");
+            curenttime = DateTime.Now.ToString("hh:mm:ss:tt");
             label5.Text = curenttime;
         }
         

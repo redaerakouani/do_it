@@ -110,5 +110,10 @@ namespace do_it
 
             f.ShowDialog();
         }
+
+        private void SwitchPUB_OnValuechange(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

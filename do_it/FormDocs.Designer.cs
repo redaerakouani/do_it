@@ -245,7 +245,7 @@
             this.btnprint.IdleIconLeftImage = null;
             this.btnprint.IdleIconRightImage = null;
             this.btnprint.IndicateFocus = false;
-            this.btnprint.Location = new System.Drawing.Point(334, 442);
+            this.btnprint.Location = new System.Drawing.Point(539, 442);
             this.btnprint.Name = "btnprint";
             stateProperties5.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties5.BorderRadius = 35;
@@ -265,7 +265,7 @@
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
             this.btnprint.OnPressedState = stateProperties6;
-            this.btnprint.Size = new System.Drawing.Size(223, 41);
+            this.btnprint.Size = new System.Drawing.Size(123, 41);
             this.btnprint.TabIndex = 15;
             this.btnprint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnprint.TextMarginLeft = 0;
@@ -277,6 +277,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(273, 30);
@@ -363,6 +364,7 @@
             this.SwitchSTATUS.BackColor = System.Drawing.Color.Transparent;
             this.SwitchSTATUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SwitchSTATUS.BackgroundImage")));
             this.SwitchSTATUS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SwitchSTATUS.ForeColor = System.Drawing.Color.DimGray;
             this.SwitchSTATUS.Location = new System.Drawing.Point(148, 56);
             this.SwitchSTATUS.Name = "SwitchSTATUS";
             this.SwitchSTATUS.Size = new System.Drawing.Size(51, 23);
@@ -453,7 +455,7 @@
             this.btnfiltre.IdleIconLeftImage = null;
             this.btnfiltre.IdleIconRightImage = null;
             this.btnfiltre.IndicateFocus = false;
-            this.btnfiltre.Location = new System.Drawing.Point(42, 163);
+            this.btnfiltre.Location = new System.Drawing.Point(128, 164);
             this.btnfiltre.Name = "btnfiltre";
             stateProperties7.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties7.BorderRadius = 35;
@@ -473,7 +475,7 @@
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.btnfiltre.OnPressedState = stateProperties8;
-            this.btnfiltre.Size = new System.Drawing.Size(139, 35);
+            this.btnfiltre.Size = new System.Drawing.Size(108, 42);
             this.btnfiltre.TabIndex = 16;
             this.btnfiltre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnfiltre.TextMarginLeft = 0;
@@ -486,7 +488,7 @@
             this.SwitchPUB.BackColor = System.Drawing.Color.Transparent;
             this.SwitchPUB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SwitchPUB.BackgroundImage")));
             this.SwitchPUB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SwitchPUB.ForeColor = System.Drawing.Color.Black;
+            this.SwitchPUB.ForeColor = System.Drawing.Color.Transparent;
             this.SwitchPUB.Location = new System.Drawing.Point(154, 119);
             this.SwitchPUB.Name = "SwitchPUB";
             this.SwitchPUB.Size = new System.Drawing.Size(51, 23);
@@ -519,6 +521,7 @@
             toggleState6.BorderThicknessInner = 1;
             this.SwitchPUB.ToggleStateOn = toggleState6;
             this.SwitchPUB.Value = false;
+            this.SwitchPUB.OnValuechange += new System.EventHandler(this.SwitchPUB_OnValuechange);
             // 
             // tASKBindingSource
             // 
