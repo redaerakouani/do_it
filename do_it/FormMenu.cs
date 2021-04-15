@@ -70,11 +70,20 @@ namespace do_it
                 panelNoTasks.Hide();
             }
             if (DateTime.Now.Hour > 4 && DateTime.Now.Hour < 12)
+            {
                 lblGreeting.Text = "Good morning,";
+                pictureBox1.Image = Properties.Resources.icons8_sunrise_127px;
+            }
             else if (DateTime.Now.Hour < 18)
+            {
                 lblGreeting.Text = "Good afternoon,";
+                pictureBox1.Image = Properties.Resources.icons8_sun_127px;
+            }
             else
+            {
                 lblGreeting.Text = "Good evening,";
+                pictureBox1.Image = Properties.Resources.icons8_night_127px;
+            }
         }
 
       
