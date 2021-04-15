@@ -188,10 +188,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="raport_task3.cs">
+    <Compile Include="report_task.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>raport_task3.rpt</DependentUpon>
+      <DependentUpon>report_task.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="report_note.cs">
@@ -241,9 +241,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="raport_task3.rpt">
+    <EmbeddedResource Include="report_task.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>raport_task3.cs</LastGenOutput>
+      <LastGenOutput>report_task.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="report_note.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

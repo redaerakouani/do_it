@@ -35,21 +35,21 @@ namespace do_it
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            Process.Start(" www.drive.google.com");
+            Process.Start("www.drive.google.com");
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-            Process.Start(" www.youtube.com");
+            Process.Start("www.youtube.com");
         }
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-           // Process.Start("");
+            Process.Start("https://teams.microsoft.com/");
         }
 
         private void bunifuImageButton2_Click_1(object sender, EventArgs e)
         {
-            //Process.Start("");
+            Process.Start("https://web.telegram.org/");
         }
 
         private void bunifuImageButton3_Click_1(object sender, EventArgs e)
@@ -64,12 +64,12 @@ namespace do_it
 
         private void bunifuImageButton5_Click_1(object sender, EventArgs e)
         {
-            //Process.Start("Zoom.exe");
+            Process.Start("https://zoom.us/");
         }
 
         private void btnmap_Click(object sender, EventArgs e)
         {
-            //Process.Start("www..com");
+            Process.Start("https://www.google.com/maps/");
         }
 
         private void FormTools2_Load(object sender, EventArgs e)

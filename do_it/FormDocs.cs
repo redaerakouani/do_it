@@ -80,7 +80,7 @@ namespace do_it
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
             FormPrinting f ;
-            raport_task3 r = new raport_task3();
+            report_task r = new report_task();
             report_note r2 = new report_note();
             //foreach(DataGridViewRow dgv in dataGridView1.Rows)
             //{
