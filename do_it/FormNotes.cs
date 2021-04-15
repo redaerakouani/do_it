@@ -42,7 +42,7 @@ namespace do_it
 
         private void FormNotes_Load(object sender, EventArgs e)
         {
-            Pgnote.SetPage(note1);
+            backPgnote.SetPage(note1);
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             //Greeting_Label
@@ -95,7 +95,7 @@ namespace do_it
         //Button_Add_newNote
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Pgnote.SetPage(note2);
+            backPgnote.SetPage(note2);
             cbAdd.Checked = true;
         }
         //Note_TextBox
@@ -108,7 +108,7 @@ namespace do_it
         private void btn_back_Click(object sender, EventArgs e)
         {
             if (TextWasChanged==false) { 
-            Pgnote.SetPage(note1);
+            backPgnote.SetPage(note1);
             txtnotedisplay.Text = "";
             }
             else
@@ -122,7 +122,7 @@ namespace do_it
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            Pgnote.SetPage(sketch);
+            backPgnote.SetPage(sketch);
 
         }
         //Modify_Note_Selected
@@ -134,7 +134,7 @@ namespace do_it
            
             }
             else { 
-            Pgnote.SetPage(note2);
+            backPgnote.SetPage(note2);
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
             string req = "select TITLE_NOTE ,TEXT_NOTE,PUBLIC_NOTE,DATE_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
@@ -207,7 +207,7 @@ namespace do_it
             remplirlist();
             TitleNote.Text = "";
             NoteText.Text = "";
-            Pgnote.SetPage(note1);
+            backPgnote.SetPage(note1);
             cn.Close();
             cn = null;
             com = null;
@@ -373,8 +373,13 @@ namespace do_it
         //Button_Exit_Sketch
         private void btnexit_Click(object sender, EventArgs e)
         {
-            Pgnote.SetPage(note2);
+            backPgnote.SetPage(note2);
             //base.Close();
+        }
+
+        private void lblGreeting_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
