@@ -44,7 +44,6 @@ namespace do_it
         private void activate(Boolean a)
         {
             grpdetails.Enabled = a;
-            password_userTextBox.Enabled = false;
             btncancel.Visible = a;
             btnvalidate.Visible = a;
             btnadd.Visible = !a;
@@ -68,21 +67,17 @@ namespace do_it
 
         private void btnremove_Click(object sender, EventArgs e)
         {
-            if( MessageBox.Show("Are you sure you want to delete this user ??", "Delete..!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                SqlConnection cn = new SqlConnection(cs);
-                cn.Open();
-                string req = "delete from users where ID_USER = " + iD_USERTextBox.Text;
-                SqlCommand com = new SqlCommand(req, cn);
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
+            string req = "delete from users where ID_USER = " + iD_USERTextBox.Text;
+            SqlCommand com = new SqlCommand(req, cn);
+            com.ExecuteNonQuery();
+            usersListBox.Refresh();
+            this.usersTableAdapter.Fill(this.dO_ITDataSet.users);
 
-                com.ExecuteNonQuery();
-                usersListBox.Refresh();
-                this.usersTableAdapter.Fill(this.dO_ITDataSet.users);
-
-            }
-            
-
-          
+            //usersBindingSource.RemoveCurrent();
+            //tableAdapterManager.UpdateAll(dO_ITDataSet);
+            //activate(true);
         }
 
         private void btnvalidate_Click(object sender, EventArgs e)

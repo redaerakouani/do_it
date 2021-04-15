@@ -64,7 +64,7 @@ namespace do_it
         //Delete_Note_Button
         private void deleteNote_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("are you sure you want to delete this note ", "Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("are you sure you want to delete this note ", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" +Program.get_userID() + "'";
                 cn = new SqlConnection(cs);
@@ -113,7 +113,7 @@ namespace do_it
             }
             else
             {
-                MessageBox.Show("Please save your modifications first.", "Alert", MessageBoxButtons.OK);
+                MessageBox.Show("Please save your modifications first.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
@@ -130,7 +130,7 @@ namespace do_it
         {
             if (lstnotes.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a note to modify first.", "Alert", MessageBoxButtons.OK);
+                MessageBox.Show("Please select a note to modify first.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
            
             }
             else { 
