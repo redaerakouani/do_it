@@ -22,7 +22,8 @@ namespace do_it
         public FormMenu()
         {
             InitializeComponent();
-            bunifuFormDock1.SubscribeControlToDragEvents(bunifuGradientPanel1);            bunifuFormDock1.SubscribeControlToDragEvents(panelForms);
+            bunifuFormDock1.SubscribeControlToDragEvents(bunifuGradientPanel1);
+            bunifuFormDock1.SubscribeControlToDragEvents(panelForms);
             bunifuFormDock1.SubscribeControlToDragEvents(panelHome);
 
 
