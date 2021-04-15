@@ -194,7 +194,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.panel1.Controls.Add(this.lbl_display_NotesTiitles);
-            this.panel1.Location = new System.Drawing.Point(21, 75);
+            this.panel1.Location = new System.Drawing.Point(21, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 38);
             this.panel1.TabIndex = 37;
@@ -252,7 +252,7 @@
             this.panelNoteDisplay.Controls.Add(this.lbldate);
             this.panelNoteDisplay.Enabled = false;
             this.panelNoteDisplay.ForeColor = System.Drawing.Color.White;
-            this.panelNoteDisplay.Location = new System.Drawing.Point(375, 75);
+            this.panelNoteDisplay.Location = new System.Drawing.Point(375, 58);
             this.panelNoteDisplay.Name = "panelNoteDisplay";
             this.panelNoteDisplay.Size = new System.Drawing.Size(274, 363);
             this.panelNoteDisplay.TabIndex = 33;
@@ -427,7 +427,7 @@
             this.lblGreeting.BackColor = System.Drawing.Color.Transparent;
             this.lblGreeting.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
             this.lblGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.lblGreeting.Location = new System.Drawing.Point(195, 9);
+            this.lblGreeting.Location = new System.Drawing.Point(13, 2);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(222, 45);
             this.lblGreeting.TabIndex = 32;
@@ -440,7 +440,7 @@
             this.lstnotes.ForeColor = System.Drawing.Color.DimGray;
             this.lstnotes.FormattingEnabled = true;
             this.lstnotes.ItemHeight = 15;
-            this.lstnotes.Location = new System.Drawing.Point(21, 109);
+            this.lstnotes.Location = new System.Drawing.Point(21, 92);
             this.lstnotes.Name = "lstnotes";
             this.lstnotes.Size = new System.Drawing.Size(266, 319);
             this.lstnotes.TabIndex = 30;

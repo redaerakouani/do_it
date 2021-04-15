@@ -69,11 +69,20 @@ namespace do_it
                 panelNoTasks.Hide();
             }
             if (DateTime.Now.Hour > 4 && DateTime.Now.Hour < 12)
+            {
                 lblGreeting.Text = "Good morning,";
+                pictureBox1.Image = do_it.Properties.Resources.icons8_sunrise_127px;
+            }
             else if (DateTime.Now.Hour < 18)
+            {
                 lblGreeting.Text = "Good afternoon,";
+                pictureBox1.Image = do_it.Properties.Resources.icons8_sun_127px;
+            }
             else
+            {
                 lblGreeting.Text = "Good evening,";
+                pictureBox1.Image = do_it.Properties.Resources.icons8_night_127px;
+            }
         }
 
       
@@ -293,26 +302,26 @@ namespace do_it
         //Button_add_New_Note_From_Home
         private void btnAddNote_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
-            string req = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
-            SqlCommand com = new SqlCommand(req, cn);
-            com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
-            com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
-            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + " " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
-            com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-            com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+            try {
+                SqlConnection cn = new SqlConnection(cs);
+                cn.Open();
+                string req = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
+                SqlCommand com = new SqlCommand(req, cn);
+                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(get_userID())));
+                com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
+                com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + " " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
+                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
 
-            com.ExecuteNonQuery();
-            txtBoxNote.Text = "";
+                com.ExecuteNonQuery();
+                txtBoxNote.Text = "";
 
-            cn.Close();
-            cn = null;
-            com = null;
+                cn.Close();
+                cn = null;
+                com = null;
+            }
+            catch { }
+            
         }
-
-        
-
-        
     }
 }

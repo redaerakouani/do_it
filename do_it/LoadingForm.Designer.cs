@@ -84,7 +84,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(342, 315);
             this.bunifuGradientPanel1.TabIndex = 2;
-       
             // 
             // pictureBox2
             // 
@@ -118,6 +117,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoadingForm";
             this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
