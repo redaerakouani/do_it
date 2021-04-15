@@ -20,7 +20,7 @@ namespace do_it
             string id = "";
             cn = new SqlConnection(cs);
             cn.Open();
-            string r = "select ID_USER from users where FULL_NAME = '" + Program.activeUser + "'";
+            string r = "select ID_USER from users where FULL_NAME  = '" + Program.activeUser + "' or login = '" + Program.activeUser +"'" ;
             comd = new SqlCommand(r, cn);
             SqlDataReader dr = comd.ExecuteReader();
             while (dr.Read())

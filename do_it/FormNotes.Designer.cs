@@ -47,33 +47,35 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.NotePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.Pgnote = new Bunifu.UI.WinForms.BunifuPages();
+            this.backPgnote = new Bunifu.UI.WinForms.BunifuPages();
             this.note1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBox_Search_NoteTitle = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_display_NotesTiitles = new System.Windows.Forms.Label();
-            this.Btn_modifie_note = new System.Windows.Forms.PictureBox();
-            this.Btn_Delete_Note = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Btn_modifie_note = new System.Windows.Forms.PictureBox();
+            this.Btn_Add_note = new System.Windows.Forms.PictureBox();
             this.panelNoteDisplay = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.cb_public = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.txtnotedisplay = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.lbldate = new System.Windows.Forms.Label();
+            this.Btn_Delete_Note = new System.Windows.Forms.PictureBox();
             this.lblGreeting = new System.Windows.Forms.Label();
             this.lstnotes = new System.Windows.Forms.ListBox();
-            this.txtBox_Search_NoteTitle = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.Btn_Add_note = new System.Windows.Forms.PictureBox();
             this.note2 = new System.Windows.Forms.TabPage();
-            this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.btn_back = new System.Windows.Forms.PictureBox();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chkBoxPulicNote = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_save = new System.Windows.Forms.PictureBox();
+            this.btn_back = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkBoxPulicNote = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.NoteText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.TitleNote = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.sketch = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
@@ -91,17 +93,19 @@
             this.Black_pen = new System.Windows.Forms.PictureBox();
             this.DrawingPanel = new System.Windows.Forms.Panel();
             this.NotePanel.SuspendLayout();
-            this.Pgnote.SuspendLayout();
+            this.backPgnote.SuspendLayout();
             this.note1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelNoteDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).BeginInit();
+            this.panelNoteDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).BeginInit();
             this.note2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.sketch.SuspendLayout();
@@ -124,7 +128,7 @@
             // 
             this.NotePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NotePanel.BackgroundImage")));
             this.NotePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.NotePanel.Controls.Add(this.Pgnote);
+            this.NotePanel.Controls.Add(this.backPgnote);
             this.NotePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NotePanel.GradientBottomLeft = System.Drawing.Color.White;
             this.NotePanel.GradientBottomRight = System.Drawing.Color.White;
@@ -136,23 +140,23 @@
             this.NotePanel.Size = new System.Drawing.Size(684, 519);
             this.NotePanel.TabIndex = 0;
             // 
-            // Pgnote
+            // backPgnote
             // 
-            this.Pgnote.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Pgnote.AllowTransitions = true;
-            this.Pgnote.Controls.Add(this.note1);
-            this.Pgnote.Controls.Add(this.note2);
-            this.Pgnote.Controls.Add(this.sketch);
-            this.Pgnote.Location = new System.Drawing.Point(3, 3);
-            this.Pgnote.Multiline = true;
-            this.Pgnote.Name = "Pgnote";
-            this.Pgnote.Page = this.note1;
-            this.Pgnote.PageIndex = 0;
-            this.Pgnote.PageName = "note1";
-            this.Pgnote.PageTitle = "Pgnote1";
-            this.Pgnote.SelectedIndex = 0;
-            this.Pgnote.Size = new System.Drawing.Size(681, 516);
-            this.Pgnote.TabIndex = 0;
+            this.backPgnote.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.backPgnote.AllowTransitions = true;
+            this.backPgnote.Controls.Add(this.note1);
+            this.backPgnote.Controls.Add(this.note2);
+            this.backPgnote.Controls.Add(this.sketch);
+            this.backPgnote.Location = new System.Drawing.Point(3, 3);
+            this.backPgnote.Multiline = true;
+            this.backPgnote.Name = "backPgnote";
+            this.backPgnote.Page = this.note1;
+            this.backPgnote.PageIndex = 0;
+            this.backPgnote.PageName = "note1";
+            this.backPgnote.PageTitle = "Pgnote1";
+            this.backPgnote.SelectedIndex = 0;
+            this.backPgnote.Size = new System.Drawing.Size(681, 516);
+            this.backPgnote.TabIndex = 0;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -168,20 +172,17 @@
             animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 1F;
-            this.Pgnote.Transition = animation1;
-            this.Pgnote.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.backPgnote.Transition = animation1;
+            this.backPgnote.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // note1
             // 
+            this.note1.Controls.Add(this.groupBox2);
             this.note1.Controls.Add(this.panel1);
-            this.note1.Controls.Add(this.Btn_modifie_note);
-            this.note1.Controls.Add(this.Btn_Delete_Note);
             this.note1.Controls.Add(this.pictureBox4);
             this.note1.Controls.Add(this.panelNoteDisplay);
             this.note1.Controls.Add(this.lblGreeting);
             this.note1.Controls.Add(this.lstnotes);
-            this.note1.Controls.Add(this.txtBox_Search_NoteTitle);
-            this.note1.Controls.Add(this.Btn_Add_note);
             this.note1.Location = new System.Drawing.Point(4, 4);
             this.note1.Name = "note1";
             this.note1.Padding = new System.Windows.Forms.Padding(3);
@@ -190,11 +191,98 @@
             this.note1.Text = "Pgnote1";
             this.note1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtBox_Search_NoteTitle);
+            this.groupBox2.Controls.Add(this.Btn_Add_note);
+            this.groupBox2.Controls.Add(this.Btn_modifie_note);
+            this.groupBox2.Controls.Add(this.Btn_Delete_Note);
+            this.groupBox2.Location = new System.Drawing.Point(21, 418);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(629, 66);
+            this.groupBox2.TabIndex = 38;
+            this.groupBox2.TabStop = false;
+            // 
+            // txtBox_Search_NoteTitle
+            // 
+            this.txtBox_Search_NoteTitle.AcceptsReturn = false;
+            this.txtBox_Search_NoteTitle.AcceptsTab = false;
+            this.txtBox_Search_NoteTitle.AnimationSpeed = 200;
+            this.txtBox_Search_NoteTitle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtBox_Search_NoteTitle.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtBox_Search_NoteTitle.BackColor = System.Drawing.Color.Transparent;
+            this.txtBox_Search_NoteTitle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBox_Search_NoteTitle.BackgroundImage")));
+            this.txtBox_Search_NoteTitle.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBox_Search_NoteTitle.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtBox_Search_NoteTitle.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBox_Search_NoteTitle.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBox_Search_NoteTitle.BorderRadius = 25;
+            this.txtBox_Search_NoteTitle.BorderThickness = 1;
+            this.txtBox_Search_NoteTitle.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBox_Search_NoteTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox_Search_NoteTitle.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtBox_Search_NoteTitle.DefaultText = "";
+            this.txtBox_Search_NoteTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtBox_Search_NoteTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.txtBox_Search_NoteTitle.HideSelection = true;
+            this.txtBox_Search_NoteTitle.IconLeft = null;
+            this.txtBox_Search_NoteTitle.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox_Search_NoteTitle.IconPadding = 5;
+            this.txtBox_Search_NoteTitle.IconRight = ((System.Drawing.Image)(resources.GetObject("txtBox_Search_NoteTitle.IconRight")));
+            this.txtBox_Search_NoteTitle.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox_Search_NoteTitle.Lines = new string[0];
+            this.txtBox_Search_NoteTitle.Location = new System.Drawing.Point(6, 19);
+            this.txtBox_Search_NoteTitle.MaxLength = 32767;
+            this.txtBox_Search_NoteTitle.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtBox_Search_NoteTitle.Modified = false;
+            this.txtBox_Search_NoteTitle.Multiline = false;
+            this.txtBox_Search_NoteTitle.Name = "txtBox_Search_NoteTitle";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBox_Search_NoteTitle.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtBox_Search_NoteTitle.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBox_Search_NoteTitle.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBox_Search_NoteTitle.OnIdleState = stateProperties4;
+            this.txtBox_Search_NoteTitle.PasswordChar = '\0';
+            this.txtBox_Search_NoteTitle.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtBox_Search_NoteTitle.PlaceholderText = "Type here to search";
+            this.txtBox_Search_NoteTitle.ReadOnly = false;
+            this.txtBox_Search_NoteTitle.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBox_Search_NoteTitle.SelectedText = "";
+            this.txtBox_Search_NoteTitle.SelectionLength = 0;
+            this.txtBox_Search_NoteTitle.SelectionStart = 0;
+            this.txtBox_Search_NoteTitle.ShortcutsEnabled = true;
+            this.txtBox_Search_NoteTitle.Size = new System.Drawing.Size(266, 37);
+            this.txtBox_Search_NoteTitle.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtBox_Search_NoteTitle.TabIndex = 27;
+            this.txtBox_Search_NoteTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox_Search_NoteTitle.TextMarginBottom = 0;
+            this.txtBox_Search_NoteTitle.TextMarginLeft = 2;
+            this.txtBox_Search_NoteTitle.TextMarginTop = 0;
+            this.txtBox_Search_NoteTitle.TextPlaceholder = "Type here to search";
+            this.txtBox_Search_NoteTitle.UseSystemPasswordChar = false;
+            this.txtBox_Search_NoteTitle.WordWrap = true;
+            this.txtBox_Search_NoteTitle.TextChanged += new System.EventHandler(this.txtBox_Search_NoteTitle_TextChanged);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             this.panel1.Controls.Add(this.lbl_display_NotesTiitles);
-            this.panel1.Location = new System.Drawing.Point(21, 58);
+            this.panel1.Location = new System.Drawing.Point(21, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 38);
             this.panel1.TabIndex = 37;
@@ -211,10 +299,19 @@
             this.lbl_display_NotesTiitles.TabIndex = 0;
             this.lbl_display_NotesTiitles.Text = "Your Note List";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(309, 156);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            // 
             // Btn_modifie_note
             // 
             this.Btn_modifie_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modifie_note.Image")));
-            this.Btn_modifie_note.Location = new System.Drawing.Point(599, 460);
+            this.Btn_modifie_note.Location = new System.Drawing.Point(371, 20);
             this.Btn_modifie_note.Name = "Btn_modifie_note";
             this.Btn_modifie_note.Size = new System.Drawing.Size(42, 42);
             this.Btn_modifie_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,25 +319,16 @@
             this.Btn_modifie_note.TabStop = false;
             this.Btn_modifie_note.Click += new System.EventHandler(this.Btn_modifie_note_Click);
             // 
-            // Btn_Delete_Note
+            // Btn_Add_note
             // 
-            this.Btn_Delete_Note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete_Note.Image")));
-            this.Btn_Delete_Note.Location = new System.Drawing.Point(293, 415);
-            this.Btn_Delete_Note.Name = "Btn_Delete_Note";
-            this.Btn_Delete_Note.Size = new System.Drawing.Size(26, 26);
-            this.Btn_Delete_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_Delete_Note.TabIndex = 35;
-            this.Btn_Delete_Note.TabStop = false;
-            this.Btn_Delete_Note.Click += new System.EventHandler(this.deleteNote_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(311, 237);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 39);
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
+            this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
+            this.Btn_Add_note.Location = new System.Drawing.Point(307, 13);
+            this.Btn_Add_note.Name = "Btn_Add_note";
+            this.Btn_Add_note.Size = new System.Drawing.Size(50, 49);
+            this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Add_note.TabIndex = 8;
+            this.Btn_Add_note.TabStop = false;
+            this.Btn_Add_note.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelNoteDisplay
             // 
@@ -252,7 +340,7 @@
             this.panelNoteDisplay.Controls.Add(this.lbldate);
             this.panelNoteDisplay.Enabled = false;
             this.panelNoteDisplay.ForeColor = System.Drawing.Color.White;
-            this.panelNoteDisplay.Location = new System.Drawing.Point(375, 58);
+            this.panelNoteDisplay.Location = new System.Drawing.Point(377, 53);
             this.panelNoteDisplay.Name = "panelNoteDisplay";
             this.panelNoteDisplay.Size = new System.Drawing.Size(274, 363);
             this.panelNoteDisplay.TabIndex = 33;
@@ -275,7 +363,7 @@
             this.bunifuSeparator1.ForeColor = System.Drawing.Color.DimGray;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 285);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 286);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(274, 17);
             this.bunifuSeparator1.TabIndex = 43;
@@ -369,26 +457,26 @@
             this.txtnotedisplay.Modified = false;
             this.txtnotedisplay.Multiline = true;
             this.txtnotedisplay.Name = "txtnotedisplay";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtnotedisplay.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Transparent;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtnotedisplay.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.Transparent;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtnotedisplay.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Transparent;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtnotedisplay.OnIdleState = stateProperties4;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtnotedisplay.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.Transparent;
+            stateProperties6.FillColor = System.Drawing.Color.White;
+            stateProperties6.ForeColor = System.Drawing.Color.Empty;
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtnotedisplay.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.Transparent;
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtnotedisplay.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Transparent;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtnotedisplay.OnIdleState = stateProperties8;
             this.txtnotedisplay.PasswordChar = '\0';
             this.txtnotedisplay.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtnotedisplay.PlaceholderText = "";
@@ -421,17 +509,29 @@
             this.lbldate.TabIndex = 40;
             this.lbldate.Text = "Last modified on:";
             // 
+            // Btn_Delete_Note
+            // 
+            this.Btn_Delete_Note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete_Note.Image")));
+            this.Btn_Delete_Note.Location = new System.Drawing.Point(429, 30);
+            this.Btn_Delete_Note.Name = "Btn_Delete_Note";
+            this.Btn_Delete_Note.Size = new System.Drawing.Size(26, 26);
+            this.Btn_Delete_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Delete_Note.TabIndex = 35;
+            this.Btn_Delete_Note.TabStop = false;
+            this.Btn_Delete_Note.Click += new System.EventHandler(this.deleteNote_Click);
+            // 
             // lblGreeting
             // 
             this.lblGreeting.AutoSize = true;
             this.lblGreeting.BackColor = System.Drawing.Color.Transparent;
             this.lblGreeting.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
             this.lblGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.lblGreeting.Location = new System.Drawing.Point(13, 2);
+            this.lblGreeting.Location = new System.Drawing.Point(11, 0);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(222, 45);
             this.lblGreeting.TabIndex = 32;
             this.lblGreeting.Text = "Name\'s Notes";
+            this.lblGreeting.Click += new System.EventHandler(this.lblGreeting_Click);
             // 
             // lstnotes
             // 
@@ -440,109 +540,19 @@
             this.lstnotes.ForeColor = System.Drawing.Color.DimGray;
             this.lstnotes.FormattingEnabled = true;
             this.lstnotes.ItemHeight = 15;
-            this.lstnotes.Location = new System.Drawing.Point(21, 92);
+            this.lstnotes.Location = new System.Drawing.Point(21, 93);
             this.lstnotes.Name = "lstnotes";
             this.lstnotes.Size = new System.Drawing.Size(266, 319);
             this.lstnotes.TabIndex = 30;
             this.lstnotes.SelectedIndexChanged += new System.EventHandler(this.lstnotes_SelectedIndexChanged);
             // 
-            // txtBox_Search_NoteTitle
-            // 
-            this.txtBox_Search_NoteTitle.AcceptsReturn = false;
-            this.txtBox_Search_NoteTitle.AcceptsTab = false;
-            this.txtBox_Search_NoteTitle.AnimationSpeed = 200;
-            this.txtBox_Search_NoteTitle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtBox_Search_NoteTitle.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtBox_Search_NoteTitle.BackColor = System.Drawing.Color.Transparent;
-            this.txtBox_Search_NoteTitle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBox_Search_NoteTitle.BackgroundImage")));
-            this.txtBox_Search_NoteTitle.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtBox_Search_NoteTitle.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtBox_Search_NoteTitle.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtBox_Search_NoteTitle.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.txtBox_Search_NoteTitle.BorderRadius = 25;
-            this.txtBox_Search_NoteTitle.BorderThickness = 2;
-            this.txtBox_Search_NoteTitle.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBox_Search_NoteTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBox_Search_NoteTitle.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtBox_Search_NoteTitle.DefaultText = "";
-            this.txtBox_Search_NoteTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtBox_Search_NoteTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.txtBox_Search_NoteTitle.HideSelection = true;
-            this.txtBox_Search_NoteTitle.IconLeft = null;
-            this.txtBox_Search_NoteTitle.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBox_Search_NoteTitle.IconPadding = 5;
-            this.txtBox_Search_NoteTitle.IconRight = ((System.Drawing.Image)(resources.GetObject("txtBox_Search_NoteTitle.IconRight")));
-            this.txtBox_Search_NoteTitle.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBox_Search_NoteTitle.Lines = new string[0];
-            this.txtBox_Search_NoteTitle.Location = new System.Drawing.Point(21, 458);
-            this.txtBox_Search_NoteTitle.MaxLength = 32767;
-            this.txtBox_Search_NoteTitle.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtBox_Search_NoteTitle.Modified = false;
-            this.txtBox_Search_NoteTitle.Multiline = false;
-            this.txtBox_Search_NoteTitle.Name = "txtBox_Search_NoteTitle";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBox_Search_NoteTitle.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.Empty;
-            stateProperties6.FillColor = System.Drawing.Color.White;
-            stateProperties6.ForeColor = System.Drawing.Color.Empty;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtBox_Search_NoteTitle.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBox_Search_NoteTitle.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBox_Search_NoteTitle.OnIdleState = stateProperties8;
-            this.txtBox_Search_NoteTitle.PasswordChar = '\0';
-            this.txtBox_Search_NoteTitle.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtBox_Search_NoteTitle.PlaceholderText = "Type here to search";
-            this.txtBox_Search_NoteTitle.ReadOnly = false;
-            this.txtBox_Search_NoteTitle.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBox_Search_NoteTitle.SelectedText = "";
-            this.txtBox_Search_NoteTitle.SelectionLength = 0;
-            this.txtBox_Search_NoteTitle.SelectionStart = 0;
-            this.txtBox_Search_NoteTitle.ShortcutsEnabled = true;
-            this.txtBox_Search_NoteTitle.Size = new System.Drawing.Size(266, 37);
-            this.txtBox_Search_NoteTitle.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtBox_Search_NoteTitle.TabIndex = 27;
-            this.txtBox_Search_NoteTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBox_Search_NoteTitle.TextMarginBottom = 0;
-            this.txtBox_Search_NoteTitle.TextMarginLeft = 2;
-            this.txtBox_Search_NoteTitle.TextMarginTop = 0;
-            this.txtBox_Search_NoteTitle.TextPlaceholder = "Type here to search";
-            this.txtBox_Search_NoteTitle.UseSystemPasswordChar = false;
-            this.txtBox_Search_NoteTitle.WordWrap = true;
-            this.txtBox_Search_NoteTitle.TextChanged += new System.EventHandler(this.txtBox_Search_NoteTitle_TextChanged);
-            // 
-            // Btn_Add_note
-            // 
-            this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
-            this.Btn_Add_note.Location = new System.Drawing.Point(312, 455);
-            this.Btn_Add_note.Name = "Btn_Add_note";
-            this.Btn_Add_note.Size = new System.Drawing.Size(50, 49);
-            this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_Add_note.TabIndex = 8;
-            this.Btn_Add_note.TabStop = false;
-            this.Btn_Add_note.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // note2
             // 
+            this.note2.Controls.Add(this.groupBox1);
             this.note2.Controls.Add(this.cbAdd);
-            this.note2.Controls.Add(this.btn_back);
             this.note2.Controls.Add(this.bunifuTextBox1);
-            this.note2.Controls.Add(this.label4);
-            this.note2.Controls.Add(this.chkBoxPulicNote);
-            this.note2.Controls.Add(this.btn_save);
             this.note2.Controls.Add(this.NoteText);
             this.note2.Controls.Add(this.TitleNote);
-            this.note2.Controls.Add(this.pictureBox1);
             this.note2.Controls.Add(this.pictureBox3);
             this.note2.Location = new System.Drawing.Point(4, 4);
             this.note2.Name = "note2";
@@ -551,6 +561,117 @@
             this.note2.TabIndex = 1;
             this.note2.Text = "Pgnote2";
             this.note2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_save);
+            this.groupBox1.Controls.Add(this.btn_back);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.chkBoxPulicNote);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(578, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(87, 406);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
+            this.btn_save.Location = new System.Drawing.Point(20, 48);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(42, 42);
+            this.btn_save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_save.TabIndex = 41;
+            this.btn_save.TabStop = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_back
+            // 
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Location = new System.Drawing.Point(20, 159);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(42, 42);
+            this.btn_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_back.TabIndex = 45;
+            this.btn_back.TabStop = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 252);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // chkBoxPulicNote
+            // 
+            this.chkBoxPulicNote.AllowBindingControlAnimation = true;
+            this.chkBoxPulicNote.AllowBindingControlColorChanges = false;
+            this.chkBoxPulicNote.AllowBindingControlLocation = true;
+            this.chkBoxPulicNote.AllowCheckBoxAnimation = false;
+            this.chkBoxPulicNote.AllowCheckmarkAnimation = true;
+            this.chkBoxPulicNote.AllowOnHoverStates = true;
+            this.chkBoxPulicNote.AutoCheck = true;
+            this.chkBoxPulicNote.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoxPulicNote.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkBoxPulicNote.BackgroundImage")));
+            this.chkBoxPulicNote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkBoxPulicNote.BindingControl = null;
+            this.chkBoxPulicNote.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.chkBoxPulicNote.Checked = true;
+            this.chkBoxPulicNote.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.chkBoxPulicNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkBoxPulicNote.CustomCheckmarkImage = null;
+            this.chkBoxPulicNote.Location = new System.Drawing.Point(6, 345);
+            this.chkBoxPulicNote.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chkBoxPulicNote.Name = "chkBoxPulicNote";
+            this.chkBoxPulicNote.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.chkBoxPulicNote.OnCheck.BorderRadius = 2;
+            this.chkBoxPulicNote.OnCheck.BorderThickness = 2;
+            this.chkBoxPulicNote.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.chkBoxPulicNote.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.chkBoxPulicNote.OnCheck.CheckmarkThickness = 2;
+            this.chkBoxPulicNote.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.chkBoxPulicNote.OnDisable.BorderRadius = 2;
+            this.chkBoxPulicNote.OnDisable.BorderThickness = 2;
+            this.chkBoxPulicNote.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkBoxPulicNote.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.chkBoxPulicNote.OnDisable.CheckmarkThickness = 2;
+            this.chkBoxPulicNote.OnHoverChecked.BorderColor = System.Drawing.Color.DarkGray;
+            this.chkBoxPulicNote.OnHoverChecked.BorderRadius = 2;
+            this.chkBoxPulicNote.OnHoverChecked.BorderThickness = 2;
+            this.chkBoxPulicNote.OnHoverChecked.CheckBoxColor = System.Drawing.Color.DarkGray;
+            this.chkBoxPulicNote.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.chkBoxPulicNote.OnHoverChecked.CheckmarkThickness = 2;
+            this.chkBoxPulicNote.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
+            this.chkBoxPulicNote.OnHoverUnchecked.BorderRadius = 2;
+            this.chkBoxPulicNote.OnHoverUnchecked.BorderThickness = 2;
+            this.chkBoxPulicNote.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkBoxPulicNote.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.chkBoxPulicNote.OnUncheck.BorderRadius = 2;
+            this.chkBoxPulicNote.OnUncheck.BorderThickness = 2;
+            this.chkBoxPulicNote.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkBoxPulicNote.Size = new System.Drawing.Size(21, 21);
+            this.chkBoxPulicNote.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.chkBoxPulicNote.TabIndex = 42;
+            this.chkBoxPulicNote.ThreeState = false;
+            this.chkBoxPulicNote.ToolTipText = null;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
+            this.label4.Location = new System.Drawing.Point(32, 346);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Public";
             // 
             // cbAdd
             // 
@@ -604,17 +725,6 @@
             this.cbAdd.TabIndex = 46;
             this.cbAdd.ThreeState = false;
             this.cbAdd.ToolTipText = null;
-            // 
-            // btn_back
-            // 
-            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
-            this.btn_back.Location = new System.Drawing.Point(579, 265);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(42, 42);
-            this.btn_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_back.TabIndex = 45;
-            this.btn_back.TabStop = false;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // bunifuTextBox1
             // 
@@ -688,82 +798,6 @@
             this.bunifuTextBox1.TextPlaceholder = "Enter text";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.label4.Location = new System.Drawing.Point(606, 417);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Public";
-            // 
-            // chkBoxPulicNote
-            // 
-            this.chkBoxPulicNote.AllowBindingControlAnimation = true;
-            this.chkBoxPulicNote.AllowBindingControlColorChanges = false;
-            this.chkBoxPulicNote.AllowBindingControlLocation = true;
-            this.chkBoxPulicNote.AllowCheckBoxAnimation = false;
-            this.chkBoxPulicNote.AllowCheckmarkAnimation = true;
-            this.chkBoxPulicNote.AllowOnHoverStates = true;
-            this.chkBoxPulicNote.AutoCheck = true;
-            this.chkBoxPulicNote.BackColor = System.Drawing.Color.Transparent;
-            this.chkBoxPulicNote.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkBoxPulicNote.BackgroundImage")));
-            this.chkBoxPulicNote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chkBoxPulicNote.BindingControl = null;
-            this.chkBoxPulicNote.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chkBoxPulicNote.Checked = true;
-            this.chkBoxPulicNote.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.chkBoxPulicNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkBoxPulicNote.CustomCheckmarkImage = null;
-            this.chkBoxPulicNote.Location = new System.Drawing.Point(579, 415);
-            this.chkBoxPulicNote.MinimumSize = new System.Drawing.Size(17, 17);
-            this.chkBoxPulicNote.Name = "chkBoxPulicNote";
-            this.chkBoxPulicNote.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.chkBoxPulicNote.OnCheck.BorderRadius = 2;
-            this.chkBoxPulicNote.OnCheck.BorderThickness = 2;
-            this.chkBoxPulicNote.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.chkBoxPulicNote.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.chkBoxPulicNote.OnCheck.CheckmarkThickness = 2;
-            this.chkBoxPulicNote.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.chkBoxPulicNote.OnDisable.BorderRadius = 2;
-            this.chkBoxPulicNote.OnDisable.BorderThickness = 2;
-            this.chkBoxPulicNote.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkBoxPulicNote.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.chkBoxPulicNote.OnDisable.CheckmarkThickness = 2;
-            this.chkBoxPulicNote.OnHoverChecked.BorderColor = System.Drawing.Color.DarkGray;
-            this.chkBoxPulicNote.OnHoverChecked.BorderRadius = 2;
-            this.chkBoxPulicNote.OnHoverChecked.BorderThickness = 2;
-            this.chkBoxPulicNote.OnHoverChecked.CheckBoxColor = System.Drawing.Color.DarkGray;
-            this.chkBoxPulicNote.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.chkBoxPulicNote.OnHoverChecked.CheckmarkThickness = 2;
-            this.chkBoxPulicNote.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(131)))), ((int)(((byte)(188)))));
-            this.chkBoxPulicNote.OnHoverUnchecked.BorderRadius = 2;
-            this.chkBoxPulicNote.OnHoverUnchecked.BorderThickness = 2;
-            this.chkBoxPulicNote.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkBoxPulicNote.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.chkBoxPulicNote.OnUncheck.BorderRadius = 2;
-            this.chkBoxPulicNote.OnUncheck.BorderThickness = 2;
-            this.chkBoxPulicNote.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkBoxPulicNote.Size = new System.Drawing.Size(21, 21);
-            this.chkBoxPulicNote.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.chkBoxPulicNote.TabIndex = 42;
-            this.chkBoxPulicNote.ThreeState = false;
-            this.chkBoxPulicNote.ToolTipText = null;
-            // 
-            // btn_save
-            // 
-            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.Location = new System.Drawing.Point(579, 313);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(42, 42);
-            this.btn_save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_save.TabIndex = 41;
-            this.btn_save.TabStop = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // NoteText
             // 
@@ -865,23 +899,12 @@
             this.TitleNote.TabIndex = 38;
             this.TitleNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(579, 361);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(579, -2);
+            this.pictureBox3.Location = new System.Drawing.Point(594, 16);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 86);
+            this.pictureBox3.Size = new System.Drawing.Size(58, 57);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 39;
             this.pictureBox3.TabStop = false;
@@ -1085,21 +1108,23 @@
             this.Text = "FormNotes";
             this.Load += new System.EventHandler(this.FormNotes_Load);
             this.NotePanel.ResumeLayout(false);
-            this.Pgnote.ResumeLayout(false);
+            this.backPgnote.ResumeLayout(false);
             this.note1.ResumeLayout(false);
             this.note1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).EndInit();
             this.panelNoteDisplay.ResumeLayout(false);
             this.panelNoteDisplay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).EndInit();
             this.note2.ResumeLayout(false);
-            this.note2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.sketch.ResumeLayout(false);
@@ -1123,7 +1148,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel NotePanel;
-        private Bunifu.UI.WinForms.BunifuPages Pgnote;
+        private Bunifu.UI.WinForms.BunifuPages backPgnote;
         private System.Windows.Forms.TabPage note1;
         private System.Windows.Forms.TabPage note2;
         private System.Windows.Forms.TabPage sketch;
@@ -1141,30 +1166,32 @@
         private System.Windows.Forms.PictureBox ShapeCircle;
         private System.Windows.Forms.PictureBox btnClean;
         private System.Windows.Forms.PictureBox btnexit;
-        private System.Windows.Forms.PictureBox Btn_Add_note;
         private System.Windows.Forms.ListBox lstnotes;
         private System.Windows.Forms.Panel panelNoteDisplay;
         private System.Windows.Forms.Label lblGreeting;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtnotedisplay;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox Btn_modifie_note;
-        private System.Windows.Forms.PictureBox Btn_Delete_Note;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtBox_Search_NoteTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_display_NotesTiitles;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuCheckBox cb_public;
         private System.Windows.Forms.Label lbldate;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TitleNote;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox NoteText;
-        private System.Windows.Forms.PictureBox btn_save;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuCheckBox cbAdd;
+        private System.Windows.Forms.PictureBox Btn_modifie_note;
+        private System.Windows.Forms.PictureBox Btn_Delete_Note;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtBox_Search_NoteTitle;
+        private System.Windows.Forms.PictureBox Btn_Add_note;
+        private System.Windows.Forms.PictureBox btn_back;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuCheckBox chkBoxPulicNote;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
-        private System.Windows.Forms.PictureBox btn_back;
-        private Bunifu.UI.WinForms.BunifuCheckBox cbAdd;
+        private System.Windows.Forms.PictureBox btn_save;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
