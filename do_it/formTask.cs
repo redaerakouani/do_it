@@ -272,7 +272,7 @@ namespace do_it
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("are you sure you want to delete this task ", "delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("are you sure you want to delete this task ", "delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string req = "delete from TASK where ID_USER in (select ID_USER from users where FULL_NAME = '" + Program.activeUser + "') and DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
                 cn = new SqlConnection(cs);

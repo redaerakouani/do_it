@@ -241,7 +241,7 @@ namespace do_it
         {
             try
             {
-                formtask(new FormClients());
+                formtask(new FormAdmin());
             }
             catch { }
             
@@ -279,22 +279,32 @@ namespace do_it
         //Button_add_New_Note_From_Home
         private void btnAddNote_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
-            string req = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
-            SqlCommand com = new SqlCommand(req, cn);
-            com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
-            com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
-            com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm") + "] " + lblName.Text + " " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
-            com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-            com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+            if (txtBoxNote.Text == "") MessageBox.Show("Type a note first");
+            else
+            {
+                try
+                {
+                    SqlConnection cn = new SqlConnection(cs);
+                    cn.Open();
+                    string req = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
+                    SqlCommand com = new SqlCommand(req, cn);
+                    com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
+                    com.Parameters.Add(new SqlParameter("@desc", txtBoxNote.Text));
+                    com.Parameters.Add(new SqlParameter("@title", "[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "] " + lblName.Text + " " + (lblGreeting.Text.Split(' ', ','))[1] + " note"));
+                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked==false));
 
-            com.ExecuteNonQuery();
-            txtBoxNote.Text = "";
+                    com.ExecuteNonQuery();
+                    txtBoxNote.Text = "";
 
-            cn.Close();
-            cn = null;
-            com = null;
+                    cn.Close();
+                    cn = null;
+                    com = null;
+                }
+                catch { }
+            }
+
+
         }
 
       

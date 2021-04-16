@@ -180,37 +180,45 @@ namespace do_it
         //Button_Save
         private void btn_save_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
-            if (cbAdd.Checked == true)
+            try
             {
-                string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
-                SqlCommand com = new SqlCommand(req1, cn);
-                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
-                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                com.ExecuteNonQuery();
+                SqlConnection cn = new SqlConnection(cs);
+                cn.Open();
+                if (cbAdd.Checked == true)
+                {
+                    string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE) values (@iduser,@desc,@date,@public,@title)";
+                    SqlCommand com = new SqlCommand(req1, cn);
+                    com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
+                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                    com.ExecuteNonQuery();
+                }
+                else
+                {
+                    string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public WHERE ID_USER='" +Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
+                    SqlCommand com = new SqlCommand(req2, cn);
+                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                    com.ExecuteNonQuery();
+                }
+                remplirlist();
+                TitleNote.Text = "";
+                NoteText.Text = "";
+                backPgnote.SetPage(note1);
+                cn.Close();
+                cn = null;
+                com = null;
             }
-            else
+            catch
             {
-                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public WHERE ID_USER='" +Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
-                SqlCommand com = new SqlCommand(req2, cn);
-                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                com.ExecuteNonQuery();
+                MessageBox.Show("Try an other title...! ");
             }
 
-            remplirlist();
-            TitleNote.Text = "";
-            NoteText.Text = "";
-            backPgnote.SetPage(note1);
-            cn.Close();
-            cn = null;
-            com = null;
+            
 
         }
         //Search_textBox
@@ -338,14 +346,6 @@ namespace do_it
             p.Color = Color.White;
         }
 
-        //private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    if (moving == true)
-        //    {
-        //        x = e.X;
-        //        y = e.Y;
-        //    }
-        //}
 
         private void ShapeLine_Click(object sender, EventArgs e)
         {
