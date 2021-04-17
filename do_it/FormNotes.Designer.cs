@@ -51,18 +51,18 @@
             this.note1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBox_Search_NoteTitle = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.Btn_Add_note = new System.Windows.Forms.PictureBox();
+            this.Btn_modifie_note = new System.Windows.Forms.PictureBox();
+            this.Btn_Delete_Note = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_display_NotesTiitles = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Btn_modifie_note = new System.Windows.Forms.PictureBox();
-            this.Btn_Add_note = new System.Windows.Forms.PictureBox();
             this.panelNoteDisplay = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.cb_public = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.txtnotedisplay = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.lbldate = new System.Windows.Forms.Label();
-            this.Btn_Delete_Note = new System.Windows.Forms.PictureBox();
             this.lblGreeting = new System.Windows.Forms.Label();
             this.lstnotes = new System.Windows.Forms.ListBox();
             this.note2 = new System.Windows.Forms.TabPage();
@@ -80,28 +80,29 @@
             this.sketch = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Width_grpbox = new System.Windows.Forms.GroupBox();
+            this.rb_20 = new System.Windows.Forms.RadioButton();
+            this.rb_10 = new System.Windows.Forms.RadioButton();
+            this.rb_5 = new System.Windows.Forms.RadioButton();
             this.btnexit = new System.Windows.Forms.PictureBox();
-            this.btnClean = new System.Windows.Forms.PictureBox();
             this.Erasser = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.PictureBox();
-            this.ShapeLine = new System.Windows.Forms.PictureBox();
-            this.ShapeRect = new System.Windows.Forms.PictureBox();
-            this.Grey_pen = new System.Windows.Forms.PictureBox();
-            this.Blue_pen = new System.Windows.Forms.PictureBox();
-            this.ShapeCircle = new System.Windows.Forms.PictureBox();
-            this.Red_pen = new System.Windows.Forms.PictureBox();
+            this.Color_Dialogue = new System.Windows.Forms.PictureBox();
             this.Black_pen = new System.Windows.Forms.PictureBox();
-            this.DrawingPanel = new System.Windows.Forms.Panel();
+            this.rb_30 = new System.Windows.Forms.RadioButton();
+            this.rb_40 = new System.Windows.Forms.RadioButton();
+            this.rb_50 = new System.Windows.Forms.RadioButton();
+            this.DrawingPanel = new do_it.TPanel();
             this.NotePanel.SuspendLayout();
             this.backPgnote.SuspendLayout();
             this.note1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).BeginInit();
             this.panelNoteDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).BeginInit();
             this.note2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
@@ -111,16 +112,11 @@
             this.sketch.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            this.Width_grpbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Erasser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeRect)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Grey_pen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blue_pen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeCircle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Red_pen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Color_Dialogue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black_pen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,10 +146,10 @@
             this.backPgnote.Location = new System.Drawing.Point(3, 3);
             this.backPgnote.Multiline = true;
             this.backPgnote.Name = "backPgnote";
-            this.backPgnote.Page = this.note1;
-            this.backPgnote.PageIndex = 0;
-            this.backPgnote.PageName = "note1";
-            this.backPgnote.PageTitle = "Pgnote1";
+            this.backPgnote.Page = this.sketch;
+            this.backPgnote.PageIndex = 2;
+            this.backPgnote.PageName = "sketch";
+            this.backPgnote.PageTitle = "Sketching";
             this.backPgnote.SelectedIndex = 0;
             this.backPgnote.Size = new System.Drawing.Size(681, 516);
             this.backPgnote.TabIndex = 0;
@@ -278,6 +274,39 @@
             this.txtBox_Search_NoteTitle.WordWrap = true;
             this.txtBox_Search_NoteTitle.TextChanged += new System.EventHandler(this.txtBox_Search_NoteTitle_TextChanged);
             // 
+            // Btn_Add_note
+            // 
+            this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
+            this.Btn_Add_note.Location = new System.Drawing.Point(307, 13);
+            this.Btn_Add_note.Name = "Btn_Add_note";
+            this.Btn_Add_note.Size = new System.Drawing.Size(50, 49);
+            this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Add_note.TabIndex = 8;
+            this.Btn_Add_note.TabStop = false;
+            this.Btn_Add_note.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // Btn_modifie_note
+            // 
+            this.Btn_modifie_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modifie_note.Image")));
+            this.Btn_modifie_note.Location = new System.Drawing.Point(371, 20);
+            this.Btn_modifie_note.Name = "Btn_modifie_note";
+            this.Btn_modifie_note.Size = new System.Drawing.Size(42, 42);
+            this.Btn_modifie_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_modifie_note.TabIndex = 36;
+            this.Btn_modifie_note.TabStop = false;
+            this.Btn_modifie_note.Click += new System.EventHandler(this.Btn_modifie_note_Click);
+            // 
+            // Btn_Delete_Note
+            // 
+            this.Btn_Delete_Note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete_Note.Image")));
+            this.Btn_Delete_Note.Location = new System.Drawing.Point(429, 30);
+            this.Btn_Delete_Note.Name = "Btn_Delete_Note";
+            this.Btn_Delete_Note.Size = new System.Drawing.Size(26, 26);
+            this.Btn_Delete_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_Delete_Note.TabIndex = 35;
+            this.Btn_Delete_Note.TabStop = false;
+            this.Btn_Delete_Note.Click += new System.EventHandler(this.deleteNote_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
@@ -307,28 +336,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(41, 41);
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
-            // 
-            // Btn_modifie_note
-            // 
-            this.Btn_modifie_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modifie_note.Image")));
-            this.Btn_modifie_note.Location = new System.Drawing.Point(371, 20);
-            this.Btn_modifie_note.Name = "Btn_modifie_note";
-            this.Btn_modifie_note.Size = new System.Drawing.Size(42, 42);
-            this.Btn_modifie_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_modifie_note.TabIndex = 36;
-            this.Btn_modifie_note.TabStop = false;
-            this.Btn_modifie_note.Click += new System.EventHandler(this.Btn_modifie_note_Click);
-            // 
-            // Btn_Add_note
-            // 
-            this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
-            this.Btn_Add_note.Location = new System.Drawing.Point(307, 13);
-            this.Btn_Add_note.Name = "Btn_Add_note";
-            this.Btn_Add_note.Size = new System.Drawing.Size(50, 49);
-            this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_Add_note.TabIndex = 8;
-            this.Btn_Add_note.TabStop = false;
-            this.Btn_Add_note.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panelNoteDisplay
             // 
@@ -509,17 +516,6 @@
             this.lbldate.TabIndex = 40;
             this.lbldate.Text = "Last modified on:";
             // 
-            // Btn_Delete_Note
-            // 
-            this.Btn_Delete_Note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete_Note.Image")));
-            this.Btn_Delete_Note.Location = new System.Drawing.Point(429, 30);
-            this.Btn_Delete_Note.Name = "Btn_Delete_Note";
-            this.Btn_Delete_Note.Size = new System.Drawing.Size(26, 26);
-            this.Btn_Delete_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Btn_Delete_Note.TabIndex = 35;
-            this.Btn_Delete_Note.TabStop = false;
-            this.Btn_Delete_Note.Click += new System.EventHandler(this.deleteNote_Click);
-            // 
             // lblGreeting
             // 
             this.lblGreeting.AutoSize = true;
@@ -531,7 +527,6 @@
             this.lblGreeting.Size = new System.Drawing.Size(222, 45);
             this.lblGreeting.TabIndex = 32;
             this.lblGreeting.Text = "Name\'s Notes";
-            this.lblGreeting.Click += new System.EventHandler(this.lblGreeting_Click);
             // 
             // lstnotes
             // 
@@ -926,43 +921,92 @@
             this.bunifuShadowPanel1.BackColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Gainsboro;
             this.bunifuShadowPanel1.Controls.Add(this.bunifuGradientPanel1);
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(585, 6);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(593, 6);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Empty;
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(85, 481);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(77, 481);
             this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.Width_grpbox);
             this.bunifuGradientPanel1.Controls.Add(this.btnexit);
-            this.bunifuGradientPanel1.Controls.Add(this.btnClean);
             this.bunifuGradientPanel1.Controls.Add(this.Erasser);
             this.bunifuGradientPanel1.Controls.Add(this.btnSave);
-            this.bunifuGradientPanel1.Controls.Add(this.ShapeLine);
-            this.bunifuGradientPanel1.Controls.Add(this.ShapeRect);
-            this.bunifuGradientPanel1.Controls.Add(this.Grey_pen);
-            this.bunifuGradientPanel1.Controls.Add(this.Blue_pen);
-            this.bunifuGradientPanel1.Controls.Add(this.ShapeCircle);
-            this.bunifuGradientPanel1.Controls.Add(this.Red_pen);
+            this.bunifuGradientPanel1.Controls.Add(this.Color_Dialogue);
             this.bunifuGradientPanel1.Controls.Add(this.Black_pen);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(13, 3);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(8, 3);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(56, 463);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // Width_grpbox
+            // 
+            this.Width_grpbox.BackColor = System.Drawing.Color.Transparent;
+            this.Width_grpbox.Controls.Add(this.rb_50);
+            this.Width_grpbox.Controls.Add(this.rb_40);
+            this.Width_grpbox.Controls.Add(this.rb_30);
+            this.Width_grpbox.Controls.Add(this.rb_20);
+            this.Width_grpbox.Controls.Add(this.rb_10);
+            this.Width_grpbox.Controls.Add(this.rb_5);
+            this.Width_grpbox.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.Width_grpbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.Width_grpbox.Location = new System.Drawing.Point(4, 110);
+            this.Width_grpbox.Name = "Width_grpbox";
+            this.Width_grpbox.Size = new System.Drawing.Size(49, 178);
+            this.Width_grpbox.TabIndex = 9;
+            this.Width_grpbox.TabStop = false;
+            this.Width_grpbox.Text = "Size";
+            // 
+            // rb_20
+            // 
+            this.rb_20.AutoSize = true;
+            this.rb_20.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_20.Location = new System.Drawing.Point(12, 69);
+            this.rb_20.Name = "rb_20";
+            this.rb_20.Size = new System.Drawing.Size(32, 19);
+            this.rb_20.TabIndex = 1;
+            this.rb_20.Text = "3";
+            this.rb_20.UseVisualStyleBackColor = true;
+            // 
+            // rb_10
+            // 
+            this.rb_10.AutoSize = true;
+            this.rb_10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_10.Location = new System.Drawing.Point(12, 45);
+            this.rb_10.Name = "rb_10";
+            this.rb_10.Size = new System.Drawing.Size(32, 19);
+            this.rb_10.TabIndex = 2;
+            this.rb_10.Text = "2";
+            this.rb_10.UseVisualStyleBackColor = true;
+            // 
+            // rb_5
+            // 
+            this.rb_5.AutoSize = true;
+            this.rb_5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_5.Location = new System.Drawing.Point(12, 23);
+            this.rb_5.Name = "rb_5";
+            this.rb_5.Size = new System.Drawing.Size(30, 19);
+            this.rb_5.TabIndex = 0;
+            this.rb_5.Text = "1";
+            this.rb_5.UseVisualStyleBackColor = true;
+            // 
             // btnexit
             // 
             this.btnexit.Image = ((System.Drawing.Image)(resources.GetObject("btnexit.Image")));
-            this.btnexit.Location = new System.Drawing.Point(12, 420);
+            this.btnexit.Location = new System.Drawing.Point(14, 406);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(29, 33);
             this.btnexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -970,21 +1014,10 @@
             this.btnexit.TabStop = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // btnClean
-            // 
-            this.btnClean.Image = ((System.Drawing.Image)(resources.GetObject("btnClean.Image")));
-            this.btnClean.Location = new System.Drawing.Point(12, 342);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(29, 33);
-            this.btnClean.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClean.TabIndex = 8;
-            this.btnClean.TabStop = false;
-            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
-            // 
             // Erasser
             // 
             this.Erasser.Image = ((System.Drawing.Image)(resources.GetObject("Erasser.Image")));
-            this.Erasser.Location = new System.Drawing.Point(12, 163);
+            this.Erasser.Location = new System.Drawing.Point(16, 294);
             this.Erasser.Name = "Erasser";
             this.Erasser.Size = new System.Drawing.Size(29, 33);
             this.Erasser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -995,93 +1028,73 @@
             // btnSave
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(12, 381);
+            this.btnSave.Location = new System.Drawing.Point(14, 363);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(29, 33);
             this.btnSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSave.TabIndex = 6;
             this.btnSave.TabStop = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // ShapeLine
+            // Color_Dialogue
             // 
-            this.ShapeLine.Image = ((System.Drawing.Image)(resources.GetObject("ShapeLine.Image")));
-            this.ShapeLine.Location = new System.Drawing.Point(12, 288);
-            this.ShapeLine.Name = "ShapeLine";
-            this.ShapeLine.Size = new System.Drawing.Size(29, 33);
-            this.ShapeLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ShapeLine.TabIndex = 5;
-            this.ShapeLine.TabStop = false;
-            this.ShapeLine.Click += new System.EventHandler(this.ShapeLine_Click);
-            // 
-            // ShapeRect
-            // 
-            this.ShapeRect.Image = ((System.Drawing.Image)(resources.GetObject("ShapeRect.Image")));
-            this.ShapeRect.Location = new System.Drawing.Point(12, 249);
-            this.ShapeRect.Name = "ShapeRect";
-            this.ShapeRect.Size = new System.Drawing.Size(29, 33);
-            this.ShapeRect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ShapeRect.TabIndex = 6;
-            this.ShapeRect.TabStop = false;
-            this.ShapeRect.Click += new System.EventHandler(this.ShapeRect_Click);
-            // 
-            // Grey_pen
-            // 
-            this.Grey_pen.BackColor = System.Drawing.Color.Gray;
-            this.Grey_pen.Image = ((System.Drawing.Image)(resources.GetObject("Grey_pen.Image")));
-            this.Grey_pen.Location = new System.Drawing.Point(12, 124);
-            this.Grey_pen.Name = "Grey_pen";
-            this.Grey_pen.Size = new System.Drawing.Size(29, 33);
-            this.Grey_pen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Grey_pen.TabIndex = 3;
-            this.Grey_pen.TabStop = false;
-            this.Grey_pen.Click += new System.EventHandler(this.Grey_pen_Click);
-            // 
-            // Blue_pen
-            // 
-            this.Blue_pen.BackColor = System.Drawing.Color.Blue;
-            this.Blue_pen.Image = ((System.Drawing.Image)(resources.GetObject("Blue_pen.Image")));
-            this.Blue_pen.Location = new System.Drawing.Point(12, 85);
-            this.Blue_pen.Name = "Blue_pen";
-            this.Blue_pen.Size = new System.Drawing.Size(29, 33);
-            this.Blue_pen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Blue_pen.TabIndex = 2;
-            this.Blue_pen.TabStop = false;
-            this.Blue_pen.Click += new System.EventHandler(this.Blue_pen_Click);
-            // 
-            // ShapeCircle
-            // 
-            this.ShapeCircle.Image = ((System.Drawing.Image)(resources.GetObject("ShapeCircle.Image")));
-            this.ShapeCircle.Location = new System.Drawing.Point(12, 210);
-            this.ShapeCircle.Name = "ShapeCircle";
-            this.ShapeCircle.Size = new System.Drawing.Size(29, 33);
-            this.ShapeCircle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ShapeCircle.TabIndex = 4;
-            this.ShapeCircle.TabStop = false;
-            this.ShapeCircle.Click += new System.EventHandler(this.ShapeCircle_Click);
-            // 
-            // Red_pen
-            // 
-            this.Red_pen.BackColor = System.Drawing.Color.Red;
-            this.Red_pen.Image = ((System.Drawing.Image)(resources.GetObject("Red_pen.Image")));
-            this.Red_pen.Location = new System.Drawing.Point(12, 46);
-            this.Red_pen.Name = "Red_pen";
-            this.Red_pen.Size = new System.Drawing.Size(29, 33);
-            this.Red_pen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Red_pen.TabIndex = 1;
-            this.Red_pen.TabStop = false;
-            this.Red_pen.Click += new System.EventHandler(this.Red_pen_Click);
+            this.Color_Dialogue.BackColor = System.Drawing.Color.Transparent;
+            this.Color_Dialogue.Image = ((System.Drawing.Image)(resources.GetObject("Color_Dialogue.Image")));
+            this.Color_Dialogue.Location = new System.Drawing.Point(14, 63);
+            this.Color_Dialogue.Name = "Color_Dialogue";
+            this.Color_Dialogue.Size = new System.Drawing.Size(29, 33);
+            this.Color_Dialogue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Color_Dialogue.TabIndex = 3;
+            this.Color_Dialogue.TabStop = false;
+            this.Color_Dialogue.Click += new System.EventHandler(this.Color_Dialogue_Click);
             // 
             // Black_pen
             // 
             this.Black_pen.BackColor = System.Drawing.Color.Black;
             this.Black_pen.Image = ((System.Drawing.Image)(resources.GetObject("Black_pen.Image")));
-            this.Black_pen.Location = new System.Drawing.Point(12, 7);
+            this.Black_pen.Location = new System.Drawing.Point(14, 20);
             this.Black_pen.Name = "Black_pen";
             this.Black_pen.Size = new System.Drawing.Size(29, 33);
             this.Black_pen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Black_pen.TabIndex = 0;
             this.Black_pen.TabStop = false;
             this.Black_pen.Click += new System.EventHandler(this.Black_pen_Click);
+            // 
+            // rb_30
+            // 
+            this.rb_30.AutoSize = true;
+            this.rb_30.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_30.Location = new System.Drawing.Point(12, 94);
+            this.rb_30.Name = "rb_30";
+            this.rb_30.Size = new System.Drawing.Size(32, 19);
+            this.rb_30.TabIndex = 3;
+            this.rb_30.Text = "4";
+            this.rb_30.UseVisualStyleBackColor = true;
+            // 
+            // rb_40
+            // 
+            this.rb_40.AutoSize = true;
+            this.rb_40.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_40.Location = new System.Drawing.Point(12, 119);
+            this.rb_40.Name = "rb_40";
+            this.rb_40.Size = new System.Drawing.Size(32, 19);
+            this.rb_40.TabIndex = 4;
+            this.rb_40.Text = "5";
+            this.rb_40.UseVisualStyleBackColor = true;
+            // 
+            // rb_50
+            // 
+            this.rb_50.AutoSize = true;
+            this.rb_50.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_50.Location = new System.Drawing.Point(12, 144);
+            this.rb_50.Name = "rb_50";
+            this.rb_50.Size = new System.Drawing.Size(32, 19);
+            this.rb_50.TabIndex = 5;
+            this.rb_50.Text = "6";
+            this.rb_50.UseVisualStyleBackColor = true;
             // 
             // DrawingPanel
             // 
@@ -1112,14 +1125,14 @@
             this.note1.ResumeLayout(false);
             this.note1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).EndInit();
             this.panelNoteDisplay.ResumeLayout(false);
             this.panelNoteDisplay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).EndInit();
             this.note2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1130,16 +1143,12 @@
             this.sketch.ResumeLayout(false);
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.Width_grpbox.ResumeLayout(false);
+            this.Width_grpbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClean)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Erasser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeRect)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Grey_pen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blue_pen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeCircle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Red_pen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Color_Dialogue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Black_pen)).EndInit();
             this.ResumeLayout(false);
 
@@ -1152,19 +1161,12 @@
         private System.Windows.Forms.TabPage note1;
         private System.Windows.Forms.TabPage note2;
         private System.Windows.Forms.TabPage sketch;
-        private System.Windows.Forms.Panel DrawingPanel;
         private Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.PictureBox Black_pen;
-        private System.Windows.Forms.PictureBox Grey_pen;
-        private System.Windows.Forms.PictureBox Blue_pen;
-        private System.Windows.Forms.PictureBox Red_pen;
+        private System.Windows.Forms.PictureBox Color_Dialogue;
         private System.Windows.Forms.PictureBox Erasser;
         private System.Windows.Forms.PictureBox btnSave;
-        private System.Windows.Forms.PictureBox ShapeLine;
-        private System.Windows.Forms.PictureBox ShapeRect;
-        private System.Windows.Forms.PictureBox ShapeCircle;
-        private System.Windows.Forms.PictureBox btnClean;
         private System.Windows.Forms.PictureBox btnexit;
         private System.Windows.Forms.ListBox lstnotes;
         private System.Windows.Forms.Panel panelNoteDisplay;
@@ -1193,5 +1195,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private TPanel DrawingPanel;
+        private System.Windows.Forms.GroupBox Width_grpbox;
+        private System.Windows.Forms.RadioButton rb_20;
+        private System.Windows.Forms.RadioButton rb_10;
+        private System.Windows.Forms.RadioButton rb_5;
+        private System.Windows.Forms.RadioButton rb_50;
+        private System.Windows.Forms.RadioButton rb_40;
+        private System.Windows.Forms.RadioButton rb_30;
     }
 }

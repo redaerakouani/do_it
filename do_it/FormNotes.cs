@@ -9,6 +9,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace do_it
 {
@@ -21,13 +22,19 @@ namespace do_it
         ////textBox_Note_Content
         public bool TextWasChanged = false;
         //scketching 
-        public int x = -1;
-        public int y = -1;
+        //public int x = -1;
+        //public int y = -1;
+        public int h, w,x,y;
         public bool moving = false;
         public Point current = new Point();
         public Point old = new Point();
         public Graphics g;
         public Pen p;
+        Bitmap surface;
+        Graphics graph;
+        string s = "Sketch"+1;
+        public int width;
+
         //public int a=0, b=0;
         //public double diffxy;
         //public int curx, cury, diffx, diffy;
@@ -38,6 +45,10 @@ namespace do_it
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             p = new Pen(Color.Black);
             p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+            surface = new Bitmap(DrawingPanel.Width, DrawingPanel.Height);
+            graph = Graphics.FromImage(surface);
+            DrawingPanel.BackgroundImage = surface;
+            DrawingPanel.BackgroundImageLayout = ImageLayout.None;
         }
 
         private void FormNotes_Load(object sender, EventArgs e)
@@ -250,19 +261,26 @@ namespace do_it
         }
         //------------------------------------------------------------------------------------------------------//
         //sketching_Modifs
-
-
+      
 
         private void DrawingPanel_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
-            //if (e.Button == MouseButtons.Left)
-            //{
-            //    moving = true;
-            //    b++;
-            //}
-            //curx = e.X;
-            //cury = e.Y;
+            if (rb_5.Checked == true)
+                width = 5;
+            else if (rb_10.Checked == true)
+                width = 10;
+            else if (rb_20.Checked == true)
+                width = 20;
+            else if (rb_30.Checked == true)
+                width = 30;
+            else if (rb_40.Checked == true)
+                width = 40;
+            else if (rb_50.Checked == true)
+                width = 50;
+            else
+                width = 3;
+            p.Width = width;
             x = e.X;
             y = e.Y;
         }
@@ -271,116 +289,71 @@ namespace do_it
         {
             if (moving && x != -1 && y != -1)
             {
-                g.DrawLine(p, new Point(x, y), e.Location);
+                graph.DrawLine(p, new Point(x, y), e.Location);
                 x = e.X;
                 y = e.Y;
                 DrawingPanel.Cursor = Cursors.Cross;
+                DrawingPanel.Invalidate();
             }
         }
 
         private void DrawingPanel_MouseUp(object sender, MouseEventArgs e)
         {
             moving = false;
-            //h = e.X - x;
-            //w = e.Y - y;
-            //Graphics g = this.CreateGraphics();
-            //Rectangle shape = new Rectangle(x, y, h, w);
-            //if (rectgrb.Checked)
-            //{
-            //    g.DrawRectangle(p, shape);
-            //}
-            //else { 
-            //    if(Cerclerb.Checked)
-            //        g.DrawEllipse(p, shape);
-            //}
-
-            x = -1;
+            x = -1; 
             y = -1;
 
         }
         private void Black_pen_Click(object sender, EventArgs e)
         {
             PictureBox Black_pen = (PictureBox)sender;
-            p.Color = Black_pen.BackColor;
+             p.Color = Black_pen.BackColor;
             DrawingPanel.Cursor = Cursors.Default;
 
         }
-
-        private void Red_pen_Click(object sender, EventArgs e)
+        
+        //Button_Save_Image
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            PictureBox Red_pen = (PictureBox)sender;
-            p.Color = Red_pen.BackColor;
-            DrawingPanel.Cursor = Cursors.Default;
+            surface.Save(s, ImageFormat.Png);
         }
-
-        private void Blue_pen_Click(object sender, EventArgs e)
-        {
-            PictureBox Blue_pen = (PictureBox)sender;
-            p.Color = Blue_pen.BackColor;
-            DrawingPanel.Cursor = Cursors.Default;
-        }
-
-        private void Grey_pen_Click(object sender, EventArgs e)
-        {
-            PictureBox Grey_pen = (PictureBox)sender;
-            p.Color = Grey_pen.BackColor;
-            DrawingPanel.Cursor = Cursors.Default;
-        }
-
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            DrawingPanel.Invalidate();
-            //this.Rrefrech();
-        }
-
-        private void Erasser_Click(object sender, EventArgs e)
-        {
-            p.Color = Color.White;
-        }
-
-        //private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    if (moving == true)
-        //    {
-        //        x = e.X;
-        //        y = e.Y;
-        //    }
-        //}
-
-        private void ShapeLine_Click(object sender, EventArgs e)
-        {
-            //Graphics g = this.CreateGraphics();
-           // a = 1;
-            //g.DrawLine(x, y, h, w);
-        }
-
-        private void ShapeRect_Click(object sender, EventArgs e)
-        {
-          //  a = 2;
-        //    Graphics g = this.CreateGraphics();
-        //    Rectangle shape = new Rectangle(x, y, h, w);
-        //    g.DrawRectangle(p, shape);
-        }
-
-        private void ShapeCircle_Click(object sender, EventArgs e)
-        {
-           // a = 3;
-            //Graphics g = this.CreateGraphics();
-            //Rectangle shape = new Rectangle(x, y, h, w);
-            //g.DrawEllipse(p, shape);
-        }
-
+        
+        //
         //Button_Exit_Sketch
         private void btnexit_Click(object sender, EventArgs e)
         {
             backPgnote.SetPage(note2);
             //base.Close();
         }
-
-        private void lblGreeting_Click(object sender, EventArgs e)
+        //Erasser_Button
+        private void Erasser_Click(object sender, EventArgs e)
         {
+            p.Color = Color.White;
+        }
+        //Color_Dialogue
+        private void Color_Dialogue_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                p.Color = cd.Color;
+                Black_pen.BackColor = cd.Color;
+
+            }
 
         }
-    }
 
+        
+  
+    }
+    //Saving_sketch
+    public class TPanel : Panel
+    {
+        public TPanel()
+        {
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+        }
+    }
 }
