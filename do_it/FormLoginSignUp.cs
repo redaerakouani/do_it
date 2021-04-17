@@ -93,7 +93,7 @@ namespace do_it
             {
                 if (dr["TYPE_USER"].ToString().Equals("Admin")) 
                 {
-                    FormClients f = new FormClients();
+                    FormAdmin f = new FormAdmin();
                     this.Hide();
                     f.ShowDialog();
                     this.Close();

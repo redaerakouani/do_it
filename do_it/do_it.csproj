@@ -132,33 +132,27 @@
       <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WindowsFormsCalendar">
-      <HintPath>..\..\..\WinFormsCalendar_1.1\WindowsFormsCalendar.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DO_ITDataSet.cs">
+      <DependentUpon>DO_ITDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DO_ITDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DO_ITDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormClients.cs">
+    <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClients.Designer.cs">
-      <DependentUpon>FormClients.cs</DependentUpon>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDocs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDocs.Designer.cs">
       <DependentUpon>FormDocs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHome.Designer.cs">
-      <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLoginSignUp.cs">
       <SubType>Form</SubType>
@@ -229,14 +223,11 @@
       <DependentUpon>report_note.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="FormClients.resx">
-      <DependentUpon>FormClients.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocs.resx">
       <DependentUpon>FormDocs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
-      <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoginSignUp.resx">
       <DependentUpon>FormLoginSignUp.cs</DependentUpon>

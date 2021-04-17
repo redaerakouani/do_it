@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace do_it
 {
-    public partial class FormClients : Form
+    public partial class FormAdmin : Form
     {
         string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
 
-        public FormClients()
+        public FormAdmin()
         {
             InitializeComponent();
         }

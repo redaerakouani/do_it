@@ -251,9 +251,10 @@ namespace do_it
         {
             if (txt_new_tsk.Text == "") MessageBox.Show("add task first...!");
             else
-              if (combbx_cat.SelectedIndex == -1) MessageBox.Show("chose a categorie...!");
+              if (combbx_cat.SelectedIndex == -1)
+                MessageBox.Show("chose a categorie...!");
             else
-            {
+            { 
                 string req = "insert into TASK (DESCRIPTION,STATUS,PUBLIC_TASK,START_TIME,END_TIME,ID_USER,ID_CATEGORIE_) values ('" + txt_new_tsk.Text + "',0,0,'" + bunifuDatepicker1.Value.ToString() + "','" + bunifuDatepicker2.Value.ToString() + "','" + get_userID() + "','" + get_categID() + "')";
                 cn = new SqlConnection(cs);
                 cn.Open();
@@ -272,7 +273,7 @@ namespace do_it
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("are you sure you want to delete this task ", "delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("are you sure you want to delete this task ", "delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string req = "delete from TASK where ID_USER in (select ID_USER from users where FULL_NAME = '" + Program.activeUser + "') and DESCRIPTION = '" + DataGridtasks.CurrentCell.Value.ToString() + "'";
                 cn = new SqlConnection(cs);
@@ -280,8 +281,6 @@ namespace do_it
 
                 comd = new SqlCommand(req, cn);
                 comd.ExecuteNonQuery();
-
-
 
                 string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
                 remplirlist(cs, cn, req2, DataGridtasks);
