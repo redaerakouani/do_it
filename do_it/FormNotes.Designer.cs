@@ -49,7 +49,9 @@
             this.NotePanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.backPgnote = new Bunifu.UI.WinForms.BunifuPages();
             this.note1 = new System.Windows.Forms.TabPage();
+            this.sketchDisplay = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnShowSketch = new System.Windows.Forms.PictureBox();
             this.txtBox_Search_NoteTitle = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Btn_Add_note = new System.Windows.Forms.PictureBox();
             this.Btn_modifie_note = new System.Windows.Forms.PictureBox();
@@ -96,7 +98,9 @@
             this.NotePanel.SuspendLayout();
             this.backPgnote.SuspendLayout();
             this.note1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sketchDisplay)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowSketch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).BeginInit();
@@ -146,10 +150,10 @@
             this.backPgnote.Location = new System.Drawing.Point(3, 3);
             this.backPgnote.Multiline = true;
             this.backPgnote.Name = "backPgnote";
-            this.backPgnote.Page = this.sketch;
-            this.backPgnote.PageIndex = 2;
-            this.backPgnote.PageName = "sketch";
-            this.backPgnote.PageTitle = "Sketching";
+            this.backPgnote.Page = this.note1;
+            this.backPgnote.PageIndex = 0;
+            this.backPgnote.PageName = "note1";
+            this.backPgnote.PageTitle = "Pgnote1";
             this.backPgnote.SelectedIndex = 0;
             this.backPgnote.Size = new System.Drawing.Size(681, 516);
             this.backPgnote.TabIndex = 0;
@@ -173,6 +177,7 @@
             // 
             // note1
             // 
+            this.note1.Controls.Add(this.sketchDisplay);
             this.note1.Controls.Add(this.groupBox2);
             this.note1.Controls.Add(this.panel1);
             this.note1.Controls.Add(this.pictureBox4);
@@ -187,8 +192,18 @@
             this.note1.Text = "Pgnote1";
             this.note1.UseVisualStyleBackColor = true;
             // 
+            // sketchDisplay
+            // 
+            this.sketchDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sketchDisplay.Location = new System.Drawing.Point(21, 55);
+            this.sketchDisplay.Name = "sketchDisplay";
+            this.sketchDisplay.Size = new System.Drawing.Size(630, 359);
+            this.sketchDisplay.TabIndex = 39;
+            this.sketchDisplay.TabStop = false;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnShowSketch);
             this.groupBox2.Controls.Add(this.txtBox_Search_NoteTitle);
             this.groupBox2.Controls.Add(this.Btn_Add_note);
             this.groupBox2.Controls.Add(this.Btn_modifie_note);
@@ -198,6 +213,17 @@
             this.groupBox2.Size = new System.Drawing.Size(629, 66);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
+            // 
+            // btnShowSketch
+            // 
+            this.btnShowSketch.Image = global::do_it.Properties.Resources.pqa;
+            this.btnShowSketch.Location = new System.Drawing.Point(373, 13);
+            this.btnShowSketch.Name = "btnShowSketch";
+            this.btnShowSketch.Size = new System.Drawing.Size(50, 50);
+            this.btnShowSketch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnShowSketch.TabIndex = 38;
+            this.btnShowSketch.TabStop = false;
+            this.btnShowSketch.Click += new System.EventHandler(this.btnShowSketch_Click);
             // 
             // txtBox_Search_NoteTitle
             // 
@@ -277,7 +303,7 @@
             // Btn_Add_note
             // 
             this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
-            this.Btn_Add_note.Location = new System.Drawing.Point(305, 13);
+            this.Btn_Add_note.Location = new System.Drawing.Point(288, 13);
             this.Btn_Add_note.Name = "Btn_Add_note";
             this.Btn_Add_note.Size = new System.Drawing.Size(50, 50);
             this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +314,7 @@
             // Btn_modifie_note
             // 
             this.Btn_modifie_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modifie_note.Image")));
-            this.Btn_modifie_note.Location = new System.Drawing.Point(445, 12);
+            this.Btn_modifie_note.Location = new System.Drawing.Point(474, 12);
             this.Btn_modifie_note.Name = "Btn_modifie_note";
             this.Btn_modifie_note.Size = new System.Drawing.Size(50, 50);
             this.Btn_modifie_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,7 +339,7 @@
             this.panel1.Controls.Add(this.lbl_display_NotesTiitles);
             this.panel1.Location = new System.Drawing.Point(21, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 38);
+            this.panel1.Size = new System.Drawing.Size(266, 40);
             this.panel1.TabIndex = 37;
             // 
             // lbl_display_NotesTiitles
@@ -347,7 +373,7 @@
             this.panelNoteDisplay.Controls.Add(this.lbldate);
             this.panelNoteDisplay.Enabled = false;
             this.panelNoteDisplay.ForeColor = System.Drawing.Color.White;
-            this.panelNoteDisplay.Location = new System.Drawing.Point(377, 53);
+            this.panelNoteDisplay.Location = new System.Drawing.Point(377, 55);
             this.panelNoteDisplay.Name = "panelNoteDisplay";
             this.panelNoteDisplay.Size = new System.Drawing.Size(274, 359);
             this.panelNoteDisplay.TabIndex = 33;
@@ -493,7 +519,7 @@
             this.txtnotedisplay.SelectionLength = 0;
             this.txtnotedisplay.SelectionStart = 0;
             this.txtnotedisplay.ShortcutsEnabled = true;
-            this.txtnotedisplay.Size = new System.Drawing.Size(272, 291);
+            this.txtnotedisplay.Size = new System.Drawing.Size(272, 272);
             this.txtnotedisplay.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtnotedisplay.TabIndex = 34;
             this.txtnotedisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -535,7 +561,7 @@
             this.lstnotes.ForeColor = System.Drawing.Color.DimGray;
             this.lstnotes.FormattingEnabled = true;
             this.lstnotes.ItemHeight = 15;
-            this.lstnotes.Location = new System.Drawing.Point(21, 93);
+            this.lstnotes.Location = new System.Drawing.Point(21, 95);
             this.lstnotes.Name = "lstnotes";
             this.lstnotes.Size = new System.Drawing.Size(266, 319);
             this.lstnotes.TabIndex = 30;
@@ -1105,7 +1131,6 @@
             this.DrawingPanel.Name = "DrawingPanel";
             this.DrawingPanel.Size = new System.Drawing.Size(667, 484);
             this.DrawingPanel.TabIndex = 1;
-            this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
             this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
             this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
             this.DrawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseUp);
@@ -1126,7 +1151,9 @@
             this.backPgnote.ResumeLayout(false);
             this.note1.ResumeLayout(false);
             this.note1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sketchDisplay)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowSketch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Add_note)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_modifie_note)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete_Note)).EndInit();
@@ -1205,5 +1232,7 @@
         private System.Windows.Forms.RadioButton rb_50;
         private System.Windows.Forms.RadioButton rb_40;
         private System.Windows.Forms.RadioButton rb_30;
+        private System.Windows.Forms.PictureBox sketchDisplay;
+        private System.Windows.Forms.PictureBox btnShowSketch;
     }
 }

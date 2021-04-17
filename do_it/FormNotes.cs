@@ -71,6 +71,7 @@ namespace do_it
             //------------------------------------------------------------------------//
             //Title_List
             remplirlist();
+            sketchDisplay.Visible = false;
             dr.Close();
 
         }
@@ -186,7 +187,7 @@ namespace do_it
             cn.Open();
             try
             {
-                string req = "select TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+                string req = "select TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,SKETCH_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
                 SqlCommand com = new SqlCommand(req, cn);
                 SqlDataReader dr = com.ExecuteReader();
                 while (dr.Read())
@@ -194,6 +195,10 @@ namespace do_it
                     txtnotedisplay.Text = dr[0].ToString();
                     lbldate.Text = "Last modified on: " + Convert.ToDateTime(dr[1].ToString()).ToString("MMM dd,yyyy HH:mm");
                     cb_public.Checked = Convert.ToBoolean(dr[2].ToString());
+                    if(dr[3].ToString()!=null && File.Exists(dr[3].ToString())==true)
+                        sketchDisplay.Image = Image.FromFile(dr[3].ToString());
+                    else
+                        sketchDisplay.Image = Image.FromFile("null.png");
                 }
                 dr.Close();
                 dr = null;
@@ -356,7 +361,6 @@ namespace do_it
                 s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
                 clearSketch();
-                DrawingPanel.BackgroundImage = null;
                 File.Delete(txtBoxSketch.Text);
                 
                 
@@ -376,19 +380,22 @@ namespace do_it
             return Name + i;
         }
 
-        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        private void btnShowSketch_Click(object sender, EventArgs e)
         {
-            if(txtBoxSketch.Text != "")
+            if(sketchDisplay.Visible == false)
             {
-            Image im = Image.FromFile(txtBoxSketch.Text); ;
-            e.Graphics.DrawImage(im, new Point(0, 0));
+                sketchDisplay.Visible = true;
+                btnShowSketch.Image = do_it.Properties.Resources.text_50px;
             }
             else
             {
-                //clearSketch();
+                sketchDisplay.Visible = false;
+                btnShowSketch.Image = do_it.Properties.Resources.pqa;
             }
-            
         }
+
+        
+
 
         //
         //Button_Exit_Sketch
