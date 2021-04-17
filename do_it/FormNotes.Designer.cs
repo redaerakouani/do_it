@@ -66,14 +66,14 @@
             this.lblGreeting = new System.Windows.Forms.Label();
             this.lstnotes = new System.Windows.Forms.ListBox();
             this.note2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpbox = new System.Windows.Forms.GroupBox();
             this.btn_save = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chkBoxPulicNote = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txtBoxSketch = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.NoteText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.TitleNote = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -81,6 +81,9 @@
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Width_grpbox = new System.Windows.Forms.GroupBox();
+            this.rb_50 = new System.Windows.Forms.RadioButton();
+            this.rb_40 = new System.Windows.Forms.RadioButton();
+            this.rb_30 = new System.Windows.Forms.RadioButton();
             this.rb_20 = new System.Windows.Forms.RadioButton();
             this.rb_10 = new System.Windows.Forms.RadioButton();
             this.rb_5 = new System.Windows.Forms.RadioButton();
@@ -89,9 +92,6 @@
             this.btnSave = new System.Windows.Forms.PictureBox();
             this.Color_Dialogue = new System.Windows.Forms.PictureBox();
             this.Black_pen = new System.Windows.Forms.PictureBox();
-            this.rb_30 = new System.Windows.Forms.RadioButton();
-            this.rb_40 = new System.Windows.Forms.RadioButton();
-            this.rb_50 = new System.Windows.Forms.RadioButton();
             this.DrawingPanel = new do_it.TPanel();
             this.NotePanel.SuspendLayout();
             this.backPgnote.SuspendLayout();
@@ -104,7 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelNoteDisplay.SuspendLayout();
             this.note2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,10 +146,10 @@
             this.backPgnote.Location = new System.Drawing.Point(3, 3);
             this.backPgnote.Multiline = true;
             this.backPgnote.Name = "backPgnote";
-            this.backPgnote.Page = this.sketch;
-            this.backPgnote.PageIndex = 2;
-            this.backPgnote.PageName = "sketch";
-            this.backPgnote.PageTitle = "Sketching";
+            this.backPgnote.Page = this.note2;
+            this.backPgnote.PageIndex = 1;
+            this.backPgnote.PageName = "note2";
+            this.backPgnote.PageTitle = "Pgnote2";
             this.backPgnote.SelectedIndex = 0;
             this.backPgnote.Size = new System.Drawing.Size(681, 516);
             this.backPgnote.TabIndex = 0;
@@ -277,9 +277,9 @@
             // Btn_Add_note
             // 
             this.Btn_Add_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Add_note.Image")));
-            this.Btn_Add_note.Location = new System.Drawing.Point(307, 13);
+            this.Btn_Add_note.Location = new System.Drawing.Point(305, 13);
             this.Btn_Add_note.Name = "Btn_Add_note";
-            this.Btn_Add_note.Size = new System.Drawing.Size(50, 49);
+            this.Btn_Add_note.Size = new System.Drawing.Size(50, 50);
             this.Btn_Add_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_Add_note.TabIndex = 8;
             this.Btn_Add_note.TabStop = false;
@@ -288,9 +288,9 @@
             // Btn_modifie_note
             // 
             this.Btn_modifie_note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_modifie_note.Image")));
-            this.Btn_modifie_note.Location = new System.Drawing.Point(371, 20);
+            this.Btn_modifie_note.Location = new System.Drawing.Point(445, 12);
             this.Btn_modifie_note.Name = "Btn_modifie_note";
-            this.Btn_modifie_note.Size = new System.Drawing.Size(42, 42);
+            this.Btn_modifie_note.Size = new System.Drawing.Size(50, 50);
             this.Btn_modifie_note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_modifie_note.TabIndex = 36;
             this.Btn_modifie_note.TabStop = false;
@@ -299,9 +299,9 @@
             // Btn_Delete_Note
             // 
             this.Btn_Delete_Note.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Delete_Note.Image")));
-            this.Btn_Delete_Note.Location = new System.Drawing.Point(429, 30);
+            this.Btn_Delete_Note.Location = new System.Drawing.Point(573, 12);
             this.Btn_Delete_Note.Name = "Btn_Delete_Note";
-            this.Btn_Delete_Note.Size = new System.Drawing.Size(26, 26);
+            this.Btn_Delete_Note.Size = new System.Drawing.Size(50, 50);
             this.Btn_Delete_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_Delete_Note.TabIndex = 35;
             this.Btn_Delete_Note.TabStop = false;
@@ -349,7 +349,7 @@
             this.panelNoteDisplay.ForeColor = System.Drawing.Color.White;
             this.panelNoteDisplay.Location = new System.Drawing.Point(377, 53);
             this.panelNoteDisplay.Name = "panelNoteDisplay";
-            this.panelNoteDisplay.Size = new System.Drawing.Size(274, 363);
+            this.panelNoteDisplay.Size = new System.Drawing.Size(274, 359);
             this.panelNoteDisplay.TabIndex = 33;
             // 
             // label1
@@ -522,7 +522,7 @@
             this.lblGreeting.BackColor = System.Drawing.Color.Transparent;
             this.lblGreeting.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
             this.lblGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(124)))), ((int)(((byte)(118)))));
-            this.lblGreeting.Location = new System.Drawing.Point(11, 0);
+            this.lblGreeting.Location = new System.Drawing.Point(19, 1);
             this.lblGreeting.Name = "lblGreeting";
             this.lblGreeting.Size = new System.Drawing.Size(222, 45);
             this.lblGreeting.TabIndex = 32;
@@ -543,9 +543,9 @@
             // 
             // note2
             // 
-            this.note2.Controls.Add(this.groupBox1);
+            this.note2.Controls.Add(this.grpbox);
             this.note2.Controls.Add(this.cbAdd);
-            this.note2.Controls.Add(this.bunifuTextBox1);
+            this.note2.Controls.Add(this.txtBoxSketch);
             this.note2.Controls.Add(this.NoteText);
             this.note2.Controls.Add(this.TitleNote);
             this.note2.Controls.Add(this.pictureBox3);
@@ -557,18 +557,18 @@
             this.note2.Text = "Pgnote2";
             this.note2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpbox
             // 
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Controls.Add(this.btn_back);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.chkBoxPulicNote);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(578, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(87, 406);
-            this.groupBox1.TabIndex = 47;
-            this.groupBox1.TabStop = false;
+            this.grpbox.Controls.Add(this.btn_save);
+            this.grpbox.Controls.Add(this.btn_back);
+            this.grpbox.Controls.Add(this.pictureBox1);
+            this.grpbox.Controls.Add(this.chkBoxPulicNote);
+            this.grpbox.Controls.Add(this.label4);
+            this.grpbox.Location = new System.Drawing.Point(578, 73);
+            this.grpbox.Name = "grpbox";
+            this.grpbox.Size = new System.Drawing.Size(87, 406);
+            this.grpbox.TabIndex = 47;
+            this.grpbox.TabStop = false;
             // 
             // btn_save
             // 
@@ -721,78 +721,79 @@
             this.cbAdd.ThreeState = false;
             this.cbAdd.ToolTipText = null;
             // 
-            // bunifuTextBox1
+            // txtBoxSketch
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.bunifuTextBox1.BorderRadius = 1;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(16, 444);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.txtBoxSketch.AcceptsReturn = false;
+            this.txtBoxSketch.AcceptsTab = false;
+            this.txtBoxSketch.AnimationSpeed = 200;
+            this.txtBoxSketch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtBoxSketch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtBoxSketch.BackColor = System.Drawing.Color.Transparent;
+            this.txtBoxSketch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBoxSketch.BackgroundImage")));
+            this.txtBoxSketch.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBoxSketch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtBoxSketch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBoxSketch.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.txtBoxSketch.BorderRadius = 1;
+            this.txtBoxSketch.BorderThickness = 1;
+            this.txtBoxSketch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBoxSketch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxSketch.DefaultFont = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtBoxSketch.DefaultText = "";
+            this.txtBoxSketch.Enabled = false;
+            this.txtBoxSketch.FillColor = System.Drawing.Color.White;
+            this.txtBoxSketch.HideSelection = true;
+            this.txtBoxSketch.IconLeft = null;
+            this.txtBoxSketch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxSketch.IconPadding = 10;
+            this.txtBoxSketch.IconRight = null;
+            this.txtBoxSketch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxSketch.Lines = new string[0];
+            this.txtBoxSketch.Location = new System.Drawing.Point(16, 444);
+            this.txtBoxSketch.MaxLength = 32767;
+            this.txtBoxSketch.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtBoxSketch.Modified = false;
+            this.txtBoxSketch.Multiline = false;
+            this.txtBoxSketch.Name = "txtBoxSketch";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             stateProperties9.FillColor = System.Drawing.Color.Empty;
             stateProperties9.ForeColor = System.Drawing.Color.Empty;
             stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties9;
+            this.txtBoxSketch.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.Empty;
             stateProperties10.FillColor = System.Drawing.Color.White;
             stateProperties10.ForeColor = System.Drawing.Color.Empty;
             stateProperties10.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.OnDisabledState = stateProperties10;
+            this.txtBoxSketch.OnDisabledState = stateProperties10;
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             stateProperties11.FillColor = System.Drawing.Color.Empty;
             stateProperties11.ForeColor = System.Drawing.Color.Empty;
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties11;
+            this.txtBoxSketch.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
             stateProperties12.FillColor = System.Drawing.Color.White;
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties12;
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Enter text";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(556, 35);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 44;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 5;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Enter text";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.txtBoxSketch.OnIdleState = stateProperties12;
+            this.txtBoxSketch.PasswordChar = '\0';
+            this.txtBoxSketch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtBoxSketch.PlaceholderText = "";
+            this.txtBoxSketch.ReadOnly = false;
+            this.txtBoxSketch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxSketch.SelectedText = "";
+            this.txtBoxSketch.SelectionLength = 0;
+            this.txtBoxSketch.SelectionStart = 0;
+            this.txtBoxSketch.ShortcutsEnabled = true;
+            this.txtBoxSketch.Size = new System.Drawing.Size(556, 35);
+            this.txtBoxSketch.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtBoxSketch.TabIndex = 44;
+            this.txtBoxSketch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBoxSketch.TextMarginBottom = 0;
+            this.txtBoxSketch.TextMarginLeft = 5;
+            this.txtBoxSketch.TextMarginTop = 0;
+            this.txtBoxSketch.TextPlaceholder = "";
+            this.txtBoxSketch.UseSystemPasswordChar = false;
+            this.txtBoxSketch.WordWrap = true;
             // 
             // NoteText
             // 
@@ -967,6 +968,42 @@
             this.Width_grpbox.TabStop = false;
             this.Width_grpbox.Text = "Size";
             // 
+            // rb_50
+            // 
+            this.rb_50.AutoSize = true;
+            this.rb_50.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_50.Location = new System.Drawing.Point(12, 144);
+            this.rb_50.Name = "rb_50";
+            this.rb_50.Size = new System.Drawing.Size(32, 19);
+            this.rb_50.TabIndex = 5;
+            this.rb_50.Text = "6";
+            this.rb_50.UseVisualStyleBackColor = true;
+            // 
+            // rb_40
+            // 
+            this.rb_40.AutoSize = true;
+            this.rb_40.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_40.Location = new System.Drawing.Point(12, 119);
+            this.rb_40.Name = "rb_40";
+            this.rb_40.Size = new System.Drawing.Size(32, 19);
+            this.rb_40.TabIndex = 4;
+            this.rb_40.Text = "5";
+            this.rb_40.UseVisualStyleBackColor = true;
+            // 
+            // rb_30
+            // 
+            this.rb_30.AutoSize = true;
+            this.rb_30.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.rb_30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            this.rb_30.Location = new System.Drawing.Point(12, 94);
+            this.rb_30.Name = "rb_30";
+            this.rb_30.Size = new System.Drawing.Size(32, 19);
+            this.rb_30.TabIndex = 3;
+            this.rb_30.Text = "4";
+            this.rb_30.UseVisualStyleBackColor = true;
+            // 
             // rb_20
             // 
             this.rb_20.AutoSize = true;
@@ -1060,42 +1097,6 @@
             this.Black_pen.TabStop = false;
             this.Black_pen.Click += new System.EventHandler(this.Black_pen_Click);
             // 
-            // rb_30
-            // 
-            this.rb_30.AutoSize = true;
-            this.rb_30.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.rb_30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.rb_30.Location = new System.Drawing.Point(12, 94);
-            this.rb_30.Name = "rb_30";
-            this.rb_30.Size = new System.Drawing.Size(32, 19);
-            this.rb_30.TabIndex = 3;
-            this.rb_30.Text = "4";
-            this.rb_30.UseVisualStyleBackColor = true;
-            // 
-            // rb_40
-            // 
-            this.rb_40.AutoSize = true;
-            this.rb_40.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.rb_40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.rb_40.Location = new System.Drawing.Point(12, 119);
-            this.rb_40.Name = "rb_40";
-            this.rb_40.Size = new System.Drawing.Size(32, 19);
-            this.rb_40.TabIndex = 4;
-            this.rb_40.Text = "5";
-            this.rb_40.UseVisualStyleBackColor = true;
-            // 
-            // rb_50
-            // 
-            this.rb_50.AutoSize = true;
-            this.rb_50.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.rb_50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            this.rb_50.Location = new System.Drawing.Point(12, 144);
-            this.rb_50.Name = "rb_50";
-            this.rb_50.Size = new System.Drawing.Size(32, 19);
-            this.rb_50.TabIndex = 5;
-            this.rb_50.Text = "6";
-            this.rb_50.UseVisualStyleBackColor = true;
-            // 
             // DrawingPanel
             // 
             this.DrawingPanel.BackColor = System.Drawing.Color.White;
@@ -1134,8 +1135,8 @@
             this.panelNoteDisplay.ResumeLayout(false);
             this.panelNoteDisplay.PerformLayout();
             this.note2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpbox.ResumeLayout(false);
+            this.grpbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1182,7 +1183,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox TitleNote;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox NoteText;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtBoxSketch;
         private Bunifu.UI.WinForms.BunifuCheckBox cbAdd;
         private System.Windows.Forms.PictureBox Btn_modifie_note;
         private System.Windows.Forms.PictureBox Btn_Delete_Note;
@@ -1193,7 +1194,7 @@
         private Bunifu.UI.WinForms.BunifuCheckBox chkBoxPulicNote;
         private System.Windows.Forms.PictureBox btn_save;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpbox;
         private System.Windows.Forms.GroupBox groupBox2;
         private TPanel DrawingPanel;
         private System.Windows.Forms.GroupBox Width_grpbox;
