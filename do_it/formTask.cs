@@ -253,7 +253,7 @@ namespace do_it
             else
               if (combbx_cat.SelectedIndex == -1) MessageBox.Show("chose a categorie...!");
             else
-            {
+            { 
                 string req = "insert into TASK (DESCRIPTION,STATUS,PUBLIC_TASK,START_TIME,END_TIME,ID_USER,ID_CATEGORIE_) values ('" + txt_new_tsk.Text + "',0,0,'" + bunifuDatepicker1.Value.ToString() + "','" + bunifuDatepicker2.Value.ToString() + "','" + get_userID() + "','" + get_categID() + "')";
                 cn = new SqlConnection(cs);
                 cn.Open();
