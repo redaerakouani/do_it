@@ -92,7 +92,7 @@ namespace do_it
                 com = null;
                 cn.Close();
                 //=======delete skeetch file=========//
-                //delete_sketchFile();
+                
                 try
                 {
                     File.Delete(txtBoxSketch.Text);
@@ -101,20 +101,7 @@ namespace do_it
                 
             }
         }
-        public void delete_sketchFile()
-        {
-            MessageBox.Show(lstnotes.SelectedItem.ToString());
-            string req2 = "select * from note where TITLE_NOTE like'" + lstnotes.SelectedItem.ToString() + "'";
-            SqlConnection cn2 = new SqlConnection(cs);
-            cn2.Open();
-            SqlCommand com2 = new SqlCommand(req2, cn2);
-            SqlDataReader dr = com2.ExecuteReader();
-            while (dr.Read())
-            {
-                MessageBox.Show(dr[6].ToString());
-                
-            }
-        }
+        
         //Methode_RemplireList
         public void remplirlist()
         {
