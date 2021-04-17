@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace do_it
 {
@@ -42,12 +43,17 @@ namespace do_it
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             p = new Pen(Color.Black);
             p.StartCap = p.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+            clearSketch();
+
+
+        }
+        public void clearSketch()
+        {
             surface = new Bitmap(DrawingPanel.Width, DrawingPanel.Height);
             graph = Graphics.FromImage(surface);
             DrawingPanel.BackgroundImage = surface;
             DrawingPanel.BackgroundImageLayout = ImageLayout.None;
         }
-
         private void FormNotes_Load(object sender, EventArgs e)
         {
             backPgnote.SetPage(note1);
@@ -135,10 +141,14 @@ namespace do_it
         {  // if()
            // DrawingPanel.
             backPgnote.SetPage(sketch);
-            //if (cbAdd.Checked == false)
-            //{
-            //    DrawingPanel.BackgroundImage = Image.FromFile(txtBoxSketch.Text);
-            //}
+            if(txtBoxSketch.Text=="")
+            {
+                clearSketch();
+            }
+            if (cbAdd.Checked == false)
+            {
+               
+            }
 
         }
         //Modify_Note_Selected
@@ -334,13 +344,23 @@ namespace do_it
         //Button_Save_Image
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             s = "Sketch_" + Program.get_userID() + "_";
-            txtBoxSketch.Text = "";
             if (txtBoxSketch.Text == "")
             {
                 s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
                 txtBoxSketch.Text =s ;
+            }else
+            {
+                s = s + getRandomName() + ".png";
+                surface.Save(s, ImageFormat.Png);
+                clearSketch();
+                DrawingPanel.BackgroundImage = null;
+                File.Delete(txtBoxSketch.Text);
+                
+                
+                txtBoxSketch.Text = s;
             }
           
             MessageBox.Show("The Sketch is Saved !!.", "Notification", MessageBoxButtons.OK);
@@ -354,6 +374,20 @@ namespace do_it
             Random r = new Random();
             long i = Math.Abs(r.Next() * 1000);
             return Name + i;
+        }
+
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if(txtBoxSketch.Text != "")
+            {
+            Image im = Image.FromFile(txtBoxSketch.Text); ;
+            e.Graphics.DrawImage(im, new Point(0, 0));
+            }
+            else
+            {
+                //clearSketch();
+            }
+            
         }
 
         //

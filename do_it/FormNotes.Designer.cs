@@ -146,10 +146,10 @@
             this.backPgnote.Location = new System.Drawing.Point(3, 3);
             this.backPgnote.Multiline = true;
             this.backPgnote.Name = "backPgnote";
-            this.backPgnote.Page = this.note2;
-            this.backPgnote.PageIndex = 1;
-            this.backPgnote.PageName = "note2";
-            this.backPgnote.PageTitle = "Pgnote2";
+            this.backPgnote.Page = this.sketch;
+            this.backPgnote.PageIndex = 2;
+            this.backPgnote.PageName = "sketch";
+            this.backPgnote.PageTitle = "Sketching";
             this.backPgnote.SelectedIndex = 0;
             this.backPgnote.Size = new System.Drawing.Size(681, 516);
             this.backPgnote.TabIndex = 0;
@@ -1105,6 +1105,7 @@
             this.DrawingPanel.Name = "DrawingPanel";
             this.DrawingPanel.Size = new System.Drawing.Size(667, 484);
             this.DrawingPanel.TabIndex = 1;
+            this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
             this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
             this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
             this.DrawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseUp);

@@ -266,10 +266,14 @@ namespace do_it
         //Notes_Button
         private void btnnote_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
                 panelForms.Visible = true;
                 panelHome.Visible = false;
                 formtask(new FormNotes());
+            }
+            catch { }
+               
           
             
         }
