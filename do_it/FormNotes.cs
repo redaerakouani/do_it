@@ -198,8 +198,10 @@ namespace do_it
         //Button_Save
         private void btn_save_Click(object sender, EventArgs e)
         {
+            try { 
             SqlConnection cn = new SqlConnection(cs);
             cn.Open();
+            
             if (cbAdd.Checked == true)
             {
                 string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE,SKETCH_NOTE) values (@iduser,@desc,@date,@public,@title,@sketch)";
@@ -235,6 +237,11 @@ namespace do_it
             cn.Close();
             cn = null;
             com = null;
+            }
+            catch
+            {
+                MessageBox.Show("Try another title...!");
+            }
 
         }
         //Search_textBox
