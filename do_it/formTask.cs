@@ -281,8 +281,6 @@ namespace do_it
                 comd = new SqlCommand(req, cn);
                 comd.ExecuteNonQuery();
 
-
-
                 string req2 = "select DESCRIPTION from TASK t inner join users u on t.ID_USER = u.ID_USER  inner join CATEGORIE c on t.ID_CATEGORIE_=c.ID_CATEGORIE_  where u.FULL_NAME = '" + Program.activeUser + "' and c.CAT_NAME= '" + combbx_cat.GetItemText(combbx_cat.SelectedItem) + "' ";
                 remplirlist(cs, cn, req2, DataGridtasks);
 
