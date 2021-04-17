@@ -318,7 +318,7 @@ namespace do_it
             x = e.X;
             y = e.Y;
         }
-
+        //Mouse_events
         private void DrawingPanel_MouseMove(object sender, MouseEventArgs e)
         {
             if (moving && x != -1 && y != -1)
@@ -379,7 +379,7 @@ namespace do_it
             long i = Math.Abs(r.Next() * 1000);
             return Name + i;
         }
-
+        //Button_show_sketch
         private void btnShowSketch_Click(object sender, EventArgs e)
         {
             if(sketchDisplay.Visible == false)
