@@ -19,9 +19,7 @@ namespace do_it
         //Note
         string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
         SqlConnection cn = new SqlConnection();
-        
         SqlCommand com = new SqlCommand();
-        
         ////textBox_Note_Content
         public bool TextWasChanged = false;
         //scketching 
@@ -73,6 +71,7 @@ namespace do_it
             //------------------------------------------------------------------------//
             //Title_List
             remplirlist();
+            sketchDisplay.Visible = false;
             dr.Close();
 
         }
@@ -83,7 +82,6 @@ namespace do_it
             if (MessageBox.Show("are you sure you want to delete this note ", "Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" + Program.get_userID() + "'";
-
                 cn = new SqlConnection(cs);
                 cn.Open();
                 com = new SqlCommand(req, cn);
@@ -91,17 +89,8 @@ namespace do_it
                 remplirlist();
                 com = null;
                 cn.Close();
-                //=======delete skeetch file=========//
-                
-                try
-                {
-                    File.Delete(txtBoxSketch.Text);
-                }
-                catch { }
-                
             }
         }
-        
         //Methode_RemplireList
         public void remplirlist()
         {
@@ -149,7 +138,20 @@ namespace do_it
 
         }
         //Button_Go_To_Sketching
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {  // if()
+           // DrawingPanel.
+            backPgnote.SetPage(sketch);
+            if(txtBoxSketch.Text=="")
+            {
+                clearSketch();
+            }
+            if (cbAdd.Checked == false)
+            {
+               
+            }
+
+        }
         //Modify_Note_Selected
         private void Btn_modifie_note_Click(object sender, EventArgs e)
         {
@@ -185,7 +187,7 @@ namespace do_it
             cn.Open();
             try
             {
-                string req = "select TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
+                string req = "select TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,SKETCH_NOTE from note where TITLE_NOTE = '" + lstnotes.SelectedItem.ToString() + "'";
                 SqlCommand com = new SqlCommand(req, cn);
                 SqlDataReader dr = com.ExecuteReader();
                 while (dr.Read())
@@ -193,6 +195,10 @@ namespace do_it
                     txtnotedisplay.Text = dr[0].ToString();
                     lbldate.Text = "Last modified on: " + Convert.ToDateTime(dr[1].ToString()).ToString("MMM dd,yyyy HH:mm");
                     cb_public.Checked = Convert.ToBoolean(dr[2].ToString());
+                    if(dr[3].ToString()!=null && File.Exists(dr[3].ToString())==true)
+                        sketchDisplay.Image = Image.FromFile(dr[3].ToString());
+                    else
+                        sketchDisplay.Image = Image.FromFile("null.png");
                 }
                 dr.Close();
                 dr = null;
@@ -208,48 +214,49 @@ namespace do_it
         private void btn_save_Click(object sender, EventArgs e)
         {
             try { 
-                SqlConnection cn = new SqlConnection(cs);
-                cn.Open();
+            SqlConnection cn = new SqlConnection(cs);
+            cn.Open();
             
-                if (cbAdd.Checked == true)
-                {
-                    string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE,SKETCH_NOTE) values (@iduser,@desc,@date,@public,@title,@sketch)";
-                    SqlCommand com = new SqlCommand(req1, cn);
-                    com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
-                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                    com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
-                    com.ExecuteNonQuery();
-                }
-                else
-                {
-                    //Maybe a try catch is needed
-                    string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public, SKETCH_NOTE=@sketch WHERE ID_USER='" + Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
-                    SqlCommand com = new SqlCommand(req2, cn);
-                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                    com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
+            if (cbAdd.Checked == true)
+            {
+                string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE,SKETCH_NOTE) values (@iduser,@desc,@date,@public,@title,@sketch)";
+                SqlCommand com = new SqlCommand(req1, cn);
+                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
+                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
+                com.ExecuteNonQuery();
+            }
+            else
+            {
+                //Maybe a try catch is needed
+                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public, SKETCH_NOTE=@sketch WHERE ID_USER='" + Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
+                SqlCommand com = new SqlCommand(req2, cn);
+                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
 
-                    com.ExecuteNonQuery();
+                com.ExecuteNonQuery();
                 
-                }
-                remplirlist();
-                TitleNote.Text = "";
-                NoteText.Text = "";
-                backPgnote.SetPage(note1);
-                txtnotedisplay.Text = "";
-                cn.Close();
-                cn = null;
-                com = null;
-                }
-                catch
-                {
-                    MessageBox.Show("Try another title...!");
-                }
+            }
+
+            remplirlist();
+            TitleNote.Text = "";
+            NoteText.Text = "";
+            backPgnote.SetPage(note1);
+            txtnotedisplay.Text = "";
+            cn.Close();
+            cn = null;
+            com = null;
+            }
+            catch
+            {
+                MessageBox.Show("Try another title...!");
+            }
 
         }
         //Search_textBox
@@ -311,7 +318,7 @@ namespace do_it
             x = e.X;
             y = e.Y;
         }
-
+        //Mouse_events
         private void DrawingPanel_MouseMove(object sender, MouseEventArgs e)
         {
             if (moving && x != -1 && y != -1)
@@ -354,8 +361,9 @@ namespace do_it
                 s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
                 clearSketch();
-                //DrawingPanel.BackgroundImage = null;
                 File.Delete(txtBoxSketch.Text);
+                
+                
                 txtBoxSketch.Text = s;
             }
           
@@ -371,19 +379,22 @@ namespace do_it
             long i = Math.Abs(r.Next() * 1000);
             return Name + i;
         }
-
-        private void btn_sketch_Click(object sender, EventArgs e)
+        //Button_show_sketch
+        private void btnShowSketch_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to erase this sketch...?", "Attention...!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(sketchDisplay.Visible == false)
             {
-                backPgnote.SetPage(sketch);
-                if (txtBoxSketch.Text == "")
-                {
-                    clearSketch();
-                }
+                sketchDisplay.Visible = true;
+                btnShowSketch.Image = do_it.Properties.Resources.text_50px;
+            }
+            else
+            {
+                sketchDisplay.Visible = false;
+                btnShowSketch.Image = do_it.Properties.Resources.pqa;
             }
         }
 
+        
 
 
         //
