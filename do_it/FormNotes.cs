@@ -32,7 +32,7 @@ namespace do_it
         public Pen p;
         Bitmap surface;
         Graphics graph;
-        string s = "Sketch_" + Program.get_userID() + "_";
+        string s ;
         int i = 0;
         public int width;
         public FormNotes()
@@ -135,6 +135,10 @@ namespace do_it
         {  // if()
            // DrawingPanel.
             backPgnote.SetPage(sketch);
+            //if (cbAdd.Checked == false)
+            //{
+            //    DrawingPanel.BackgroundImage = Image.FromFile(txtBoxSketch.Text);
+            //}
 
         }
         //Modify_Note_Selected
@@ -323,17 +327,17 @@ namespace do_it
         //Button_Save_Image
         private void btnSave_Click(object sender, EventArgs e)
         {
+            s = "Sketch_" + Program.get_userID() + "_";
+            txtBoxSketch.Text = "";
             if (txtBoxSketch.Text == "")
             {
-
+                s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
-                txtBoxSketch.Text = s + getRandomName() + ".png";
+                txtBoxSketch.Text =s ;
             }
-            else
-            {
-                surface.Save(s, ImageFormat.Png);
-            }
+          
             MessageBox.Show("The Sketch is Saved !!.", "Notification", MessageBoxButtons.OK);
+            backPgnote.SetPage(note2);
 
         }
         //Random_Number_proc
