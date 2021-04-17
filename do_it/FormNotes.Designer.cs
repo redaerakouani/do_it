@@ -69,7 +69,7 @@
             this.grpbox = new System.Windows.Forms.GroupBox();
             this.btn_save = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_sketch = new System.Windows.Forms.PictureBox();
             this.chkBoxPulicNote = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbAdd = new Bunifu.UI.WinForms.BunifuCheckBox();
@@ -107,7 +107,7 @@
             this.grpbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_sketch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.sketch.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
@@ -146,10 +146,10 @@
             this.backPgnote.Location = new System.Drawing.Point(3, 3);
             this.backPgnote.Multiline = true;
             this.backPgnote.Name = "backPgnote";
-            this.backPgnote.Page = this.sketch;
-            this.backPgnote.PageIndex = 2;
-            this.backPgnote.PageName = "sketch";
-            this.backPgnote.PageTitle = "Sketching";
+            this.backPgnote.Page = this.note2;
+            this.backPgnote.PageIndex = 1;
+            this.backPgnote.PageName = "note2";
+            this.backPgnote.PageTitle = "Pgnote2";
             this.backPgnote.SelectedIndex = 0;
             this.backPgnote.Size = new System.Drawing.Size(681, 516);
             this.backPgnote.TabIndex = 0;
@@ -561,7 +561,7 @@
             // 
             this.grpbox.Controls.Add(this.btn_save);
             this.grpbox.Controls.Add(this.btn_back);
-            this.grpbox.Controls.Add(this.pictureBox1);
+            this.grpbox.Controls.Add(this.btn_sketch);
             this.grpbox.Controls.Add(this.chkBoxPulicNote);
             this.grpbox.Controls.Add(this.label4);
             this.grpbox.Location = new System.Drawing.Point(578, 73);
@@ -592,16 +592,16 @@
             this.btn_back.TabStop = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // pictureBox1
+            // btn_sketch
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 252);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btn_sketch.Image = ((System.Drawing.Image)(resources.GetObject("btn_sketch.Image")));
+            this.btn_sketch.Location = new System.Drawing.Point(20, 252);
+            this.btn_sketch.Name = "btn_sketch";
+            this.btn_sketch.Size = new System.Drawing.Size(42, 42);
+            this.btn_sketch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_sketch.TabIndex = 37;
+            this.btn_sketch.TabStop = false;
+            this.btn_sketch.Click += new System.EventHandler(this.btn_sketch_Click);
             // 
             // chkBoxPulicNote
             // 
@@ -1105,7 +1105,6 @@
             this.DrawingPanel.Name = "DrawingPanel";
             this.DrawingPanel.Size = new System.Drawing.Size(667, 484);
             this.DrawingPanel.TabIndex = 1;
-            this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
             this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
             this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
             this.DrawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseUp);
@@ -1140,7 +1139,7 @@
             this.grpbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_save)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_sketch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.sketch.ResumeLayout(false);
             this.bunifuShadowPanel1.ResumeLayout(false);
@@ -1194,7 +1193,7 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuCheckBox chkBoxPulicNote;
         private System.Windows.Forms.PictureBox btn_save;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_sketch;
         private System.Windows.Forms.GroupBox grpbox;
         private System.Windows.Forms.GroupBox groupBox2;
         private TPanel DrawingPanel;

@@ -19,7 +19,9 @@ namespace do_it
         //Note
         string cs = ConfigurationManager.ConnectionStrings["do_it.Properties.Settings.DO_ITConnectionString"].ConnectionString;
         SqlConnection cn = new SqlConnection();
+        
         SqlCommand com = new SqlCommand();
+        
         ////textBox_Note_Content
         public bool TextWasChanged = false;
         //scketching 
@@ -81,6 +83,7 @@ namespace do_it
             if (MessageBox.Show("are you sure you want to delete this note ", "Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string req = "delete from NOTE where TITLE_NOTE ='" + lstnotes.SelectedItem.ToString() + "' and ID_USER = '" + Program.get_userID() + "'";
+
                 cn = new SqlConnection(cs);
                 cn.Open();
                 com = new SqlCommand(req, cn);
@@ -88,6 +91,28 @@ namespace do_it
                 remplirlist();
                 com = null;
                 cn.Close();
+                //=======delete skeetch file=========//
+                //delete_sketchFile();
+                try
+                {
+                    File.Delete(txtBoxSketch.Text);
+                }
+                catch { }
+                
+            }
+        }
+        public void delete_sketchFile()
+        {
+            MessageBox.Show(lstnotes.SelectedItem.ToString());
+            string req2 = "select * from note where TITLE_NOTE like'" + lstnotes.SelectedItem.ToString() + "'";
+            SqlConnection cn2 = new SqlConnection(cs);
+            cn2.Open();
+            SqlCommand com2 = new SqlCommand(req2, cn2);
+            SqlDataReader dr = com2.ExecuteReader();
+            while (dr.Read())
+            {
+                MessageBox.Show(dr[6].ToString());
+                
             }
         }
         //Methode_RemplireList
@@ -137,20 +162,7 @@ namespace do_it
 
         }
         //Button_Go_To_Sketching
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {  // if()
-           // DrawingPanel.
-            backPgnote.SetPage(sketch);
-            if(txtBoxSketch.Text=="")
-            {
-                clearSketch();
-            }
-            if (cbAdd.Checked == false)
-            {
-               
-            }
-
-        }
+        
         //Modify_Note_Selected
         private void Btn_modifie_note_Click(object sender, EventArgs e)
         {
@@ -209,49 +221,48 @@ namespace do_it
         private void btn_save_Click(object sender, EventArgs e)
         {
             try { 
-            SqlConnection cn = new SqlConnection(cs);
-            cn.Open();
+                SqlConnection cn = new SqlConnection(cs);
+                cn.Open();
             
-            if (cbAdd.Checked == true)
-            {
-                string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE,SKETCH_NOTE) values (@iduser,@desc,@date,@public,@title,@sketch)";
-                SqlCommand com = new SqlCommand(req1, cn);
-                com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
-                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
-                com.ExecuteNonQuery();
-            }
-            else
-            {
-                //Maybe a try catch is needed
-                string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public, SKETCH_NOTE=@sketch WHERE ID_USER='" + Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
-                SqlCommand com = new SqlCommand(req2, cn);
-                com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
-                com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
-                com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
-                com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
-                com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
+                if (cbAdd.Checked == true)
+                {
+                    string req1 = "insert into note (ID_USER,TEXT_NOTE,DATE_NOTE,PUBLIC_NOTE,TITLE_NOTE,SKETCH_NOTE) values (@iduser,@desc,@date,@public,@title,@sketch)";
+                    SqlCommand com = new SqlCommand(req1, cn);
+                    com.Parameters.Add(new SqlParameter("@iduser", Convert.ToInt32(Program.get_userID())));
+                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                    com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
+                    com.ExecuteNonQuery();
+                }
+                else
+                {
+                    //Maybe a try catch is needed
+                    string req2 = "UPDATE note SET TITLE_NOTE = @title, TEXT_NOTE = @desc, DATE_NOTE = @date, PUBLIC_NOTE = @public, SKETCH_NOTE=@sketch WHERE ID_USER='" + Program.get_userID() + "' and TITLE_NOTE='" + lstnotes.SelectedItem.ToString() + "'";
+                    SqlCommand com = new SqlCommand(req2, cn);
+                    com.Parameters.Add(new SqlParameter("@desc", NoteText.Text));
+                    com.Parameters.Add(new SqlParameter("@title", TitleNote.Text));
+                    com.Parameters.Add(new SqlParameter("@date", DateTime.Now));
+                    com.Parameters.Add(new SqlParameter("@public", chkBoxPulicNote.Checked));
+                    com.Parameters.Add(new SqlParameter("@sketch", txtBoxSketch.Text));
 
-                com.ExecuteNonQuery();
+                    com.ExecuteNonQuery();
                 
-            }
-
-            remplirlist();
-            TitleNote.Text = "";
-            NoteText.Text = "";
-            backPgnote.SetPage(note1);
-            txtnotedisplay.Text = "";
-            cn.Close();
-            cn = null;
-            com = null;
-            }
-            catch
-            {
-                MessageBox.Show("Try another title...!");
-            }
+                }
+                remplirlist();
+                TitleNote.Text = "";
+                NoteText.Text = "";
+                backPgnote.SetPage(note1);
+                txtnotedisplay.Text = "";
+                cn.Close();
+                cn = null;
+                com = null;
+                }
+                catch
+                {
+                    MessageBox.Show("Try another title...!");
+                }
 
         }
         //Search_textBox
@@ -356,10 +367,8 @@ namespace do_it
                 s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
                 clearSketch();
-                DrawingPanel.BackgroundImage = null;
+                //DrawingPanel.BackgroundImage = null;
                 File.Delete(txtBoxSketch.Text);
-                
-                
                 txtBoxSketch.Text = s;
             }
           
@@ -376,19 +385,19 @@ namespace do_it
             return Name + i;
         }
 
-        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        private void btn_sketch_Click(object sender, EventArgs e)
         {
-            if(txtBoxSketch.Text != "")
+            if (MessageBox.Show("Do you want to erase this sketch...?", "Attention...!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-            Image im = Image.FromFile(txtBoxSketch.Text); ;
-            e.Graphics.DrawImage(im, new Point(0, 0));
+                backPgnote.SetPage(sketch);
+                if (txtBoxSketch.Text == "")
+                {
+                    clearSketch();
+                }
             }
-            else
-            {
-                //clearSketch();
-            }
-            
         }
+
+
 
         //
         //Button_Exit_Sketch
