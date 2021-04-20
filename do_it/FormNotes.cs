@@ -90,6 +90,11 @@ namespace do_it
                 com = null;
                 cn.Close();
             }
+            try
+            {
+                File.Delete(s);
+            }
+            catch { };
         }
         //Methode_RemplireList
         public void remplirlist()
