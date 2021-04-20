@@ -309,6 +309,20 @@ namespace do_it
 
         }
 
-      
+        private void panelHome_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerdate_Tick(object sender, EventArgs e)
+        {
+            lbltime.Text = DateTime.Now.ToLongTimeString();
+            timerdate.Start();
+        }
     }
 }

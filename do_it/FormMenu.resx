@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 17</value>
+    <value>121, 17</value>
   </metadata>
   <metadata name="bunifuFormDock1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>228, 17</value>
+    <value>208, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>44</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnminize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -3893,7 +3893,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="stateProperties93.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties71.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAyhJREFUWEft
         VktoFEEQHRFRwYsg6lUFxZuIgh68aUDxoiGotxzET3Zm4hrUgwdnpjfb06PksB4kihcVhICgBBHFi4pX
@@ -3935,7 +3935,7 @@
         q450Y8Z99AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="stateProperties95.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties73.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAmlJREFUaEPtmb9rFEEUx89oF4gIimmtJSDYBdEmYGcnSCwsREGzuxEUba7Y2bm7
@@ -3975,7 +3975,7 @@
         Iblet3p/XEQ983+j/h+4gtsx9rEXCn8Ay0fmqSvlkf0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="stateProperties97.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties75.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA29JREFUWEft
         Vklo1FAYHhUUFMWDG64Xl5MbHjzoSXEFUdQqVfBYS5vJVCoe1MNLMp3kzVSEoqBCxfXSouCGFSwo2IMg
@@ -4019,7 +4019,7 @@
         7RdDEAQybEJn5gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="stateProperties99.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties77.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAz5JREFUWEfl
         V01o1EAUXkVUVARR9OJJ8aAoBfGkB1FQ8QcF8eeiUARr203SSv2FYiczu5vMVoru2YKICiKCHlR6Ejx5
@@ -4065,7 +4065,7 @@
         VnTL+j/BSUJ/mqmmHvUm933/A06sn2L6BrQBOWDutKzW2gYKZWV/ASZglcrv9WemAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="stateProperties101.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties79.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA/JJREFUWEfV
         V1uoDVEYPu6EIjxRSLkVDy5FbiGXkAeXcs1BhD2zzzkcRx5oZq3dzKy9RaRQnjySW24hD6R4ILeiXBIl
@@ -4103,7 +4103,7 @@
         upm146+qxno73qvGupn9ihDe0uW/KW+JeogAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="stateProperties103.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties81.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAALBJREFUWEft
         k00KwjAQhXMEXfhzxFob9QghpU2rCy/mSu15NBMeEjSF1NCiMB+8xQzv5ZHFCIb5C2RdLwqjM4zTQuWy
@@ -4135,7 +4135,7 @@
         uvuf6DTtRfr4PIeW0H2XxmeRPlarn/MV/i9arZ/p+ebYX8uVHwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="stateProperties105.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties83.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAs1JREFUWEft
         lklrFEEYhkcU9wX9C/4Gb+LBoHjTgwvuUSGg6Z4hKgqioaoroaoNziEHD54UFCRuJ72KC+JF/4HEjbgk
@@ -4175,7 +4175,7 @@
         BIlZiuRd+O82JeI/WBcNlQNZdgfKois84SqEvAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="stateProperties107.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties85.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAmBJREFUWEft
         VstuEzEUHXawhi0fwB8gXhJFoKq8WYFUobIlM24rFoAQUmwPGbug/AFC6o6uWSDU3yl03fJK1Src61w7
@@ -4207,7 +4207,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="stateProperties109.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stateProperties87.IconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAMdJREFUWEft
         lFEKwjAMhveipxIFD+OLrV6hq5vNvMFu54NOt0toMoIPItR2xfqQD8Ig5P+hJPsLQfhLjDHzHVinnT1r
@@ -4216,4 +4216,7 @@
         gMOSA5IDgvAjiuIJEKfA90H/PokAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="timerdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
