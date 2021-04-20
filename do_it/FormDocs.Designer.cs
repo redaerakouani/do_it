@@ -266,7 +266,7 @@
             stateProperties6.IconRightImage = null;
             this.btnprint.OnPressedState = stateProperties6;
             this.btnprint.Size = new System.Drawing.Size(123, 41);
-            this.btnprint.TabIndex = 15;
+            this.btnprint.TabIndex = 20;
             this.btnprint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnprint.TextMarginLeft = 0;
             this.btnprint.UseDefaultRadiusAndThickness = true;
@@ -295,7 +295,6 @@
             this.groupBox1.Size = new System.Drawing.Size(242, 172);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // groupBox2
             // 
@@ -303,7 +302,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnfiltre);
             this.groupBox2.Controls.Add(this.SwitchPUB);
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox2.Location = new System.Drawing.Point(12, 232);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(242, 223);
@@ -317,6 +316,7 @@
             this.pnlOthersFilters.Controls.Add(this.label3);
             this.pnlOthersFilters.Controls.Add(this.SwitchSTATUS);
             this.pnlOthersFilters.Controls.Add(this.lblCat);
+            this.pnlOthersFilters.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlOthersFilters.Location = new System.Drawing.Point(6, 17);
             this.pnlOthersFilters.Name = "pnlOthersFilters";
             this.pnlOthersFilters.Size = new System.Drawing.Size(230, 96);
@@ -352,6 +352,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(16, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 18);
@@ -364,8 +365,9 @@
             this.SwitchSTATUS.BackColor = System.Drawing.Color.Transparent;
             this.SwitchSTATUS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SwitchSTATUS.BackgroundImage")));
             this.SwitchSTATUS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SwitchSTATUS.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SwitchSTATUS.ForeColor = System.Drawing.Color.DimGray;
-            this.SwitchSTATUS.Location = new System.Drawing.Point(148, 56);
+            this.SwitchSTATUS.Location = new System.Drawing.Point(148, 60);
             this.SwitchSTATUS.Name = "SwitchSTATUS";
             this.SwitchSTATUS.Size = new System.Drawing.Size(51, 23);
             this.SwitchSTATUS.TabIndex = 2;
@@ -402,6 +404,7 @@
             // 
             this.lblCat.AutoSize = true;
             this.lblCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCat.ForeColor = System.Drawing.Color.DimGray;
             this.lblCat.Location = new System.Drawing.Point(16, 24);
             this.lblCat.Name = "lblCat";
             this.lblCat.Size = new System.Drawing.Size(72, 18);
@@ -412,6 +415,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(22, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 18);

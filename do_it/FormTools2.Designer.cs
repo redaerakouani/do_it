@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTools2));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties69 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnteams = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnzoom = new Bunifu.Framework.UI.BunifuImageButton();
@@ -55,7 +55,6 @@
             this.btnpause = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnstrat = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -361,7 +360,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label1);
@@ -381,15 +379,6 @@
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reminder";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 254);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
             // 
             // label4
             // 
@@ -427,7 +416,7 @@
             this.txtss.Location = new System.Drawing.Point(105, 26);
             this.txtss.Name = "txtss";
             this.txtss.Size = new System.Drawing.Size(35, 27);
-            this.txtss.TabIndex = 38;
+            this.txtss.TabIndex = 37;
             this.txtss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmin
@@ -436,7 +425,7 @@
             this.txtmin.Location = new System.Drawing.Point(61, 26);
             this.txtmin.Name = "txtmin";
             this.txtmin.Size = new System.Drawing.Size(37, 27);
-            this.txtmin.TabIndex = 37;
+            this.txtmin.TabIndex = 36;
             this.txtmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBox1
@@ -450,7 +439,7 @@
             this.comboBox1.Location = new System.Drawing.Point(150, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(54, 28);
-            this.comboBox1.TabIndex = 36;
+            this.comboBox1.TabIndex = 38;
             this.comboBox1.Text = "AM";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -485,11 +474,11 @@
             this.btnnstop.ColorContrastOnClick = 45;
             this.btnnstop.ColorContrastOnHover = 45;
             this.btnnstop.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges35.BottomLeft = true;
-            borderEdges35.BottomRight = true;
-            borderEdges35.TopLeft = true;
-            borderEdges35.TopRight = true;
-            this.btnnstop.CustomizableEdges = borderEdges35;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnnstop.CustomizableEdges = borderEdges7;
             this.btnnstop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnnstop.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnnstop.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -510,24 +499,24 @@
             this.btnnstop.IndicateFocus = false;
             this.btnnstop.Location = new System.Drawing.Point(20, 209);
             this.btnnstop.Name = "btnnstop";
-            stateProperties69.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties69.BorderRadius = 35;
-            stateProperties69.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties69.BorderThickness = 2;
-            stateProperties69.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties69.IconLeftImage = null;
-            stateProperties69.IconRightImage = null;
-            this.btnnstop.onHoverState = stateProperties69;
-            stateProperties70.BorderColor = System.Drawing.Color.White;
-            stateProperties70.BorderRadius = 35;
-            stateProperties70.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties70.BorderThickness = 2;
-            stateProperties70.FillColor = System.Drawing.Color.White;
-            stateProperties70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties70.IconLeftImage = null;
-            stateProperties70.IconRightImage = null;
-            this.btnnstop.OnPressedState = stateProperties70;
+            stateProperties13.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties13.BorderRadius = 35;
+            stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties13.BorderThickness = 2;
+            stateProperties13.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.btnnstop.onHoverState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.White;
+            stateProperties14.BorderRadius = 35;
+            stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties14.BorderThickness = 2;
+            stateProperties14.FillColor = System.Drawing.Color.White;
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.btnnstop.OnPressedState = stateProperties14;
             this.btnnstop.Size = new System.Drawing.Size(66, 42);
             this.btnnstop.TabIndex = 32;
             this.btnnstop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -549,11 +538,11 @@
             this.btnStart.ColorContrastOnClick = 45;
             this.btnStart.ColorContrastOnHover = 45;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges36.BottomLeft = true;
-            borderEdges36.BottomRight = true;
-            borderEdges36.TopLeft = true;
-            borderEdges36.TopRight = true;
-            this.btnStart.CustomizableEdges = borderEdges36;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnStart.CustomizableEdges = borderEdges8;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStart.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btnStart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -574,24 +563,24 @@
             this.btnStart.IndicateFocus = false;
             this.btnStart.Location = new System.Drawing.Point(136, 209);
             this.btnStart.Name = "btnStart";
-            stateProperties71.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties71.BorderRadius = 35;
-            stateProperties71.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties71.BorderThickness = 2;
-            stateProperties71.FillColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
-            stateProperties71.IconLeftImage = null;
-            stateProperties71.IconRightImage = null;
-            this.btnStart.onHoverState = stateProperties71;
-            stateProperties72.BorderColor = System.Drawing.Color.White;
-            stateProperties72.BorderRadius = 35;
-            stateProperties72.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties72.BorderThickness = 2;
-            stateProperties72.FillColor = System.Drawing.Color.White;
-            stateProperties72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
-            stateProperties72.IconLeftImage = null;
-            stateProperties72.IconRightImage = null;
-            this.btnStart.OnPressedState = stateProperties72;
+            stateProperties15.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties15.BorderRadius = 35;
+            stateProperties15.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties15.BorderThickness = 2;
+            stateProperties15.FillColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(143)))));
+            stateProperties15.IconLeftImage = null;
+            stateProperties15.IconRightImage = null;
+            this.btnStart.onHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.White;
+            stateProperties16.BorderRadius = 35;
+            stateProperties16.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties16.BorderThickness = 2;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(136)))), ((int)(((byte)(130)))));
+            stateProperties16.IconLeftImage = null;
+            stateProperties16.IconRightImage = null;
+            this.btnStart.OnPressedState = stateProperties16;
             this.btnStart.Size = new System.Drawing.Size(66, 42);
             this.btnStart.TabIndex = 31;
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1025,7 +1014,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnlinkedin;
         private Bunifu.Framework.UI.BunifuImageButton btnteams;
         private Bunifu.Framework.UI.BunifuImageButton btnzoom;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtDisplay;

@@ -130,7 +130,7 @@
             this.label6.Location = new System.Drawing.Point(9, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 21);
-            this.label6.TabIndex = 32;
+            this.label6.TabIndex = 36465;
             this.label6.Text = "Email";
             // 
             // txtmailpwd
@@ -265,7 +265,7 @@
             stateProperties34.IconRightImage = null;
             this.btncancle.OnPressedState = stateProperties34;
             this.btncancle.Size = new System.Drawing.Size(105, 41);
-            this.btncancle.TabIndex = 31;
+            this.btncancle.TabIndex = 32;
             this.btncancle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btncancle.TextMarginLeft = 0;
             this.btncancle.UseDefaultRadiusAndThickness = true;
@@ -329,7 +329,7 @@
             stateProperties36.IconRightImage = null;
             this.btnSend.OnPressedState = stateProperties36;
             this.btnSend.Size = new System.Drawing.Size(105, 41);
-            this.btnSend.TabIndex = 30;
+            this.btnSend.TabIndex = 31;
             this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSend.TextMarginLeft = 0;
             this.btnSend.UseDefaultRadiusAndThickness = true;
@@ -714,7 +714,7 @@
             this.txtmessage.ShortcutsEnabled = true;
             this.txtmessage.Size = new System.Drawing.Size(520, 189);
             this.txtmessage.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtmessage.TabIndex = 39;
+            this.txtmessage.TabIndex = 30;
             this.txtmessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmessage.TextMarginBottom = 0;
             this.txtmessage.TextMarginLeft = 2;

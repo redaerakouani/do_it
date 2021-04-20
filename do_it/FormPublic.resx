@@ -120,6 +120,12 @@
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
   </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="datePicker.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -152,6 +158,18 @@
         mwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="bunifuLabel10.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
   <data name="cbElement.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -161,24 +179,32 @@
         gg==
 </value>
   </data>
+  <data name="bunifuLabel9.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 9.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: DimGray; text-align: left; }</value>
+  </data>
   <data name="txtSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAO4AAAAlCAYAAABFwdVVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMnSURBVHhe7d1PSBRhHMbxPXbs2LFjx44dO3rs2K2OkbMp
-        QRF0mGasnVmpDAODhAzpDwYWBhYGomCgkGRFaEhR0cGiIqNISWiaZ/Z91WHVclmbWfp+4MfCzOx6evy9
-        887MOwUA/4EDrrutOWjbqyoG3imKomqsUluTctTS4W438aqvw+3ujmLotRZDfyquiKKouteMU/Y7nDPu
-        LhO72imw+rEjob9o/8DRs6Wo80ZvUndHh6N7Y6MURdVQNkfHL7SnQxx4N1sCd6eJ4eYUQ3dPsezP2x/r
-        vt0XPZ19Ef1cWooA1Nfs2zdR39Bg0hiVNzXL5tDfb+L4d+Iuu892Wf1HePdhzvw8gK30ef5L0iRtw9S5
-        sInlxtRpbWivDQ7QYYEMjDyaWA5vc8k7ZOK5tmQSygyPFVoA2Rl7PLk8bFZDNTGtpokoHajhMZ0WyF7/
-        8JDtvFMmpmmaxbJDZM5pgXxQAz158XwSXs09mbiuSC4Ixzt1YgwgP+z5rhN6901cV8Q7ZrRT09IA8uPr
-        9292uLygOxdNZO2dUX5yIZhzWyB/NO+kjKaGy8l9x/FG7QSQP3aSKnVpyAn8g9rIJSAgnx6MP6wMl1ff
-        kGEnpnTvMYD82TC4uvEZQP4omwQXaDAEF2hABBdoQAQXaEAEF2hAawZXF3W1keu4QD7ZR/zSHbfU1qSN
-        Xbeum8MA5Mlyxw29VhPbQkEry2nj6e4ucxiAPLHL2VStQ1UM/DnteP/pozkUQB7owR+7iFzV6o9xC+7R
-        DiaogHzR6qrKphP44yauK+x5rp62/7G4YL4CIGvlnsvV57erxTtHdIAeIQKQvcnp55XQxqeyqYfoVzvc
-        7u6uJNtP2jOA7Gi+yZ7b/nGJVif0TuhAfYHwAtlQaN1LnXaIfMfEc2N2okql5wAB/DsaHh/rKP8yGZxa
-        d4i8FnsbpErJn3j2hPWogC00/epldK73iumylU5b0ys4tTCVE/qv7Q9p+Hx1oD+5ZKQg65OiqNpKnVWf
-        utU49ca+5J6KdWaQN8OsScW7cSlqa2tGc0x1f9G1lnFNHkjQMJqiqPpU3F3r8kJrAHlWKPwGikdSEsH3
-        pWgAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALmSURBVHhe7d3NS1RRGMfxs2zZsmV/QsuW/QXRsl3b0ETE
+        cmZUGJzSGeflOi9mqBiFRIKRRGWvVqaWkpiZWEivSESUjJPlhLOYfPSRGLLMl/Rc+X7gWcyce2ZWP869
+        51zOMQB2sGP1gUOeeLjTm4g+lSoJBfIURW2slvMk2SoOBQ4f8ft3aeTWr7TBv7vCCYVKw6dyjR3tM4Nj
+        o/nJ9+8WC8DGLedJstVyqSNTFq3LehKRlqKwf4/GcG28DdGDFfFw+mpvT3Y+l9O/AfA/SdbuDj3KeeKR
+        TGUyVqRx/DcLncqc9rPTcz+y+nMAtpIEuK2rc9qXirVpLP9OQisdtD+AbdTd35utanQuajxXJrfHMtJq
+        HwAW6Lh1LeNNRHwa00LyMCz31TzPAnaRTAaaT39ZyOg+jesvMpMlD8V6LQCLPJt8mfcmI/c0rktk7Uim
+        oRltAXt5E9HZ0qB/r8bWGFn4lTUkbQdgoa6e29mySG21xtYYXyJyfXhiXJsB2Ehe1JC3rDS2i0tAL95+
+        mNJmADaanknnjzuhzxpbY+SDfAnAbvJ+s8bWGPkAwH4EF3Ahggu4EMEFXIjgAi5EcAEXIriACxFcwIUI
+        LuBCBcEtjwYzmW+z2gTAVgXB9cTDb6Y+fdQmADaSwVUGWY2tMd5k5PHE61faDMBGMrjKIKuxNaa4rubo
+        he4r37UdgIVuDDzMnXDqGzS2S/tNLXxBcAGL1baeSZeE/Ps1tktkPxvZ1waAfX67TV4mO8jVNKdm9DoA
+        FpEjgOT8Lo1roeqU09Td9+CrXgvAAgOjI/O+ZPSyxnRllalY79D42Lz2AbCNZEupqpTzfNVT/OQCCe+d
+        wf457QtgG8gA6kvGJuXUTI3n6uSwofC51jRHagJbSyai5Jm2Khm7ua7zcouDJw/IdpAyDX3/yeDiLnMA
+        Np9kq29kOC+Dpcwe/3Eiai1k7ajcCTbJbpDyriRFUZtbkq2KeP15GSw1dgB2FmN+AhGiaE7ajISbAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="txtSearch.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
