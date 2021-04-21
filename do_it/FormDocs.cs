@@ -82,38 +82,22 @@ namespace do_it
             FormPrinting f ;
             report_task r = new report_task();
             report_note r2 = new report_note();
-            //foreach(DataGridViewRow dgv in dataGridView1.Rows)
-            //{
-            //    r.SetParameterValue(0, dgv.Cells[5].Value);
-            //    r.SetParameterValue(1, dgv.Cells[3].Value);
-            //    r.SetParameterValue(2, dgv.Cells[4].Value);
-            //    r.SetParameterValue(3, dgv.Cells[6].Value);
-            //    r.SetParameterValue(4, dgv.Cells[7].Value);
-            //}
+         
             r.SetDataSource(dO_ITDataSet);
-
+            
             r2.SetDataSource(dO_ITDataSet);
-
-            if(_isTask)
+            
+            if (_isTask)
             {
                 f = new FormPrinting(r);
-                
-
             }
             else
             {
-                f = new FormPrinting(r2);
-                
+                f = new FormPrinting(r2); 
             }
-
-                 
-
             f.ShowDialog();
         }
 
-        private void SwitchPUB_OnValuechange(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

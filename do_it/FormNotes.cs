@@ -366,9 +366,6 @@ namespace do_it
                 s = s + getRandomName() + ".png";
                 surface.Save(s, ImageFormat.Png);
                 clearSketch();
-                File.Delete(txtBoxSketch.Text);
-                
-                
                 txtBoxSketch.Text = s;
             }
           
@@ -387,8 +384,9 @@ namespace do_it
         //Button_show_sketch
         private void btnShowSketch_Click(object sender, EventArgs e)
         {
+           
             if(sketchDisplay.Visible == false)
-            {
+            { 
                 sketchDisplay.Visible = true;
                 btnShowSketch.Image = do_it.Properties.Resources.text_50px;
             }

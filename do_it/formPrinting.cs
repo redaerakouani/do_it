@@ -28,8 +28,10 @@ namespace do_it
 
         private void FormPrinting_Load(object sender, EventArgs e)
         {
+            report.SetParameterValue("sketch", Application.StartupPath+"\\");
             crystalReportViewer1.ReportSource = null;
             crystalReportViewer1.ReportSource = report;
+            
 
         }
 

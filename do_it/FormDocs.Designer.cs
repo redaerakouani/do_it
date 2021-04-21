@@ -245,7 +245,7 @@
             this.btnprint.IdleIconLeftImage = null;
             this.btnprint.IdleIconRightImage = null;
             this.btnprint.IndicateFocus = false;
-            this.btnprint.Location = new System.Drawing.Point(539, 442);
+            this.btnprint.Location = new System.Drawing.Point(397, 445);
             this.btnprint.Name = "btnprint";
             stateProperties5.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties5.BorderRadius = 35;
@@ -525,7 +525,6 @@
             toggleState6.BorderThicknessInner = 1;
             this.SwitchPUB.ToggleStateOn = toggleState6;
             this.SwitchPUB.Value = false;
-            this.SwitchPUB.OnValuechange += new System.EventHandler(this.SwitchPUB_OnValuechange);
             // 
             // tASKBindingSource
             // 
